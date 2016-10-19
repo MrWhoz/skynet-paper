@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.10.17)  17 OCT 2016 15:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.10.17)  19 OCT 2016 09:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1739,7 +1739,7 @@ Package microtype Info: Loading generic settings for font family
 \CSE@Title=\box52
 \CSE@crest=\box53
 
-<Figs/bklogo.png, id=136, 105.4485pt x 106.7625pt>
+<Figs/bklogo.png, id=200, 105.4485pt x 106.7625pt>
 File: Figs/bklogo.png Graphic file (type png)
  <use Figs/bklogo.png>
 Package pdftex.def Info: Figs/bklogo.png used on input line 113.
@@ -1830,54 +1830,83 @@ Ch\uhorn \ohorn ng 1.
 
  (./Chapter2/chapter2.tex
 Ch\uhorn \ohorn ng 2.
-<Chapter2/Figs/Raster/minion.png, id=282, 636.6987pt x 582.4962pt>
-File: Chapter2/Figs/Raster/minion.png Graphic file (type png)
-
-<use Chapter2/Figs/Raster/minion.png>
-Package pdftex.def Info: Chapter2/Figs/Raster/minion.png used on input line 26.
-
-(pdftex.def)             Requested size: 437.46112pt x 400.22517pt.
- [6
-
-
-
-] [7 <./Chapter2/Figs/Raster/minion.png>] [8]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 52.
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [9] [10]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 78.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 78.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 78.
- [11
-
-]
-<Chapter2/Figs/Raster/TomandJerry.png, id=327, 324.33366pt x 216.81pt>
+<Chapter2/Figs/Raster/TomandJerry.png, id=363, 324.33366pt x 216.81pt>
 File: Chapter2/Figs/Raster/TomandJerry.png Graphic file (type png)
 
 <use Chapter2/Figs/Raster/TomandJerry.png>
 Package pdftex.def Info: Chapter2/Figs/Raster/TomandJerry.png used on input lin
-e 90.
+e 43.
+(pdftex.def)             Requested size: 437.46112pt x 292.44928pt.
+ [6
+
+
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (14.5pt): 
+ Make it at least 15.07204pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7 <./Chapter2/Figs/Raster/TomandJerry.png>]
+
+Package Fancyhdr Warning: \headheight is too small (14.5pt): 
+ Make it at least 15.07204pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 69.
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+Package Fancyhdr Warning: \headheight is too small (14.5pt): 
+ Make it at least 15.07204pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
+
+Package Fancyhdr Warning: \headheight is too small (14.5pt): 
+ Make it at least 15.07204pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 95.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 95.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 95.
+ [11
+
+]
+File: Chapter2/Figs/Raster/TomandJerry.png Graphic file (type png)
+ <use Chapter2/Figs/Raster/TomandJerry.png>
+Package pdftex.def Info: Chapter2/Figs/Raster/TomandJerry.png used on input lin
+e 107.
 (pdftex.def)             Requested size: 131.23967pt x 87.73148pt.
 
-<Chapter2/Figs/Raster/WallE.png, id=328, 341.9605pt x 515.58476pt>
+<Chapter2/Figs/Raster/WallE.png, id=407, 341.9605pt x 515.58476pt>
 File: Chapter2/Figs/Raster/WallE.png Graphic file (type png)
 
 <use Chapter2/Figs/Raster/WallE.png>
-Package pdftex.def Info: Chapter2/Figs/Raster/WallE.png used on input line 95.
+Package pdftex.def Info: Chapter2/Figs/Raster/WallE.png used on input line 112.
+
 (pdftex.def)             Requested size: 131.23967pt x 197.8753pt.
+
+<Chapter2/Figs/Raster/minion.png, id=408, 636.6987pt x 582.4962pt>
 File: Chapter2/Figs/Raster/minion.png Graphic file (type png)
- <use Chapter2/Figs/Raster/minion.png>
-Package pdftex.def Info: Chapter2/Figs/Raster/minion.png used on input line 100
+
+<use Chapter2/Figs/Raster/minion.png>
+Package pdftex.def Info: Chapter2/Figs/Raster/minion.png used on input line 117
 .
 (pdftex.def)             Requested size: 131.23967pt x 120.06133pt.
+ [12
 
-[12
-
- <./Chapter2/Figs/Raster/TomandJerry.png> <./Chapter2/Figs/Raster/WallE.png>])
+ <./Chapter2/Figs/Raster/WallE.png> <./Chapter2/Figs/Raster/minion.png>])
 \openout2 = `Chapter3/chapter3.aux'.
 
  (./Chapter3/chapter3.tex
@@ -1887,7 +1916,7 @@ Ch\uhorn \ohorn ng 3.
 
 
 
-] [14]) [15] [16]
+] [14] [15]) [16]
 \openout2 = `Chapter4/chapter4.aux'.
 
  (./Chapter4/chapter4.tex
@@ -1937,20 +1966,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 187.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 187.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 187.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 833337976E0B1D963A0641EC23F97295;7259.
+(rerunfilecheck)             Checksum: ECE39D007F09B88711B12DE08B786B1C;12569.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24204 strings out of 493304
- 426116 string characters out of 6139870
- 493693 words of memory out of 5000000
- 26910 multiletter control sequences out of 15000+600000
+ 24236 strings out of 493304
+ 426600 string characters out of 6139870
+ 493694 words of memory out of 5000000
+ 26926 multiletter control sequences out of 15000+600000
  134535 words of font info for 130 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 49i,12n,47p,10424b,838s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,12n,47p,10424b,912s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-t5.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/shar
 e/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
@@ -1963,10 +1992,10 @@ blic/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 ri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmsy10.pfb>
-Output written on thesis.pdf (35 pages, 602399 bytes).
+Output written on thesis.pdf (35 pages, 611019 bytes).
 PDF statistics:
- 520 PDF objects out of 1000 (max. 8388607)
- 443 compressed objects within 5 object streams
- 126 named destinations out of 1000 (max. 500000)
- 33053 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 604 PDF objects out of 1000 (max. 8388607)
+ 526 compressed objects within 6 object streams
+ 142 named destinations out of 1000 (max. 500000)
+ 33181 words of extra memory for PDF output out of 35830 (max. 10000000)
 
