@@ -1,6 +1,6 @@
 \thispagestyle {empty}
-\contentsline {chapter}{Danh s\'ach h\`inh v\~e}{viii}{chapter*.5}
-\contentsline {chapter}{Danh s\'ach b\h {a}ng}{ix}{chapter*.6}
+\contentsline {chapter}{Danh s\'ach h\`inh v\~e}{vii}{chapter*.5}
+\contentsline {chapter}{Danh s\'ach b\h {a}ng}{viii}{chapter*.6}
 \contentsline {chapter}{\numberline {1}Gi\IeC {\'\ohorn }i thi\IeC {\d \ecircumflex }u}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}\IeC {\'Y} t\IeC {\uhorn }\IeC {\h \ohorn }ng v\IeC {\`a} t\IeC {\'\i }nh c\IeC {\'\acircumflex }p thi\IeC {\'\ecircumflex }t c\IeC {\h u}a \IeC {\dj }\IeC {\`\ecircumflex } t\IeC {\`a}i}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}M\IeC {\d u}c ti\IeC {\^e}u v\IeC {\`a} nhi\IeC {\d \ecircumflex }m v\IeC {\d u} c\IeC {\h u}a \IeC {\dj }\IeC {\`\ecircumflex } t\IeC {\`a}i}{1}{section.1.2}
