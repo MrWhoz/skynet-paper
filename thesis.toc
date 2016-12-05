@@ -6,50 +6,50 @@
 \contentsline {section}{\numberline {1.2}M\IeC {\d u}c ti\IeC {\^e}u v\IeC {\`a} nhi\IeC {\d \ecircumflex }m v\IeC {\d u} c\IeC {\h u}a \IeC {\dj }\IeC {\`\ecircumflex } t\IeC {\`a}i}{2}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}M\IeC {\d u}c ti\IeC {\^e}u \IeC {\dj }\IeC {\`\ecircumflex } t\IeC {\`a}i}{2}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}Nhi\IeC {\d \ecircumflex }m v\IeC {\d u} \IeC {\dj }\IeC {\`\ecircumflex } t\IeC {\`a}i}{3}{subsection.1.2.2}
-\contentsline {chapter}{\numberline {2}IoT v\IeC {\`a} C\IeC {\'a}c ki\IeC {\'\ecircumflex }n th\IeC {\'\uhorn }c c\IeC {\ohorn } b\IeC {\h a}n}{4}{chapter.2}
+\contentsline {chapter}{\numberline {2}IoT v\IeC {\`a} C\IeC {\'a}c ki\IeC {\'\ecircumflex }n th\IeC {\'\uhorn }c c\IeC {\ohorn } b\IeC {\h a}n v\IeC {\`\ecircumflex } IoT}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}Gi\IeC {\'\ohorn }i thi\IeC {\d \ecircumflex }u v\IeC {\`\ecircumflex } Internet of Things v\IeC {\`a} c\IeC {\'a}c \IeC {\'\uhorn }ng d\IeC {\d u}ng gi\IeC {\'a}m s\IeC {\'a}t}{4}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Internet of Things (IoT)}{4}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}C\IeC {\'a}c h\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng gi\IeC {\'a}m s\IeC {\'a}t \IeC {\dj }\IeC {\uhorn }\IeC {\d \ohorn }c ph\IeC {\'a}t tri\IeC {\h \ecircumflex }n d\IeC {\d \uhorn }a tr\IeC {\^e}n IoT}{12}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}Gi\IeC {\'\ohorn }i thi\IeC {\d \ecircumflex }u v\IeC {\`\ecircumflex } c\IeC {\'a}c c\IeC {\^o}ng c\IeC {\d u} h\IeC {\~\ocircumflex } tr\IeC {\d \ohorn } ph\IeC {\'a}t tri\IeC {\h \ecircumflex }n \IeC {\'\uhorn }ng d\IeC {\d u}ng IoT}{17}{section.2.2}
 \contentsline {section}{\numberline {2.3}Nh\IeC {\~\uhorn }ng y\IeC {\'\ecircumflex }u t\IeC {\'\ocircumflex } \IeC {\h a}nh h\IeC {\uhorn }\IeC {\h \ohorn }ng m\IeC {\^o}i tr\IeC {\uhorn }\IeC {\`\ohorn }ng t\IeC {\`\uhorn } kh\IeC {\'\i } th\IeC {\h a}i ph\IeC {\uhorn }\IeC {\ohorn }ng ti\IeC {\d \ecircumflex }n giao th\IeC {\^o}ng}{17}{section.2.3}
 \contentsline {section}{\numberline {2.4}C\IeC {\'a}c h\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng quan tr\IeC {\'\abreve }c hi\IeC {\d \ecircumflex }n h\IeC {\~\uhorn }u}{19}{section.2.4}
-\contentsline {chapter}{\numberline {3}Thi\IeC {\'\ecircumflex }t k\IeC {\'\ecircumflex } v\IeC {\`a} Hi\IeC {\d \ecircumflex }n th\IeC {\d \uhorn }c}{25}{chapter.3}
-\contentsline {section}{\numberline {3.1}Thi\IeC {\'\ecircumflex }t k\IeC {\'\ecircumflex } h\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng}{25}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Ki\IeC {\'\ecircumflex }n tr\IeC {\'u}c m\IeC {\^o} h\IeC {\`\i }nh h\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng}{25}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}C\IeC {\'a}c r\IeC {\`a}ng bu\IeC {\d \ocircumflex }c c\IeC {\h u}a h\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng}{25}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}M\IeC {\^o} h\IeC {\`\i }nh \IeC {\'\uhorn }ng d\IeC {\d u}ng tr\IeC {\`\i }nh b\IeC {\`a}y d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u}{25}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Hi\IeC {\d \ecircumflex }n th\IeC {\d \uhorn }c}{25}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}C\IeC {\'a}c node c\IeC {\h a}m bi\IeC {\'\ecircumflex }n thu th\IeC {\d \acircumflex }p d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u}{25}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}H\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng Server l\IeC {\uhorn }u tr\IeC {\~\uhorn } d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u v\IeC {\`a} cung c\IeC {\'\acircumflex }p API}{25}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}\IeC {\'\UHORN }ng d\IeC {\d u}ng theo d\IeC {\~o}i d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u v\IeC {\`a} \IeC {\dj }\IeC {\'a}nh gi\IeC {\'a}}{26}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Hi\IeC {\d \ecircumflex }n th\IeC {\d u}wc}{26}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}First subsection in the first section}{26}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Second subsection in the first section}{26}{subsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.2.1}First subsub section in the second subsection}{26}{subsubsection.3.3.2.1}
-\contentsline {subsection}{\numberline {3.3.3}Third subsection in the first section}{27}{subsection.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.3.1}First subsub section in the third subsection}{27}{subsubsection.3.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.3.2}Second subsub section in the third subsection}{27}{subsubsection.3.3.3.2}
-\contentsline {section}{\numberline {3.4}Second section of the third chapter}{27}{section.3.4}
-\contentsline {section}{\numberline {3.5}The layout of formal tables}{27}{section.3.5}
-\contentsline {chapter}{\numberline {4}K\IeC {\'\ecircumflex }t qu\IeC {\h a} th\IeC {\d \uhorn }c nhi\IeC {\d \ecircumflex }m v\IeC {\`a} \IeC {\DJ }\IeC {\'a}nh gi\IeC {\'a}}{30}{chapter.4}
-\contentsline {section}{\numberline {4.1}First section of the fourth chapter}{30}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}First subsection in the first section}{30}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Second subsection in the first section}{30}{subsection.4.1.2}
-\contentsline {subsubsection}{\numberline {4.1.2.1}First subsub section in the second subsection}{30}{subsubsection.4.1.2.1}
-\contentsline {subsection}{\numberline {4.1.3}Third subsection in the first section}{31}{subsection.4.1.3}
-\contentsline {subsubsection}{\numberline {4.1.3.1}First subsub section in the third subsection}{31}{subsubsection.4.1.3.1}
-\contentsline {subsubsection}{\numberline {4.1.3.2}Second subsub section in the third subsection}{31}{subsubsection.4.1.3.2}
-\contentsline {section}{\numberline {4.2}Second section of the third chapter}{31}{section.4.2}
-\contentsline {section}{\numberline {4.3}The layout of formal tables}{31}{section.4.3}
-\contentsline {chapter}{\numberline {5}T\IeC {\h \ocircumflex }ng k\IeC {\'\ecircumflex }t v\IeC {\`a} H\IeC {\uhorn }\IeC {\'\ohorn }ng ph\IeC {\'a}t tri\IeC {\h \ecircumflex }n cho t\IeC {\uhorn }\IeC {\ohorn }ng lai}{34}{chapter.5}
-\contentsline {section}{\numberline {5.1}First section of the fifth chapter}{34}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}First subsection in the first section}{34}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Second subsection in the first section}{34}{subsection.5.1.2}
-\contentsline {subsubsection}{\numberline {5.1.2.1}First subsub section in the second subsection}{34}{subsubsection.5.1.2.1}
-\contentsline {subsection}{\numberline {5.1.3}Third subsection in the first section}{35}{subsection.5.1.3}
-\contentsline {subsubsection}{\numberline {5.1.3.1}First subsub section in the third subsection}{35}{subsubsection.5.1.3.1}
-\contentsline {subsubsection}{\numberline {5.1.3.2}Second subsub section in the third subsection}{35}{subsubsection.5.1.3.2}
-\contentsline {section}{\numberline {5.2}Second section of the third chapter}{35}{section.5.2}
-\contentsline {section}{\numberline {5.3}The layout of formal tables}{35}{section.5.3}
-\contentsline {chapter}{T\`ai li\d \ecircumflex u tham kh\h {a}o}{38}{chapter*.40}
-\contentsline {chapter}{Ch\h {i} m\d {u}c}{39}{section*.41}
+\contentsline {section}{\numberline {2.5}C\IeC {\'a}c thi\IeC {\'\ecircumflex }t b\IeC {\d i} ph\IeC {\`\acircumflex }n c\IeC {\'\uhorn }ng}{22}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Thi\IeC {\'\ecircumflex }t b\IeC {\d i} thu th\IeC {\d \acircumflex }p d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u}{22}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}C\IeC {\'a}c lo\IeC {\d a}i sensor}{23}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}M\IeC {\d a}ch vi x\IeC {\h \uhorn } l\IeC {\'y} Arduino}{23}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Module SIM900}{23}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}N\IeC {\u a}ng l\IeC {\uhorn }\IeC {\d \ohorn }ng m\IeC {\d \abreve }t tr\IeC {\`\ohorn }i}{24}{subsection.2.5.5}
+\contentsline {section}{\numberline {2.6}Ki\IeC {\'\ecircumflex }n th\IeC {\'\uhorn }c c\IeC {\u a}n b\IeC {\h a}n v\IeC {\`\ecircumflex } \IeC {\'\uhorn }ng d\IeC {\d u}ng web - di \IeC {\dj }\IeC {\d \ocircumflex }ng v\IeC {\`a} x\IeC {\^a}y d\IeC {\d \uhorn }ng Server}{24}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Giao th\IeC {\'\uhorn }c TCP}{24}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}C\IeC {\u a}n b\IeC {\h a}n v\IeC {\`\ecircumflex } RESTful Web services}{25}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}NodeJs}{29}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Javascripts}{31}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6.5}Websocket - Socket.io}{31}{subsection.2.6.5}
+\contentsline {subsection}{\numberline {2.6.6}RethinkDB}{33}{subsection.2.6.6}
+\contentsline {subsection}{\numberline {2.6.7}Raspberry}{35}{subsection.2.6.7}
+\contentsline {subsection}{\numberline {2.6.8}Framework Ionic}{35}{subsection.2.6.8}
+\contentsline {chapter}{\numberline {3}Thi\IeC {\'\ecircumflex }t k\IeC {\'\ecircumflex } v\IeC {\`a} Hi\IeC {\d \ecircumflex }n th\IeC {\d \uhorn }c}{36}{chapter.3}
+\contentsline {section}{\numberline {3.1}Thi\IeC {\'\ecircumflex }t k\IeC {\'\ecircumflex } h\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng}{36}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Ki\IeC {\'\ecircumflex }n tr\IeC {\'u}c m\IeC {\^o} h\IeC {\`\i }nh h\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng}{36}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}C\IeC {\'a}c r\IeC {\`a}ng bu\IeC {\d \ocircumflex }c c\IeC {\h u}a h\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng}{36}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}M\IeC {\^o} h\IeC {\`\i }nh \IeC {\'\uhorn }ng d\IeC {\d u}ng tr\IeC {\`\i }nh b\IeC {\`a}y d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u}{37}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Hi\IeC {\d \ecircumflex }n th\IeC {\d \uhorn }c Node c\IeC {\h a}m bi\IeC {\'\ecircumflex }n}{37}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}C\IeC {\'a}c node c\IeC {\h a}m bi\IeC {\'\ecircumflex }n thu th\IeC {\d \acircumflex }p d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u}{37}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}\IeC {\'\UHORN }ng d\IeC {\d u}ng theo d\IeC {\~o}i d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u v\IeC {\`a} \IeC {\dj }\IeC {\'a}nh gi\IeC {\'a}}{37}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}H\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng Server l\IeC {\uhorn }u tr\IeC {\~\uhorn } d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u v\IeC {\`a} cung c\IeC {\'\acircumflex }p API}{38}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}C\IeC {\'\acircumflex }u tr\IeC {\'u}c t\IeC {\h \ocircumflex } ch\IeC {\'\uhorn }c t\IeC {\d \acircumflex }p tin}{38}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Thi\IeC {\'\ecircumflex }t k\IeC {\'\ecircumflex } API}{38}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}X\IeC {\^a}y d\IeC {\d \uhorn }ng Web Server}{39}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}\IeC {\'\UHORN }ng d\IeC {\d u}ng thi\IeC {\'\ecircumflex }t b\IeC {\d i} di \IeC {\dj }\IeC {\d \ocircumflex }ng}{40}{section.3.4}
+\contentsline {chapter}{\numberline {4}K\IeC {\'\ecircumflex }t qu\IeC {\h a} th\IeC {\d \uhorn }c nhi\IeC {\d \ecircumflex }m v\IeC {\`a} \IeC {\DJ }\IeC {\'a}nh gi\IeC {\'a}}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}M\IeC {\'\uhorn }c \IeC {\dj }\IeC {\d \ocircumflex } ti\IeC {\^e}u hao n\IeC {\u a}ng}{41}{section.4.1}
+\contentsline {section}{\numberline {4.2}T\IeC {\'\i }nh \IeC {\h \ocircumflex }n \IeC {\dj }\IeC {\d i}nh c\IeC {\h u}a node c\IeC {\h a}m bi\IeC {\'\ecircumflex }n}{41}{section.4.2}
+\contentsline {section}{\numberline {4.3}T\IeC {\'\i }nh \IeC {\h \ocircumflex }n \IeC {\dj }\IeC {\d i}nh c\IeC {\h u}a Server}{42}{section.4.3}
+\contentsline {section}{\numberline {4.4}\IeC {\DJ }\IeC {\'a}nh gi\IeC {\'a} l\IeC {\d \acircumflex }p tr\IeC {\`\i }nh \IeC {\'\uhorn }ng d\IeC {\d u}ng Mobile s\IeC {\h \uhorn } d\IeC {\d u}ng APIs}{42}{section.4.4}
+\contentsline {chapter}{\numberline {5}T\IeC {\h \ocircumflex }ng k\IeC {\'\ecircumflex }t v\IeC {\`a} H\IeC {\uhorn }\IeC {\'\ohorn }ng ph\IeC {\'a}t tri\IeC {\h \ecircumflex }n cho t\IeC {\uhorn }\IeC {\ohorn }ng lai}{43}{chapter.5}
+\contentsline {section}{\numberline {5.1}T\IeC {\h \ocircumflex }ng k\IeC {\'\ecircumflex }t}{43}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Nh\IeC {\~\uhorn }ng g\IeC {\`\i } \IeC {\dj }\IeC {\d a}t \IeC {\dj }\IeC {\uhorn }\IeC {\d \ohorn }c}{43}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Nh\IeC {\~\uhorn }ng kh\IeC {\'o} kh\IeC {\u a}n v\IeC {\`a} h\IeC {\d a}n ch\IeC {\'\ecircumflex }}{43}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}H\IeC {\uhorn }\IeC {\'\ohorn }ng ph\IeC {\'a}t tri\IeC {\h \ecircumflex }n t\IeC {\uhorn }\IeC {\ohorn }ng lai}{44}{section.5.2}
+\contentsline {chapter}{T\`ai li\d \ecircumflex u tham kh\h {a}o}{45}{chapter*.36}
+\contentsline {chapter}{Ch\h {i} m\d {u}c}{46}{section*.37}
