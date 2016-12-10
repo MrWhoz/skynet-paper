@@ -245,9 +245,197 @@ Từ những cơ sơ lý thuyết trên cho chúng ta biết được những y�
 
 \section{Các thiết bị phần cứng}
 \subsection{Thiết bị thu thập dữ liệu}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+
+
+
+
+
 \subsection{Các loại sensor}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\GP2\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\subsection*{Cảm biến bụi GP2} 
+Cảm biến bụi GP2 là một bộ cảm biến chất lượng không khí quang học, được thiết kế đo những hạt bụi. Cám biến được thiết kế một điốt phát hồng ngoại và một photostransistor được sắp xếp thành đường chéo thiết bị này, cho phép nó phát hiện ánh sáng phản xạ của bụi trong không khí.  Nó đặc biệt hiệu quả trong việc phát hiện các hạt rất mịn như khói thuốc lá, và thường được sử dụng trong các hệ thống lọc không khí.
+
+Cảm biến bụi GP2 tiêu tốn dòng rất ít (20 mA cao nhất, 11mA chế độ chạy thường), có thể hỗ trợ nguồn cung cấp lên tới 7VDC. Tín hiệu đầu ra của cảm biến là dạng tín hiệu tương tự dùng để đo mật độ bụi, với độ nhạy $0.5V/0.1mg/{m}^{3}$.
+
+\begin{center}
+\begin{figure}[htp]
+\centering  
+\includegraphics[width=0.4\textwidth]{gp2}
+\caption[Cảm biến bụi GP2 ]{Cảm biến bụi GP2}
+\label{fig:gp2}
+\end{figure}
+\end{center}
+
+
+Thông số kỹ thuật:
+\begin{itemize}
+\item[•]Nguồn hoạt động: 5VDC
+\item[•]Dòng tiêu thụ: 10mA
+\item[•]Ngõ ra analog
+\item[•]Nhiệt độ hoạt động: $-40^{o}$ $-$ $85 ^{o}$ C
+\end{itemize}
+
+Sơ đồ kết nối cảm biến bụi GP2 với Arduino
+
+Theo hướng dẫn của tài liệu kỹ thuật, nó có tất cả gồm 6 chân đầu ra để kết nối tới thiết bị. Để có thể cảm biến bụi GP2 hoạt động với vi xử lý Arduino cần kết nối như sơ đồ luận lý sau:
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{sodogp2}
+\caption[Sơ đồ GP2 kết nối với Arduino ]{Sơ đồ GP2 kết nối với Arduino}
+\label{fig:sodogp2}
+\end{figure}
+\end{center}
+
+
+
+
+
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	MQ135	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\newpage
+\subsection*{Cảm biến chất lượng không khí MQ135} 
+Cảm biến chất lượng không khí MQ135 thường được dùng trong các thiết bị kiểm tra chất lượng không khí bên trong cao ốc, văn phòng, thích hợp để phát hiện khí NH3, Nox, Ancol, Benzen, khói và khí CO2.Cám biến này với độ nhạy cao và thời gian đáp ứng nhanh. Tín hiệu ngõ ra dạng analog và digital. Cảm biến này có thể hoạt động ở nhiệt độ từ khoảng: $-10^{o}$C đến $50^{o}$C và tiêu thụ dòng khoảng 300mA tại 5V.
+
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{mq135}
+\caption[Cảm biến MQ135]{Cảm biến MQ135}
+\label{fig:mq135}
+\end{figure}
+\end{center}
+
+Thông số kỹ thuật:
+\begin{itemize}
+\item[•]Điện áp cung cấp: <=24 VDC
+\item[•]Điện áp heater: 5V AC/DC
+\item[•]Sử dụng chip so sánh LM393c.
+\item[•]Hai tín hiệu đầu ra (digital và analog)
+\item[•]Tín hiệu analog từ 0 ~ 5V.
+\item[•]Dải phát hiện từ 10 đến 1000ppm
+\end{itemize}
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{mq135_mqh1}
+\caption[Giản đồ chỉ sự biến đổi của Rs/Ro và giá trị ppm của MQ135]{Giản đồ chỉ sự biến đổi của Rs/Ro và giá trị ppm của MQ135}
+\label{fig:mq135_mqh1}
+\end{figure}
+\end{center}
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{mq135_mqh2}
+\caption[Giản đồ chỉ sự biến đổi của Rs/Ro đối với nhiệt độ, độ ẩm]{Giản đồ chỉ sự biến đổi của Rs/Ro đối với nhiệt độ, độ ẩm}
+\label{fig:mq135_mqh2}
+\end{figure}
+\end{center}
+
+Giá trị chất lượng không khí(ppm) được xác định theo biểu đồ Hình \ref{fig:mq135_mqh1} giá trị này thay đổi theo sự biến đổi của giá trị Rs/Ro, theo Hình \ref{fig:mq135_mqh2} thì giá trị Rs/Ro bị ảnh hưởng bởi nhiệt độ và độ ẩm.
+
+Để xác định được giá trị Rs/Ro từ ngõ ra analog của mạch cảm biến MQ-135 ta có công thức như sau:
+\begin{center}
+$\displaystyle \frac{R_{S}}{R_{L}} = \frac{V_{C}-V_{RL}}{V_{RL}}$
+\end{center}
+
+Giá trị Rs/Ro này được vi xử lý tính toán dựa trên đầu ra analog của cảm biến MQ-135 và được đưa vào thư viện mq135.h để có thể lấy được giá trị chất lượng không khí ppm theo sự thay đổi của nhiệt độ và độ ẩm của môi trường thực tế.
+
+Thư viện mq135.h cung cấp cho chúng ta các hàm toán học đã được nhà sản xuất tính toán sẵn để có thể lấy được giá trị chất lượng không khí ppm dựa vào thay đổi của môi trường nhiệt độ và độ ẩm.
+
+
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	MQ07	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\newpage
+\subsection*{Cảm biến chất lượng không khí MQ07} 
+Cảm biến khí CO MQ-7 có thể pháp hiện khí CO tập trung ở những nơi khác nhau từ 10 đến 1000ppm. Cám biến này với độ nhạy cao và thời gian đáp ứng nhanh. Tín hiệu ngõ ra dạng analog và digital. Cảm biến này có thể hoạt động ở nhiệt độ từ khoảng: -10C đến 50C và tiêu thụ dòng khoảng 250mA tại 5V.
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{mq07}
+\caption[Cảm biến MQ07]{Cảm biến MQ07}
+\label{fig:mq07}
+\end{figure}
+\end{center}
+
+Thông số kỹ thuật:
+\begin{itemize}
+\item[•]Điện áp cung cấp: 3 ~ 5VDC.
+\item[•]Sử dụng chip so sánh LM393 và MQ-7.
+\item[•]Hai tín hiệu đầu ra (digital và analog)
+\item[•]Tín hiệu analog từ 0 ~ 5V.
+\item[•]Dải phát hiện từ 10 đến 1000ppm
+\item[•]Kích thước: 33 x 20 x 16mm.
+\end{itemize}
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{mq07_mqh1}
+\caption[Giản đồ chỉ sự biến đổi của Rs/Ro và giá trị ppm của MQ07]{Giản đồ chỉ sự biến đổi của Rs/Ro và giá trị ppm của MQ07}
+\label{fig:mq07_mqh1}
+\end{figure}
+\end{center}
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{mq07_mqh2}
+\caption[Giản đồ chỉ sự biến đổi của Rs/Ro đối với nhiệt độ, độ ẩm]{Giản đồ chỉ sự biến đổi của Rs/Ro đối với nhiệt độ, độ ẩm}
+\label{fig:mq07_mqh2}
+\end{figure}
+\end{center}
+
+Giá trị chất lượng không khí(ppm) được xác định theo biểu đồ Hình \ref{fig:mq07_mqh1} giá trị này thay đổi theo sự biến đổi của giá trị Rs/Ro, theo Hình \ref{fig:mq07_mqh2} thì giá trị Rs/Ro bị ảnh hưởng bởi nhiệt độ và độ ẩm.
+
+Để xác định được giá trị Rs/Ro từ ngõ ra analog của mạch cảm biến MQ-7 ta có công thức như sau:
+\begin{center}
+$\displaystyle \frac{R_{S}}{R_{L}} = \frac{V_{C}-V_{RL}}{V_{RL}}$
+\end{center}
+
+Giá trị Rs/Ro này được vi xử lý tính toán dựa trên đầu ra analog của cảm biến MQ-7 và được đưa vào thư viện mq07.h để có thể lấy được giá trị chất lượng không khí ppm theo sự thay đổi của nhiệt độ và độ ẩm của môi trường thực tế.
+
+Thư viện mq07.h cung cấp cho chúng ta các hàm toán học đã được nhà sản xuất tính toán sẵn để có thể lấy được giá trị chất lượng không khí ppm dựa vào thay đổi của môi trường nhiệt độ và độ ẩm.
+
+
+
+
+
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	Cảm biến nhiệt độ DS18B20 IC	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\newpage
+\subsection*{Cảm biến nhiệt độ DS18B20 IC} 
+Cảm biến nhiệt độ DS18B20 là cảm biến loại tín hiệu đầu ra digital đo nhiệt độ mới của hãng MAXIM với độ phân giải cao (12bit). IC được sử dụng giao tiếp 1 dây rất gọn gàng, dễ lập trình và giao tiếp nhiều DS18B20 trên cùng 1 dây. IC còn có chức năng cảnh báo nhiệt độ khi vượt ngưỡng và đặc biệt hơn là có thể cấp nguốn từ chân data.
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{ds18b20}
+\caption[Cảm biến nhiệt độ DS18B20]{Cảm biến nhiệt độ DS18B20}
+\label{fig:ds18b20}
+\end{figure}
+\end{center}
+Thông số kỹ thuật:
+\begin{itemize}
+\item[•]Nguồn: 3-5.5V
+\item[•]Dải đo nhiệt độ: -55 -125 * C
+\item[•]Sai số: +-0.5 *C
+\item[•]Độ phân giải: 9-12bits
+\item[•]Thời gian chuyển đổi nhiệt độ: 750ms
+\end{itemize}
+Sơ đồ kết nối IC BS18B20 để lấy được tín hiệu data
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{ds18b20_ketnoi}
+\caption[Sơ đồ kết nối DS18B20]{Sơ đồ kết nối DS18B20}
+\label{fig:ds18b20_ketnoi}
+\end{figure}
+\end{center}	
+
+Chân Digital input sẽ được đưa tới chân Digital input của board arduino nano, hiện tại nhà sản xuất cũng cung cấp cho lập trình viên về bộ thư viện để có thể sử dụng trong việc phát triển.
+
+\newpage
+
+
+
 \subsection{Mạch vi xử lý Arduino}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 \subsection{Module SIM900}
