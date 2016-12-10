@@ -438,8 +438,88 @@ Chân Digital input sẽ được đưa tới chân Digital input của board ar
 
 \subsection{Mạch vi xử lý Arduino}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-\subsection{Module SIM900}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+
+
+
+
+
+
+
+
+
+
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	SIM800L	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
+\subsection{Module SIM800L}
+\subsection*{Giới thiệu về Sim800L}
+Thừa kế các chức năng từ các thế hệ modile sim trước như sim900, Module GSM sim 800L có khả năng nhắn tin SMS, nghe gọi, GPRS, … như một điện thoại nhưng có kích thuốc nhỏ nhất trong các loại module SIM (25 mm x 22 mm). Điều khiển module sử dụng các bộ tập lệnh AT dễ dàng, chân kết nối dùng rào đực thông dụng chuẩn 100mil.
+Thông số kỹ thuật:
+\begin{itemize}
+
+\item[•]Nguồn cấp: 3.7 – 4.2 VDC, có thể sử dụng với nguồn dòng thấp từ 500mAh trở lên, nhưng để sim hoạt động đảm bảo thì dòng đủ 1A là được khuyến khích dùng hơn.
+\item[•]Khe cắm SIM: MICROSIM
+\item[•]Dòng khi ở chế độ chờ: 10mA
+\item[•]Dòng khi hoạt động: 100mA đến 1A
+\item[•]Hỗ trợ 4 băng tần phổ biến: GSM 850, EGSM 900, DCS 1800, PCS 1900.
+\item[•]Nhiệt độ hoạt động: -40 C ~ 85 C
+\item[•]Tốc độ truyền downlink/uplink: cao nhất 85.6 kbps
+\item[•]Tốc độ UART hỗ trợ: 1200bps đến 125200bps
+\end{itemize}
+
+Chức năng các chân của module Sim800L
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{sim800l}
+\caption[Sơ đồ module sim800l]{Sơ đồ module sim800l}
+\label{fig:sim800l}
+\end{figure}
+\end{center}	
+
+\begin{itemize}
+\item[•]TXD: chân truyền UART TX
+\item[•]RXD: chân nhận UART RX
+\item[•]DTR: chân UART DTR, thường ít xài.
+\item[•]SPKP, SPKN: ngõ ra âm thanh, nối với loa để phát âm thanh.
+\item[•]MICP, MICN: ngõ vào âm thanh, phải găn thêm micro để thu âm thanh.
+\item[•]Reset: chân khởi động lại SIM800L
+\item[•]RING: báo cuộc gọi đến
+\item[•]GND: chân Mass, cấp 0v.
+\end{itemize}
+\subsection*{Một số tập lệnh AT của module Sim800L dùng trong đề tại luận văn}
+
+AT+CBC: trả về kết quả dung lượng pin hiện tại.
+\begin{table}[htp]
+\label{my-label}
+\begin{tabular}{|l|l|}
+\hline
+Lệnh AT & AT+CBC \\ \hline
+Kết quả  & 
++ CBC: <bcs>, <bcl>, <voltage> \\
+&OK \\
+& \\
+& Với các thông số \\
+& 		<bcs>: \\
+& $           $ 0: Mạch không phải trạng thái đang sạc. 
+
+
+  \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Năng lượng mặt trời}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 

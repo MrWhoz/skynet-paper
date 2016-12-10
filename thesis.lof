@@ -22,16 +22,17 @@
 \contentsline {figure}{\numberline {2.19}{\ignorespaces Gi\IeC {\h a}n \IeC {\dj }\IeC {\`\ocircumflex } ch\IeC {\h i} s\IeC {\d \uhorn } bi\IeC {\'\ecircumflex }n \IeC {\dj }\IeC {\h \ocircumflex }i c\IeC {\h u}a Rs/Ro \IeC {\dj }\IeC {\'\ocircumflex }i v\IeC {\'\ohorn }i nhi\IeC {\d \ecircumflex }t \IeC {\dj }\IeC {\d \ocircumflex }, \IeC {\dj }\IeC {\d \ocircumflex } \IeC {\h \acircumflex }m}}{29}{figure.caption.37}
 \contentsline {figure}{\numberline {2.20}{\ignorespaces C\IeC {\h a}m bi\IeC {\'\ecircumflex }n nhi\IeC {\d \ecircumflex }t \IeC {\dj }\IeC {\d \ocircumflex } DS18B20}}{31}{figure.caption.39}
 \contentsline {figure}{\numberline {2.21}{\ignorespaces S\IeC {\ohorn } \IeC {\dj }\IeC {\`\ocircumflex } k\IeC {\'\ecircumflex }t n\IeC {\'\ocircumflex }i DS18B20}}{32}{figure.caption.40}
-\contentsline {figure}{\numberline {2.22}{\ignorespaces C\IeC {\'\acircumflex }u tr\IeC {\'u}c c\IeC {\h u}a m\IeC {\d \ocircumflex }t \IeC {\dj }\IeC {\'\ocircumflex }i t\IeC {\uhorn }\IeC {\d \ohorn }ng JSON}}{37}{figure.caption.41}
-\contentsline {figure}{\numberline {2.23}{\ignorespaces C\IeC {\'\acircumflex }u tr\IeC {\'u}c m\IeC {\h a}ng c\IeC {\h u}a JSON}}{37}{figure.caption.42}
-\contentsline {figure}{\numberline {2.24}{\ignorespaces C\IeC {\'\acircumflex }u tr\IeC {\'u}c c\IeC {\h u}a m\IeC {\d \ocircumflex }t \IeC {\dj }\IeC {\'\ocircumflex }i t\IeC {\uhorn }\IeC {\d \ohorn }ng JSON}}{37}{figure.caption.43}
-\contentsline {figure}{\numberline {2.25}{\ignorespaces C\IeC {\'\acircumflex }u tr\IeC {\'u}c m\IeC {\^o} t\IeC {\h a} XML-JSON}}{38}{figure.caption.44}
-\contentsline {figure}{\numberline {2.26}{\ignorespaces N\IeC {\`\ecircumflex }n t\IeC {\h a}ng Nodejs}}{39}{figure.caption.45}
-\contentsline {figure}{\numberline {2.27}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ho\IeC {\d a}t \IeC {\dj }\IeC {\d \ocircumflex }ng Nodejs}}{40}{figure.caption.46}
-\contentsline {figure}{\numberline {2.28}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ho\IeC {\d a}t \IeC {\dj }\IeC {\d \ocircumflex }ng Websocket}}{41}{figure.caption.47}
-\contentsline {figure}{\numberline {2.29}{\ignorespaces Bi\IeC {\h \ecircumflex }u t\IeC {\uhorn }\IeC {\d \ohorn }ng c\IeC {\h u}a RethinkDB}}{43}{figure.caption.48}
-\contentsline {figure}{\numberline {2.30}{\ignorespaces \IeC {\DJ }o\IeC {\d a}n code m\IeC {\~\acircumflex }u RethinkDB}}{44}{figure.caption.49}
-\contentsline {figure}{\numberline {2.31}{\ignorespaces Thi\IeC {\'\ecircumflex }t b\IeC {\d i} Raspberry Pi}}{45}{figure.caption.50}
+\contentsline {figure}{\numberline {2.22}{\ignorespaces S\IeC {\ohorn } \IeC {\dj }\IeC {\`\ocircumflex } module sim800l}}{34}{figure.caption.42}
+\contentsline {figure}{\numberline {2.23}{\ignorespaces C\IeC {\'\acircumflex }u tr\IeC {\'u}c c\IeC {\h u}a m\IeC {\d \ocircumflex }t \IeC {\dj }\IeC {\'\ocircumflex }i t\IeC {\uhorn }\IeC {\d \ohorn }ng JSON}}{38}{figure.caption.45}
+\contentsline {figure}{\numberline {2.24}{\ignorespaces C\IeC {\'\acircumflex }u tr\IeC {\'u}c m\IeC {\h a}ng c\IeC {\h u}a JSON}}{39}{figure.caption.46}
+\contentsline {figure}{\numberline {2.25}{\ignorespaces C\IeC {\'\acircumflex }u tr\IeC {\'u}c c\IeC {\h u}a m\IeC {\d \ocircumflex }t \IeC {\dj }\IeC {\'\ocircumflex }i t\IeC {\uhorn }\IeC {\d \ohorn }ng JSON}}{39}{figure.caption.47}
+\contentsline {figure}{\numberline {2.26}{\ignorespaces C\IeC {\'\acircumflex }u tr\IeC {\'u}c m\IeC {\^o} t\IeC {\h a} XML-JSON}}{40}{figure.caption.48}
+\contentsline {figure}{\numberline {2.27}{\ignorespaces N\IeC {\`\ecircumflex }n t\IeC {\h a}ng Nodejs}}{41}{figure.caption.49}
+\contentsline {figure}{\numberline {2.28}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ho\IeC {\d a}t \IeC {\dj }\IeC {\d \ocircumflex }ng Nodejs}}{41}{figure.caption.50}
+\contentsline {figure}{\numberline {2.29}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ho\IeC {\d a}t \IeC {\dj }\IeC {\d \ocircumflex }ng Websocket}}{43}{figure.caption.51}
+\contentsline {figure}{\numberline {2.30}{\ignorespaces Bi\IeC {\h \ecircumflex }u t\IeC {\uhorn }\IeC {\d \ohorn }ng c\IeC {\h u}a RethinkDB}}{44}{figure.caption.52}
+\contentsline {figure}{\numberline {2.31}{\ignorespaces \IeC {\DJ }o\IeC {\d a}n code m\IeC {\~\acircumflex }u RethinkDB}}{45}{figure.caption.53}
+\contentsline {figure}{\numberline {2.32}{\ignorespaces Thi\IeC {\'\ecircumflex }t b\IeC {\d i} Raspberry Pi}}{46}{figure.caption.54}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
