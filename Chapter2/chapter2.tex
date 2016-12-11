@@ -770,8 +770,73 @@ Dữ liệu sensor node gửi lên cho máy chủ gồm các dữ liệu sau:
 
 
 \newpage
-\subsection{Năng lượng mặt trời}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+\subsection{Pin năng lượng mặt trời}
+Pin năng lượng mặt trời (pin mặt trời/pin quang điện) là thiết bị giúp chuyển hóa trực tiếp năng lượng ánh sáng mặt trời (quang năng) thành năng lượng điện (điện năng) dựa trên hiệu ứng quang điện. Hiệu ứng quang điện là khả năng phát ra điện tử (electron) khi được ánh sáng chiếu vào của vật chất.
+
+Tấm pin mặt trời, những tấm có bề mặt lớn thu thập ánh nắng mặt trời và biến nó thành điện năng, được làm bằng nhiều tế bào quang điện có nhiệm vụ thực hiện quá trình tạo ra điện từ ánh sáng mặt trời.
+
+
+
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{solarpanel}
+\caption[Tấm pin năng lượng mặt trời]{Tấm pin năng lượng mặt trời}
+\label{fig:solarpanel}
+\end{figure}
+\end{center}
+
+\subsection*{Chất bán dẫn Silicon}
+Silicon được biết đến là một chất bán dẫn. "Chất bán dẫn là vật liệu trung gian giữa chất dẫn điện và chất cách điện. Chất bán dẫn hoạt động như một chất cách điện ở nhiệt độ thấp và có tính dẫn điện ở nhiệt độ phòng". Với tính chất như vậy, silicon là một thành phần quan trọng trong cấu tạo của pin năng lượng mặt trời.
+
+Silicon tuy có mức dẫn điện hạn chế nhưng nó có cấu trúc tinh thể rất phù hợp cho việc tạo ra chất bán dẫn. Nguyên tử silicon cần 4 electron để trung hòa điện tích nhưng lớp vỏ bên ngoài một nguyên tử silicon chỉ có một nửa số electron cần thiết nên nó sẽ bám chặt với các nguyên tử khác để tìm cách trung hòa điện tích.
+
+Để tăng độ dẫn điện của silicon, các nhà khoa học đã “tạp chất hóa” nó bằng cách kết hợp nó với các vật liệu khác. Quá trình này được gọi là “doping” và silicon pha tạp với các tạp chất tạo ra nhiều electron tự do và lỗ trống. Một chất bán dẫn silicon có hai phần, mỗi phần được pha tạp với một loại vật liệu khác. Phần đầu tiên được pha với phốt pho, phốt pho cần 5 electron để trung hòa điện tích và có đủ 5 electron trong vỏ của nó. Khi kết hợp với silicon, một electron sẽ bị dư ra. Electron đặc trưng cho điện tích âm nên phần này sẽ được gọi là silicon loại N (điện cực N). Để tạo ra silicon loại P (điện cực P), các nhà khoa học kết hợp silicon với boron. Boron chỉ cần 3 electron để trung hòa điện tích và khi kết hợp với silicon sẽ tạo ra những lỗ trống cần được lấp đầy bởi electron.
+
+
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{solarpanel_hinhthanhdientich}
+\caption[Tấm pin năng lượng mặt trời]{Tấm pin năng lượng mặt trời}
+\label{fig:solarpanel_hinhthanhdientich}
+\end{figure}
+\end{center}
+
+
+Khi chất bán dẫn silicon tiếp xúc với năng lượng, các electron tự do ở điện cực N sẽ di chuyển sang để lấp đầy các lỗ trống bên điện cực P. Sau đó, các electron từ điện cực N và điện cực P sẽ cùng nhau tạo ra điện trường. Các tế bào năng lượng mặt trời sẽ trở thành một diode, cho phép electron di chuyển từ điện cực P đến điện cực N, không cho phép di chuyển ngược lại.
+
+Tất nhiên, để kích hoạt quá trình cần có năng lượng tiếp xúc với các tế bào silicon. Ánh sáng mặt trời bao gồm các hạt rất nhỏ gọi là photon được tỏa ra từ mặt trời, các hạt nhỏ năng lượng có thể tiếp xúc với các tế bào năng lượng mặt trờivà nới lỏng liên kết của các electron ở điện cực N. Sự di chuyển của các elentron tự do từ điện cực N tới điện cực P tạo ra dòng điện.
+
+
+
+
+
+\subsection*{Hiệu suất của pin mặt trời}
+Các công nghệ biến ánh sáng mặt trời thành điện hiện tại vẫn kém hiệu quả. Các tấm pin mặt trời chưa thể hấp thụ toàn bộ năng lượng của ánh sáng mặt trời. Nói chung, những tế bào năng lượng mặt trời tốt nhất hiện tại chỉ có thể chuyển 25\% năng lượng mà nó nhận được thành điện. Tại sao vậy? Thực tế là ánh sáng mặt trời, như tất cả các loại ánh sáng khác, bao gồm một quang phổ với các bước sóng khác nhau, mỗi bước sóng có một cường độ khác nhau. Có những bước sóng quá yếu không thể giải phóng các electron còn một số bước sóng lại quá mạnh với silicon.
+
+
+\subsection*{Tấm pin mặt trời được dùng cho đề tài}
+
+Pin năng lượng mặt trời Poly 5V /220 mA
+
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.6\textwidth]{solarpanel_real}
+\caption[Pin năng lượng mặt trời Poly 5V /220 mA]{Pin năng lượng mặt trời Poly 5V /220 mA}
+\label{fig:solarpanel_real}
+\end{figure}
+\end{center}
+
+
+Với kích thước: 100x80x2mm
+Nguồn đầu ra: 5V
+Dòng tối đa cung cấp được là 220mA
+
+
+
+
 
 \section{Kiến thức căn bản về ứng dụng web - di động và xây dựng Server}
 
