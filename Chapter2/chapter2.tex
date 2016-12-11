@@ -486,11 +486,15 @@ Chức năng các chân của module Sim800L
 \item[•]RING: báo cuộc gọi đến
 \item[•]GND: chân Mass, cấp 0v.
 \end{itemize}
+
+%/////////////////////////////////////////////////////////////////////////AT SIM 800L
+\newpage
 \subsection*{Một số tập lệnh AT của module Sim800L dùng trong đề tại luận văn}
 
-AT+CBC: trả về kết quả dung lượng pin hiện tại.
+
+ AT+CBC: trả về kết quả dung lượng pin hiện tại.
 \begin{table}[htp]
-\label{my-label}
+\label{table:at+cbc}
 \begin{tabular}{|l|l|}
 \hline
 Lệnh AT & AT+CBC \\ \hline
@@ -499,11 +503,177 @@ Kết quả  &
 &OK \\
 & \\
 & Với các thông số \\
-& 		<bcs>: \\
-& $           $ 0: Mạch không phải trạng thái đang sạc. 
+& \hspace{0.5cm} <bcs>: \\
+& \hspace{2cm} • 0: Mạch không phải trạng thái đang sạc. \\
+& \hspace{2cm} • 1: Mạch đang trong trạng thái sạc. \\
+& \hspace{2cm} • 2: Mạch đã sạc xong. \\
+& \hspace{0.5cm} <bcl>: giá trị \% dung lượng pin: 1 …100 \%. \\
+& \hspace{0.5cm} <voltage>: Giá trị nguồn đầu vào của module sim (mV) \\\hline
+\end{tabular}
+\caption[Tập lệnh AT+CBC: kết quả dung lượng pin hiện tại]{Tập lệnh AT+CBC}
+\end{table}
 
 
-  \\ \hline
+
+ AT+ CCLK trả về giá trị thời gian của module sim
+\begin{table}[htp]
+\label{table:at+cclk}
+\begin{tabular}{|l|l|}
+\hline
+Lệnh AT & AT+CCLK \\ \hline
+Kết quả  & 
++ CBC: <time> \\
+&OK \\
+& \\
+& Với các thông số \\
+& \hspace{0.5cm}<time>: là một dạng chuỗi String, chuỗi String này được format\\
+& \hspace{0.5cm} dưới dạng $yy/MM/dd, hh:mm:ss+-zz$ \\\hline
+\end{tabular}
+
+\caption[Tập lệnh AT+CCLK: trả về giá trị thời gian của module sim]{Tập lệnh AT+CCLK}
+\end{table}
+
+
+
+AT+CSTT cài đặt các thông số APN, USER NAME, PASSWORD cho Sim
+\begin{table}[htp]
+\label{table:at+cstt}
+\begin{tabular}{|l|l|}
+\hline
+Lệnh AT & AT+CSTT= <apn>,<user>,<password> \\ 
+& \\
+& \hspace{0.5cm}<apn> Địa điểm truy cập GPRS\\
+& \hspace{0.5cm}<user> Tên đăng nhập\\
+& \hspace{0.5cm}<pass> Mật khẩu đăng nhập\\
+& \\
+& 3 thông số trên được cung cấp theo từng nhà mạng của mỗi sim khi \\
+& được gắn vào module sim, mục đích dùng để xác nhận việc truy cập \\
+& GPRS vào các nhà mạng.\\
+& Ví dụ thông số của nhà mạng vinaphone: <m3-world>,<mms>,<mms> \\\hline
+Kết quả  &+ OK \\\hline
+\end{tabular}
+
+\caption[Tập lệnh AT+CSTT: cài đặt các thông số APN, USER NAME, PASSWORD cho Sim]{Tập lệnh AT+CSTT}
+\end{table}
+
+
+
+
+
+AT+CIFSR: Lấy thông tin địa chỉ IP của moduleSIM
+\begin{table}[htp]
+\label{table:AT+CIFS}
+\begin{tabular}{|l|l|}
+\hline
+Lệnh AT & AT+CIFSR \\ \hline
+Kết quả  & 
+<IP address> \\
+& \\
+& <IP address>: địa chỉ IP được gắn sau khi tham gia vào GPRS.\\\hline
+\end{tabular}
+
+\caption[Tập lệnh AT+CIFSR: lấy thông tin địa chỉ IP của moduleSIM]{Tập lệnh AT+CIFSR}
+\end{table}
+
+
+
+
+AT+CIPSTART: thiết lập kết nối TCP hoặc UDP
+\begin{table}[htp]
+\label{table:AT+CIPSTART}
+\begin{tabular}{|l|l|}
+\hline
+Lệnh AT & AT+CIPSTART=”TCP”,”192.168.0.1”,”80” \\ 
+& Kết nối tới địa chỉ 192.168.0.1 tại cổng 80 với giao thức TCP.\\
+& \\
+& AT+CIPSTART=”UDP”,”192.168.0.1”,”8888” \\ 
+& Kết nối tới địa chỉ 192.168.0.1 tại cổng 8888 với giao thức UDP.\\ \hline
+Kết quả  &+ OK \\
+& \\
+& CONNECT OK\\\hline
+\end{tabular}
+
+\caption[Tập lệnh AT+CIPSTART: thiết lập kết nối TCP hoặc UDP]{Tập lệnh AT+CIPSTART}
+\end{table}
+
+
+AT+CDNSGIP: được dùng để phân giải DNS của một tên miền, nó được sử dụng cho việc thiếp lập kết nối TCP/UCP thông qua tên miền bằng câu lệnh “AT+CIPSTART=<mode>,<domain name>, <port>”, và sau đó người dùng có thể gửi dữ liệu đến máy chủ thông qua câu lệnh AT+CIPSEND.
+\begin{table}[htp]
+\label{table:AT+CDNSGIP}
+\begin{tabular}{|l|l|}
+\hline
+Lệnh AT & AT+CDNSGIP=<domain name> \\ 
+& \\
+& <domain name>: Tên miền muốn phân giải DNS, \\
+
+& ví dụ như AT+CDNSGIP= “www.codingyourfuture.com “\\ \hline
+Kết quả  &OK \\
+&+ CDNSGIP:\\
+&1,”www.codingyourfuture.com”,”113.173.153.194”,”119.75.217.56”\\\hline
+\end{tabular}
+
+\caption[Tập lệnh AT+CDNSGIP: phân giải DNS tên miền]{Tập lệnh AT+CDNSGIP}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+AT+CIPSEND: gửi dữ liệu thông qua giao thức kết nối TCP/UCP
+\begin{table}[htp]
+\label{table:AT+CIPSEND}
+\begin{tabular}{|l|l|}
+\hline
+Lệnh AT & AT+CIPSEND=<length> \\ 
+& \\
+& <length>: độ dài dữ liệu muốn gửi.\\\hline
+Kết quả  & >  \\ \hline
+Lệnh AT & Dữ liệu muốn gửi đi \\ \hline
+Kết quả  & OK  \\ \hline
+\end{tabular}
+
+\caption[Tập lệnh AT+CIPSEND: gửi dữ liệu qua giao thức TCP/UCP]{Tập lệnh AT+CIPSEND}
+\end{table}
+
+
+
+
+
+
+
+\newpage
+
+\subsection*{Quá trình kết nối giao thức TCP tới máy chủ thông qua GPRS}
+Quá trình kết nối tới máy chủ thông qua giao thức TCP được thực hiện dựa trên mô hình máy trạng thái như sau:
+
+
+\begin{center}
+\begin{figure}[htpd]
+\centering    
+\includegraphics[width=0.9\textwidth]{sim800_status}
+\caption[Sơ đồ trạng thái GPRS cho đơn kết nối]{Sơ đồ trạng thái GPRS cho đơn kết nối}
+\label{fig:sim800_status}
+\end{figure}
+\end{center}
+
+Để gửi được dữ liệu đến máy chủ cần phải thiết lập được kết nối TCP từ module SIM800 đến máy chủ thông qua 11 trạng thái như Hình \ref{fig:sim800_status}. Đến trạng thái 7 (CONNET OK) chúng ta đã giữ được kết nối TCP tới máy chủ và tại trạng thái này dùng lệnh AT+CIPSEND để thực hiện việc gửi gói dữ liệu lên cho máy chủ.
+
+Gói dữ liệu được gửi theo phương thức GET, bên máy chủ phải hỗ trợ được phương thức GET này và định nghĩa rõ ràng các kiểu và số lượng dữ liệu gửi lên. 
+
+Dữ liệu sensor node gửi lên cho máy chủ gồm các dữ liệu sau:
+\begin{table}[]
+\centering
+\label{table:sensornode_api}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\begin{tabular}[c]{@{}l@{}}NODE\\ ID\end{tabular} & \begin{tabular}[c]{@{}l@{}}Giá trị CO\\ (ppm)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Giá trị \\ nhiệt độ \\ (Độ C)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Giá trị\\ độ bụi\\ (ppm)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Giá trị chất\\ lượng không \\ khí (ppm)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Giá trị dung\\ lượng pin (\%)\end{tabular} \\ \hline
 \end{tabular}
 \end{table}
 
@@ -520,6 +690,7 @@ Kết quả  &
 
 
 
+\newpage
 \subsection{Năng lượng mặt trời}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 
