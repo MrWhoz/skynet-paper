@@ -437,11 +437,90 @@ Chân Digital input sẽ được đưa tới chân Digital input của board ar
 
 
 \subsection{Mạch vi xử lý Arduino}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+\subsection*{Giới thiệu về Arduino Nano}
+Arduino là một board mạch vi xử lý, nhằm xây dựng các ứng dụng tương tác với nhau hoặc với môi trường được thuận lợi hơn. Phần cứng bao gồm một board mạch nguồn mở được thiết kế trên nền tảng vi xử lý AVR Atmel 8bit, hoặc ARM Atmel 32-bit. Những Model hiện tại được trang bị gồm 1 cổng giao tiếp USB, 6 chân đầu vào analog, 14 chân I/O kỹ thuật số tương thích với nhiều board mở rộng khác nhau. Đi cùng với nó là một môi trường phát triển tích hợp (IDE) chạy trên các máy tính cá nhân thông thường và cho phép người dùng viết các chương trình cho Aduino bằng ngôn ngữ C hoặc C++.
+
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.4\textwidth]{arduinonano}
+\caption[Mạch vi xử lý Arduino Nano]{Mạch vi xử lý Arduino Nano}
+\label{fig:arduinonano}
+\end{figure}
+\end{center}
+
+\newpage
+
+\begin{center}
+\begin{table}[]
+\centering
+\caption{Thông số của Vi xử lý Arduino}
+\label{table:thongsoarduino}
+\begin{tabular}{|l|l|}
+\hline
+Vi điều khiển                 & ATmega328 (họ 8bit)                           \\ \hline
+Điện áp hoạt động             & 5VDC                                          \\ \hline
+Tần số hoạt động              & 16 MHz                                        \\ \hline
+Dòng tiêu thụ                 & 30mA                                          \\ \hline
+Điện áp vào khuyên dùng       & 7-12 VDC                                      \\ \hline
+Điện áp vào giới hạn          & 6-20 VDC                                      \\ \hline
+Số chân Digital I/O           & 14 (6 chân PWM)                               \\ \hline
+Số chân Analog                & 8 (độ phân giải 10bit)                        \\ \hline
+Dòng,tối đa trên mỗi chân I/O & 40 mA                                         \\ \hline
+Dòng ra tối đa (5V)           & 500 mA                                        \\ \hline
+Dòng ra tối đa (3.3V)         & 50 mA                                         \\ \hline
+Bộ nhớ flash                  & 32 KB (ATmega328) với 2KB dùng bởi bootloader \\ \hline
+SRAM                          & 2 KB (ATmega328)                              \\ \hline
+EEPROM                        & 1 KB (ATmega328)                              \\ \hline
+Kích thước                    & 1.85cm x 4.3cm                                \\ \hline
+\end{tabular}
+\end{table}
+\end{center}
 
 
+\subsection*{Lập trình cho Arduino Nano}
+Arduino Nano sử dụng chương trình Arduino IDE để lập trình, và ngôn ngữ lập trình cho Arduino cũng tên là Arduino (được xây dựng trên ngôn ngữ C). 
 
+Arduino IDE là môi trường phát triển tích hợp (IDE) của Arduino là một ứng dụng cross-platform (nền tảng) được viết bằng Java, và từ IDE này sẽ được sử dụng cho ngôn ngữ lập trình xử lý (Processing programming language) và project Wiring. Nó được thiết kế để dành cho những người mới tập tành làm quen với lĩnh vực phát triển phần mềm. Nó bao gồm một chương trình code editor với các chức năng như đánh dấu cú pháp, tự động brace matching, và tự động canh lề, cũng như compile và upload chương trình lên board chỉ với 1 cú click chuột. Một chương trình hoặc code viết cho Arduino được gọi là một sketch.
 
+\newpage
+
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=1\textwidth]{arduinonano_ide}
+\caption[Môi trường phát triển của Arduino]{Môi trường phát triển của Arduino}
+\label{fig:arduinonano_ide}
+\end{figure}
+\end{center}
+
+Các chương trình Arduino được viết bằng C hoặc C++. Arduino IDE đi kèm với một thư viện phần mềm được gọi là "Wiring", từ project Wiring gốc, có thể giúp các thao tác input/output được dễ dàng hơn. Người dùng chỉ cần định nghĩa 2 hàm để tạo ra một chương trình vòng thực thi (cyclic executive) có thể chạy được:
+\begin{itemize}
+\item[•]Setup(): hàm này chạy mỗi khi khởi động một chương trình, dùng để thiết lập
+các cài đặt
+\item[•]Loop(): hàm này được gọi lặp lại cho đến khi tắt nguồn board mạch
+\end{itemize}
+
+	\begin{lstlisting}[caption=Đoạn code nháy đèn căn bản]
+// the setup function runs once
+void setup() {
+  // initialize digital pin 13 as an output.
+  pinMode(13, OUTPUT);
+}
+
+// the loop function runs forever
+void loop() {
+  // turn the LED on (HIGH is the voltage level)
+  digitalWrite(13, HIGH);   
+  // wait for a second
+  delay(1000);    
+  // turn the LED off by making the voltage LOW          
+  digitalWrite(13, LOW);    
+  // wait for a second
+  delay(1000);              
+}
+
+	\end{lstlisting}
 
 
 
