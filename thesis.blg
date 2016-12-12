@@ -8,10 +8,11 @@ A level-1 auxiliary file: Chapter3/chapter3.aux
 A level-1 auxiliary file: Chapter4/chapter4.aux
 A level-1 auxiliary file: Chapter5/chapter5.aux
 The style file: apalike.bst
+I found no \citation commands---while reading file thesis.aux
 Database file #1: References/references.bib
 I was expecting an "="---line 32 of file References/references.bib
  :    
  :    year = 1986 }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-(There was 1 error message)
+(There were 2 error messages)
