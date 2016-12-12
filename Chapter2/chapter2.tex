@@ -1063,4 +1063,88 @@ Vì sao lựa chọn Raspberry:
 • Hiệu suất đáp ứng nhu cầu làm server của đề tài yêu cầu với mức độ tiêu thụ năng lượng cực kì ít.
 
 \subsection{Framework Ionic}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+\subsection*{Giới thiệu về Ionic framework}
+Ionic là một framework được sử dụng để phát triển các ứng dụng di động dựa trên nền tảng công nghệ web HTML5 để tạo ra các ứng dụng lai hóa [ hybrid apps ] chạy trên các thiết bị di động khác nhau. Ứng dụng lai hóa ở đây được hiểu cơ bản là các ứng dụng chạy trên nền các trình duyệt được nhúng vào trong một ứng dụng được cài đặt và có thể giao tiếp, truy cập, điều khiển sử dụng các thiết bị phần cứng và hệ điều hành mobile.
+
+Hãy tưởng tượng Ionic như là một khung phát triển giao diện người dùng để xử lý tất cả các tương tác giao diện người dùng làm cho ứng dụng trở nên thuyết phục và dễ dàng sử dụng. Kiểu như “Bootstrap for Native”, tức là như các ứng dụng Native nhưng có sự hỗ bởi một loạt các thành phần giao diện, động và thiết kế đẹp.
+
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{ionic}
+\caption[Một số giao diện của Ionic ]{Một số giao diện của Ionic}
+\label{fig:ionic}
+\end{figure}
+\end{center}
+
+
+Bản chất Ionic là một khung phát triển HTML5, nó cần một vỏ bọc native như Cordova hay PhoneGap để có thể khởi động như một ứng dụng native. Ionic được hỗ trợ mạnh mẽ bởi Cordova. Việc cài đặt và khởi tạo một dự án Ionic rất dễ dàng thông qua giao diện dòng lệnh dựa trên Node.js
+
+
+\subsection*{Ưu điểm và nhược điểm của Ionic}
+
+\subsubsection*{Ưu điểm }
+\begin{itemize}
+\item[•] Dễ học, thời gian phát triển nhanh, có thể sử dụng các kỹ năng từ lập trình web.
+\item[•] Đa nền tảng.
+\item[•] Khả năng truy cập đến các tính năng của thiết bị và hệ điều hành như bluetooth, camera,..
+\item[•] Dễ dàng thiết kế giao diện cho các thiết bị có kích cỡ khác nhau
+\item[•] Việc sử dụng AngularJS làm core giúp phần xử lý UI linh động hơn so với javasript hay thư viện Jquery.
+\item[•] Việc sử dụng AngularJS làm core cũng mang lại lợi thế lớn so với các framework cho ứng dụng hybrid khác.
+\item[•] Ionic cung cấp đầy đủ các thành phần trong giao diện người dùng như Pull-to-Refresh, Infinite-loader, tabs, …
+
+\end{itemize}
+
+
+\subsubsection*{Nhược điểm }
+
+
+\begin{itemize}
+\item[•] Vẫn còn trong giai đoạn phát triển.
+\item[•] Hiệu năng vẫn chưa cao và ổn định.
+\item[•] Cộng đồng phát triển ứng dụng vẫn còn chưa đông.
+\end{itemize}
+
+\subsection{Framework AngularJS}
+
+
+
+Angular là một bộ Javascript Framework rất mạnh và thường được sử dụng để xây dựng project Single Page Application (SPA). Nó hoạt động dựa trên các thuộc tính mở rộng HTML (các atributes theo quy tắc của Angular). Đây là một Framework mã nguồn mở hoàn toàn miễn phí và được hàng ngàn các lập trình viên trên thế giới ưa chuộng và sử dụng.
+
+
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{angularjs}
+\caption[Angular JS kết hợp với ionic ]{Angular JS kết hợp với ionic}
+\label{fig:angularjs}
+\end{figure}
+\end{center}
+
+Ionic sử dụng AngularJS để cung cấp các cấu trúc ứng dụng, trong khi bản thân Ionic tập trung chính vào giao diện người dùng. Nói cách khác, chúng ta thấy được sự phối hợp ăn ý giữa sức mạnh của AngularJS và vẻ đẹp của Ionic UI.
+
+Ionic cung cấp một tập các Angular directives (nghĩa là các phần tử HTML tùy biến) để làm các thành phần của nó, tạo ra sự dễ dàng để sử dụng các tiện ích gọn để viết mã HTML. Ngoài các directives, Ionic còn sử dụng và thêm vào các thành phần khác như: Angular touch recognizers, view animation logic, HTML sanitation, và asynchronous communication.
+
+Việc xây dựng ứng dụng dựa trên AngularJS đòi hỏi mã nguồn phải có khả năng mở rộng cao để bổ sung các tính năng mới. Tuy nhiên với Ionic, người ta có thể tái sử dụng các chức năng trong ứng dụng trên các nền tảng khác nhau đồng thời vẫn có thể tùy chỉnh giao diện người dùng cho mỗi nền tảng riêng biệt. Các thành phần trong Ionic như danh sách, slide,.. chính là các directive(các thuộc tính của thẻ HTML dùng trong Angular) của AngularJS. Đó là lí do khiến cho Ionic và AngularJS kết hợp rất tốt với nhau.
+
+Mặc dù, Ionic có thành phần giao diện sử dụng Angular, nhưng developers vẫn có thể sử dụng và hỗ trợ các framework khác như Knockout hay EmberJS.
+
+
+
+\subsection{Framework Cordova}
+
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{cordova}
+\caption[Apache Cordova ]{Apache Cordova}
+\label{fig:cordova}
+\end{figure}
+\end{center}
+
+Apache Cordova là một bộ khung để xây dựng ứng dụng di động sử dụng HTML, CSS và Javascript. Apache Cordova bao gồm một tập hợp các API thiết bị cho phép người lập trình di động truy cập, sử dụng các chức năng native của thiết bị như là camera hay cảm biến gia tốc bằng Javascript. Kết hợp với một bộ khung phát triển giao diện như jQuery Mobile or Dojo Mobile hoặc Ionic, cho phép ứng dụng di động có thể được phát triển chỉ dựa trên HTML, CSS và Javascript.
+
+Khi sử dụng Cordova API, một ứng dụng có thể được xây dựng mà không phải sử dụng bất kỳ một đoạn mã native code nào. Thay vào đó, công nghệ web sẽ được sử dụng, và chúng sẽ được tổ chức trên chính ứng dụng đấy chứ không cần thông qua một server nào.
+
+Cordova cung cấp một tập hợp các thư viện Javascript đã được chuẩn hóa để có thể sử dụng. Cordova hiện có thể sử dụng cho các nền tảng như iOS, Android, Blackberry, Windows Phone, Palm WebOS, Bada và Symbian.
+

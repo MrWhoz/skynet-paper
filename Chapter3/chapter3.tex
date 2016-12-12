@@ -43,6 +43,88 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 	}
 	\end{lstlisting}
 \subsection{Xây dựng Web Server}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+\subsection*{Chức năng}
+
+\subsubsection*{Đối với người dùng:}
+Hiện thị các node cảm biến đang hoạt động trên google map, cung cấp các thông tin liên quan đến node( vị trí địa lí, tình trạng hoạt động, biểu đồ theo thời gian thực của các dữ liệu mà node thu thập được), giao tiếp với người quản lý thông qua gmail.
+\subsubsection*{Đối với người quản trị:}
+Bao gồm các chức năng tương tự như người dùng và thêm việc quản lý chỉnh sửa thông tin của các node: thêm, xóa, cập nhật, thay đổi…
+
+\subsection*{Biểu đồ High level Usecase }
+
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.7\textwidth]{usecase_diagram}
+\caption[Biểu đồ High level Usecase]{Biểu đồ High level Usecase }
+\label{fig:usecase_diagram}
+\end{figure}
+\end{center}
+
+Mô tả giản đồ Usecase
+
+\begin{table}[]
+\centering
+\caption{Bảng mô tả giản đồ Usecase}
+\label{my-label}
+\begin{tabular}{|l|l|l|}
+\hline
+STT & Tên            & Miêu tả                                                                                            \\ \hline
+1   & View map       & Người dùng thấy được các node đang chạy trên google maps                                           \\ \hline
+2   & View Node Info & Thông tin tương ứng của Node( Lat, Lng, Phone)                                                     \\ \hline
+3   & View Graph     & \begin{tabular}[c]{@{}l@{}}Đồ thị hoạt động của Node(các số liệu đo được theo\\ ngày)\end{tabular} \\ \hline
+4   & Contact        & Phản hồi ý kiến người dùng qua Gmail                                                               \\ \hline
+5   & Add Node       & Thêm mới Node vào hoạt động                                                                        \\ \hline
+6   & Update Node    & Thay đổi thông tin của Node( Lat, Lng, Phone)                                                      \\ \hline
+7   & Replace Node   & Thay đổi 1 Node xảy ra sự cố bằng 1 Node khác                                                      \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+\subsection*{Hiện thực giao diện}
+
+\subsection*{Sử dụng framework express của Nodejs và HTML để xây dựng frontend.}
+
+
+
+
+-	Phần này chứa các nút menu chức năng cùng với google map để theo dõi vị trí hoạt động của các cảm biến
+
+
+
+
+-	Là nơi hiện thị biểu đồ của các thông số cũng như thông tin tương ứng của các cảm biến.
+
+
+-	Tương tác giữa người dùng với người quản lý server. Nội dung được gửi thông qua gmail.
+
+
+
+-	Đăng nhập quản lý trang của admin( cho phép add, remove, replace, config các node cảm biến)
+
+
+
+-	Hiện thị bảng tin(Cho phép thực hiện các chức năng chỉnh sửa trực tiếp trên map) cũng như tên người dùng sau khi đăng nhập.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Ứng dụng thiết bị di động}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+
+\subsection*{Chức năng}
+Hiện thị thông tin các node đang hoạt động qua màn hình chính, kết nối với web browser tạo sự thuận tiện cho việc theo dõi, hiện thị đồ thị(2 kiểu đồ thị là line chart và bar chart).
+
+\subsection*{Biểu đồ High level Usecase }
