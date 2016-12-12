@@ -65,7 +65,7 @@ Mô tả giản đồ Usecase
 
 \begin{table}[]
 \centering
-\caption{Bảng mô tả giản đồ Usecase}
+\caption{Bảng mô tả giản đồ Usecase của Web Server}
 \label{my-label}
 \begin{tabular}{|l|l|l|}
 \hline
@@ -86,37 +86,54 @@ STT & Tên            & Miêu tả                                              
 
 \subsection*{Hiện thực giao diện}
 
-\subsection*{Sử dụng framework express của Nodejs và HTML để xây dựng frontend.}
+Sử dụng framework express của Nodejs và HTML để xây dựng frontend
+
+
+\subsubsection*{Giao diện chính của Web Server}
+Phần này chứa các nút menu chức năng cùng với google map để theo dõi vị trí hoạt động của các cảm biến.
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=1\textwidth]{webserver}
+\caption[Giao diện chính của Web Server]{Giao diện chính của Web Server}
+\label{fig:webserver}
+\end{figure}
+\end{center}
+
+\subsubsection*{Giao diện đồ thị dữ liệu}
+Là nơi hiện thị biểu đồ của các thông số cũng như thông tin tương ứng của các cảm biến.
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=1\textwidth]{web_graph}
+\caption[Giao diện đồ thị dữ liệu]{Giao diện đồ thị dữ liệu}
+\label{fig:web_graph}
+\end{figure}
+\end{center}
 
 
 
+\subsubsection*{Giao diện nhận feedback từ người dùng qua email}
+Tương tác giữa người dùng với người quản lý server. Nội dung được gửi thông qua gmail.
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=1\textwidth]{web_email}
+\caption[Giao diện nhận feedback người dùng]{Giao diện nhận feedback người dùng}
+\label{fig:web_email}
+\end{figure}
+\end{center}
 
--	Phần này chứa các nút menu chức năng cùng với google map để theo dõi vị trí hoạt động của các cảm biến
-
-
-
-
--	Là nơi hiện thị biểu đồ của các thông số cũng như thông tin tương ứng của các cảm biến.
-
-
--	Tương tác giữa người dùng với người quản lý server. Nội dung được gửi thông qua gmail.
-
-
-
--	Đăng nhập quản lý trang của admin( cho phép add, remove, replace, config các node cảm biến)
-
-
-
--	Hiện thị bảng tin(Cho phép thực hiện các chức năng chỉnh sửa trực tiếp trên map) cũng như tên người dùng sau khi đăng nhập.
-
-
-
-
-
-
-
-
-
+\subsubsection*{Giao diện dành cho người quản lý}
+Khu vực này dành cho người quản lý truy cập nhầm mục đích chỉnh sửa, thay thế các node cảm biến.
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=1\textwidth]{web_nodeinfo}
+\caption[Giao diện quản lý các node cảm biến]{Giao diện quản lý các node cảm biến}
+\label{fig:web_nodeinfo}
+\end{figure}
+\end{center}
 
 
 
@@ -124,7 +141,62 @@ STT & Tên            & Miêu tả                                              
 
 \section{Ứng dụng thiết bị di động}
 
-\subsection*{Chức năng}
-Hiện thị thông tin các node đang hoạt động qua màn hình chính, kết nối với web browser tạo sự thuận tiện cho việc theo dõi, hiện thị đồ thị(2 kiểu đồ thị là line chart và bar chart).
+\subsection{Chức năng}
+Hiện thị thông tin các node cảm biến đang hoạt động qua màn hình chính, và biểu đồ dữ liệu của từng node cảm biến theo từng ngày, thêm sự kết nối với web browser tạo sự thuận tiện cho việc theo dõi, hiện thị đồ thị (2 kiểu đồ thị là line chart và bar chart).
 
-\subsection*{Biểu đồ High level Usecase }
+\subsection{Biểu đồ High level Usecase}
+
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=1\textwidth]{app_usecase}
+\caption[Giản đồ High level Usecase của ứng dụng di động]{Giản đồ High level Usecase của ứng dụng di động}
+\label{fig:app_usecase}
+\end{figure}
+\end{center}
+
+
+
+Mô tả Usecase
+
+\begin{table}[]
+\centering
+\caption{Bảng mô tả giản đồ Usecase của ứng dụng di động}
+\label{table:usecase_mobile}
+\begin{tabular}{|l|l|l|}
+\hline
+STT & Tên Use-case     & Mô tả                                                            \\ \hline
+1   & View Node Info   & Thông tin của Node( Lat, lng, Phone, ID)                         \\ \hline
+2   & View Graph       & 2 dạng đồ thị theo ngày (line chart, bar chart của các thông số) \\ \hline
+3   & Link web browser & Liên kết tới web browser                                         \\ \hline
+4   & View Map         & Hiện thị Google Map và vị trí các Node                           \\ \hline
+5   & Other Functions  & Các chức năng của web browser                                    \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{Hiện thực giao diện và chức năng}
+\subsubsection*{Giao diện chính ứng dụng di động}
+Tại giao diện chính của ứng dụng di động người dùng có thể xem được danh sách thông tin chi tiết của các node cảm biến có trong hệ thống.
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.4\textwidth]{app_main}
+\caption[Giao diện chính ứng dụng di động]{Giao diện chính ứng dụng di động}
+\label{fig:app_main}
+\end{figure}
+\end{center}
+
+
+\subsubsection*{Giao diện xem dữ liệu trên ứng dụng di động}
+Giao diện này cho phép người dùng theo dõi được dữ liệu của từng node cảm biến theo 2 loại biểu đồ như Hình \ref{fig:app_graph} thể hiện.
+\begin{center}
+\begin{figure}[htp]
+\centering    
+\includegraphics[width=0.4\textwidth]{app_graph}
+\caption[Giao diện xem dữ liệu trên ứng dụng di động]{Giao diện xem dữ liệu trên ứng dụng di động}
+\label{fig:app_graph}
+\end{figure}
+\end{center}
+
+
