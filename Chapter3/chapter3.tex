@@ -9,7 +9,7 @@
 
 \section{Thiết kế hệ thống}
 \subsection{Kiến trúc mô hình hệ thống}
-
+\label{sec: struc}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 \subsubsection*{Cách thức tương tác cập nhật dữ liệu}
@@ -43,6 +43,30 @@ Một điểm mạnh ở mô hình này nữa là có thể phát triển nhiề
 	\caption[Mô hình tương tác cập nhật nhiều Server]{Mô hình tương tác cập nhật nhiều Server}
 	\label{fig: multiserver}
 \end{figure}
+\subsection{Thiết kế API}
+\label{sec: api}
+Mục tiêu đề tài không chỉ thu thập và phân tích mà còn chia sẻ dữ liệu. Để làm được điều đó thì cần phải có API cung cấp cho những nhà phát triển thứ 3, có thể dùng API được cung cấp để sử dụng dữ liệu để phát triển. Bởi vì vậy hệ thống có xây dựng hệ thống API mở.
+
+\subsubsection*{API List}
+Ở bảng \ref{table: apilist}, hệ thống cung cấp các API về quản lý và truy vấn dữ liệu của các sensor node. Sử dụng hai method POST và GET để gửi request tới Server. 
+
+\begin{table}[H]
+	\centering
+	\caption{Bảng API tương tác với dữ liệu về các node}
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		Method & URL            & Miêu tả         & Yêu cầu xác thực người dùng        \\ \hline
+		POST   & /node/initnew       & Khởi tạo node mới                & Có           \\ \hline
+		POST   & /node/updatenode     & Cập nhật thông tin node & Có \\ \hline
+		POST   & /node/replacenode       & Thay thế node  & Có       \\ \hline
+		GET   & /node/pushdata & Push dữ liệu               &         Không                \\ \hline
+		GET   & /node/getdata    & Get dữ liệu thu thập của node         &  Không      \\ \hline
+		GET   & /node/getinfo   & Get thông tin của node & Không  \\ \hline
+	\end{tabular}
+	\label{table: apilist}
+\end{table}
+
+
 \subsection{Các ràng buộc của hệ thống}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 \subsection{Mô hình ứng dụng trình bày dữ liệu}
@@ -56,13 +80,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 \subsection{Cấu trúc tổ chức tập tin}
 \subsubsection*{Các thư mục và chức năng}
-\begin{figure}[H]
-	\centering    
-	\includegraphics[width=1.0\textwidth]{tree}
-	\caption[Mô hình hoạt động Nodejs]{Mô hình hoạt động Nodejs}
-	\label{fig: tree}
-\end{figure}
-Như hình \ref{fig: tree}, chúng ta có những thư mục được làm việc trực tiếp:
+Chúng ta có những thư mục được làm việc trực tiếp:
 
 • libs: chứa các hàm function hỗ trợ về xác thực và log.
 
@@ -159,39 +177,130 @@ app.use('/auth', auth);
 
 %% Thiết kế API
 
-\subsection{Thiết kế API}
-
-Mục tiêu đề tài không chỉ thu thập và phân tích mà còn chia sẻ dữ liệu. Để làm được điều đó thì cần phải có API cung cấp cho những nhà phát triển thứ 3, có thể dùng API được cung cấp để sử dụng dữ liệu để phát triển. Bởi vì vậy hệ thống có xây dựng hệ thống API mở.
-
-\subsubsection*{API List}
-Ở bảng \ref{table: apilist}
-
-\begin{table}[H]
-	\centering
-	\caption{Bảng API tương tác với dữ liệu về các node}
-	\begin{tabular}{|l|l|l|l|}
-		\hline
-		Method & URL            & Miêu tả         & Yêu cầu xác thực người dùng        \\ \hline
-		POST   & /node/initnew       & Khởi tạo node mới                & Có           \\ \hline
-		POST   & /node/updatenode     & Cập nhật thông tin node & Có \\ \hline
-		POST   & /node/replacenode       & Thay thế node  & Có       \\ \hline
-		GET   & /node/pushdata & Push dữ liệu               &         Không                \\ \hline
-		GET   & /node/getdata    & Get dữ liệu thu thập của node         &  Không      \\ \hline
-		GET   & /node/getinfo   & Get thông tin của node & Không  \\ \hline
-	\end{tabular}
-	\label{table: apilist}
-\end{table}
-
-/node/initnew
-/node/pushdata
-/node/updatenode
-/node/replacenode
-/node/getdata
-/node/getinfo
 
 
+\subsection{Xây dựng Database}
+% TODO: node cảm biến hay sensor node?
+Hệ quản lý cơ sở dữ liệu được sử dụng tại hệ thống là RethinkDB như mô hình thiết kế hệ thống tại mục \ref{sec: struc} . Cơ sở dữ liệu được chia làm 3 bảng: nodeList, nodeData và user được miêu tả tại các hình \ref{fig: dbnode} và\ref{fig: dbuser}
 
-\subsection{Hiện thực Server}
+Các dữ liệu về node được chia làm hai bảng:
+
+• nodeList: chứa các thông tin về các sensor node, trong đó data\_id đóng vai trò tương tự như foreign key của bảng nodeData để có thể truy xuất dữ liệu.
+
+• nodeData: tập trung những dữ liệu thu thập được từ các sensor node theo thời gian thực. 
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=1.0\textwidth]{dbnode}
+	\caption[Mô hình cấu trúc dữ liệu của Sensor Node]{Mô hình cấu trúc dữ liệu của Sensor Node}
+	\label{fig: dbnode}
+\end{figure}
+Về phía user, chỉ có một bảng quản lý người dùng bao gồm các thông tin cơ bản để xác thực và quyền thay đổi chỉnh sửa dữ liệu sensor node.
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=0.45\textwidth]{dbuser}
+	\caption[Mô hình cấu trúc dữ liệu của User]{Mô hình cấu trúc dữ liệu của User}
+	\label{fig: dbuser}
+\end{figure}
+
+Vì mục hệ thống phát triển dừng ở mức xây dựng và thiết kế hệ thống thu thập và truy vấn dữ liệu từ các sensor node nên chưa có bảng phân quyền sở hữu giữa người dùng và sensor node.
+\subsection{Hiện thực API}
+Dựa trên mô hình thiết kế API tại \ref{sec: api}, API được hiện thực và phát triển.
+
+
+\subsubsection*{API đăng ký và xác thực người dùng}
+Sử dụng session để quả
+\subsubsection*{API cung cấp và quản lý sensor node}
+Các API được miêu tả tại bảng \ref{table: apilist}, các request và respond được miêu tả chi tiết:
+
+• API thiết lập và cấu hình các sensor node: initnew, updatenode và replace node yêu cầu phải có đăng nhập từ API xác thực người dùng để giữ session và sau đó mới có thể sử dụng. Các API này có cấu trúc tương tự nhau và được mô tả:
+\begin{lstlisting}
+POST: /node/initnew
+data: {node\_id,lat,lng,phone,status}
+======================
+RESPOND:
+case Success:
+	{
+		code: 1,
+		message: 'Add node successful'
+	}
+case Duplicated:
+	{
+		code: 0,
+		message: 'Node duplicated'
+	}
+case Failure:
+	{
+		code: 0,
+		message: 'Add node failure'
+	}
+case Not authenticated:
+	{
+		code: -1,
+		message: 'You are not authenticated'
+	}
+\end{lstlisting}
+
+• API get thông tin và dữ liệu các sensor node: sử dụng phương thức GET để truy xuất dữ liệu về thông tin sensor node và dữ liệu các cảm biến. Hệ thống được thiết kế mang tính mở và chia sẻ nên không yêu cầu đăng nhập để truy xuất dữ liệu. Các thông tin đặc tả chi tiết API:
+\begin{lstlisting}
+GET:	/node/getinfo?*query
+Ex: 	/node/getinfo?id=1&status=0
+		/node/getinfo?list=1&status=1
+Query:
++ id=*node ID* to get by ID
++ phone: *node phonenumber* to get by phone number
++ list=1 to get list
++ status=1 to get active node info recode, 0 to get all nodes history, showing disable nodes
+======================
+RESPOND:
+data:
+- single node:{node_id,location:{lat,lng},phone,,time,data_id,status}
+- list: array of {node_id,location:{lat,lng},phone,time,data_id,status}
+\end{lstlisting}
+
+• API push dữ liệu từ sensor node: cũng tương tự như API get dữ liệu, API push dữ liệu sử dụng method GET thay cho POST để hỗ trợ dễ dàng trong việc thiết lập các thiết bị IoT đóng góp dữ liệu. Lượng dữ liệu của các sensor node không quá lớn, chỉ bao gồm những trường sensor ID và node ID nên có thể tích hợp vào thanh header của request.
+
+\begin{lstlisting}
+GET: 	/node/pushdata?*query
+Ex: 	/node/pushdata?node_id=1&s1=22&s2=33&s3=44&s4=55&s5=66
+Query:
++ node_id: node ID
++ s1,s2,s4,s5: value of each sensor
+======================
+RESPOND:
+case Success:
+	{
+		code: 1,
+		message: 'Add node data successful'
+	}
+case Failure:	
+	{
+		code: 0,
+		message: 'Add node data failure'
+	}
+\end{lstlisting}
+Giao thức được lựa chọn sử dụng trong việc push data là giao thức HTTP mà không phải các giao thức thuần để phát triển IoT như MQTT hay CoAp vì tính phổ biến và dễ thiết lập sử dụng. Chỉ cần thiết lập chuỗi URL có đính kèm thông tin là có thể hòa nhập với hệ thống mà không cần thiết lập gì thêm, có thể ví như là "plug and play" vì quá đơn giản. Bù lại, so với các giao thức tối ưu dung lượng gói tin cho phát triển IoT như MQTT, gói tin gửi qua HTTP có dung lượng nhiều hơn đáng kể nhưng với tần số hoạt động truyền dữ liệu của đề tài thì vẫn có thể chấp nhận được và không tạo ra sự khác biệt lớn khi hoạt động.
+\subsubsection*{Cung cấp API log}
+
+Để hỗ trợ bên nhà phát triển thứ ba ứng dụng API tốt hơn, hệ thống có cung cấp các thông tin hoạt động của server, các request và respond cũng như các dữ liệu được truy vấn. Khi truy cập vào đường dẫn /log/, chúng ta sẽ có những file log tương ứng với các ngày như hình \ref{fig: log} :
+
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=1.0\textwidth]{log}
+	\caption[Hiển thị các file log]{Hiển thị các file log}
+	\label{fig: log}
+\end{figure}
+
+Ví dụ cụ thể của một đoạn log:
+\begin{lstlisting}
+{"level":"info","message":"IP:123.151.42.61 GET /route","timestamp":"10:48:56"}
+{"level":"info","message":"IP:14.161.14.94 GET /static route","timestamp":"10:49:22"}
+{"level":"info","message":"IP:14.161.14.94 GET /graph route","timestamp":"10:49:27"}
+{"level":"info","message":"IP:14.161.14.94 GET /node/getinfo: get list node info - number of nodes 12","timestamp":"10:49:27"}
+{"level":"info","message":"IP:14.161.14.94 GET /node/getinfo: get node info by id:9","timestamp":"10:49:29",{"data_id":"106c59fe-753d-4a76-8418-88fd0df68d0c","id":"87b7f859-8c1e-4608-9645-5105ebb38e9b", "location":{"lat":10.91085286140159,"lng":106.99790954589844}, "node_id":"9","phone":"0123456899","status":1,"time":"2016-12-06T02:08:57.943Z"}}
+{"level":"info","message":"IP:14.161.14.94 GET /node/getdata: Node data ID 9 number of records:  120","timestamp":"10:49:29"}
+\end{lstlisting}
+
+Các thông tin được thể hiện trong file log đủ thông tin để cho phép nhà phát triển theo dõi và áp dụng trong việc hiện thực sản phẩm.
 \subsection{Xây dựng Web Server}
 \subsection*{Chức năng}
 
@@ -213,7 +322,7 @@ Bao gồm các chức năng tương tự như người dùng và thêm việc qu
 
 Mô tả giản đồ Usecase
 
-\begin{table}[]
+\begin{table}[H]
 \centering
 \caption{Bảng mô tả giản đồ Usecase của Web Server}
 \label{my-label}
