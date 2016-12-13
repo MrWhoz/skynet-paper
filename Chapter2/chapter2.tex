@@ -13,7 +13,7 @@
 
 %\section[Short title]{Reasonably long section title}
 \section{Giới thiệu về Internet of Things và các ứng dụng giám sát}
-\subsection{Internet of Things (IoT)}
+\subsection{Internet of Things (IoT)}\label{sec:xuhuongiot}
 Với sự phát triển nhanh chóng của công nghê máy tính hiện nay, những công nghệ cao đã đang và ngày càng được ứng dụng trong nhiều lĩnh vực của cuộc sống con người. IoT là mạng lưới của các đối tượng vật lý, các thiết bị, các phương tiện và các đối tượng này được nhúng với các thiết bị điện tử, cảm biến, phần mềm điều khiển, và nó có khả năng trao đổi dữ liệu và thao tác với nhau. IoT cho phép các đối tượng được lắng nghe và điều khiển từ xa trên cơ sở hạ tầng mạng hiện có, các hệ thống máy tính có thể thu thập dữ liệu và điều khiển các thiết bị đối tượng một cách hiệu quả, chính xác và lợi ích kinh tế nhất có thể. 
 \begin{figure}[htbp!] 
 \centering    
@@ -162,7 +162,7 @@ Công nghệ thiết bị đeo cũng sẽ biến đổi hoàn toàn lĩnh vực 
 
 
 
-\section{Những yếu tố ảnh hưởng môi trường từ khí thải phương tiện giao thông}
+\section{Những yếu tố ảnh hưởng môi trường từ khí thải phương tiện giao thông}\label{sec:yeuto_khithai}
 Để hình dung được những yếu tố ảnh hưởng môi trường từ khí thải xe máy và ô tô thì chúng ta cần biết được quá trình hoạt động của xe máy và ô tô, từ đó chúng ta sẽ biết được những loại khí thải nào mà xe máy và ô tô sẽ thải ra môi trường. Qua quá trình tìm hiểu và đọc thông tin tài liệu trên mạng khí thải của xe máy và ô tô tuỳ thuộc chủ yếu vào chất lượng đốt cháy hỗn hợp xăng và không khí bên trong buồng đốt (combustion chamber) của động cơ, cũng như nồng độ các chất ô nhiễm trong khí xả phụ thuộc vào đặc điểm động cơ cũng như các thông số điều chỉnh, vận hành.
 
 Động cơ mới và được điều chỉnh đúng cho phản ứng cháy hoàn chỉnh (complete combustion) hay phản ứng cháy thừa oxy:
@@ -251,188 +251,6 @@ Từ những cơ sơ lý thuyết trên cho chúng ta biết được những y�
 
 
 \subsection{Các loại sensor}
-%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\GP2\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
-\subsection*{Cảm biến bụi GP2} 
-Cảm biến bụi GP2 là một bộ cảm biến chất lượng không khí quang học, được thiết kế đo những hạt bụi. Cám biến được thiết kế một điốt phát hồng ngoại và một photostransistor được sắp xếp thành đường chéo thiết bị này, cho phép nó phát hiện ánh sáng phản xạ của bụi trong không khí.  Nó đặc biệt hiệu quả trong việc phát hiện các hạt rất mịn như khói thuốc lá, và thường được sử dụng trong các hệ thống lọc không khí.
-
-Cảm biến bụi GP2 tiêu tốn dòng rất ít (20 mA cao nhất, 11mA chế độ chạy thường), có thể hỗ trợ nguồn cung cấp lên tới 7VDC. Tín hiệu đầu ra của cảm biến là dạng tín hiệu tương tự dùng để đo mật độ bụi, với độ nhạy $0.5V/0.1mg/{m}^{3}$.
-
-\begin{center}
-\begin{figure}[htp]
-\centering  
-\includegraphics[width=0.4\textwidth]{gp2}
-\caption[Cảm biến bụi GP2 ]{Cảm biến bụi GP2}
-\label{fig:gp2}
-\end{figure}
-\end{center}
-
-
-Thông số kỹ thuật:
-\begin{itemize}
-\item[•]Nguồn hoạt động: 5VDC
-\item[•]Dòng tiêu thụ: 10mA
-\item[•]Ngõ ra analog
-\item[•]Nhiệt độ hoạt động: $-40^{o}$ $-$ $85 ^{o}$ C
-\end{itemize}
-
-Sơ đồ kết nối cảm biến bụi GP2 với Arduino
-
-Theo hướng dẫn của tài liệu kỹ thuật, nó có tất cả gồm 6 chân đầu ra để kết nối tới thiết bị. Để có thể cảm biến bụi GP2 hoạt động với vi xử lý Arduino cần kết nối như sơ đồ luận lý sau:
-\begin{center}
-\begin{figure}[htp]
-\centering    
-\includegraphics[width=0.7\textwidth]{sodogp2}
-\caption[Sơ đồ GP2 kết nối với Arduino ]{Sơ đồ GP2 kết nối với Arduino}
-\label{fig:sodogp2}
-\end{figure}
-\end{center}
-
-
-
-
-
-
-%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	MQ135	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
-\newpage
-\subsection*{Cảm biến chất lượng không khí MQ135} 
-Cảm biến chất lượng không khí MQ135 thường được dùng trong các thiết bị kiểm tra chất lượng không khí bên trong cao ốc, văn phòng, thích hợp để phát hiện khí NH3, Nox, Ancol, Benzen, khói và khí CO2.Cám biến này với độ nhạy cao và thời gian đáp ứng nhanh. Tín hiệu ngõ ra dạng analog và digital. Cảm biến này có thể hoạt động ở nhiệt độ từ khoảng: $-10^{o}$C đến $50^{o}$C và tiêu thụ dòng khoảng 300mA tại 5V.
-
-\begin{center}
-\begin{figure}[htp]
-\centering    
-\includegraphics[width=0.7\textwidth]{mq135}
-\caption[Cảm biến MQ135]{Cảm biến MQ135}
-\label{fig:mq135}
-\end{figure}
-\end{center}
-
-Thông số kỹ thuật:
-\begin{itemize}
-\item[•]Điện áp cung cấp: <=24 VDC
-\item[•]Điện áp heater: 5V AC/DC
-\item[•]Sử dụng chip so sánh LM393c.
-\item[•]Hai tín hiệu đầu ra (digital và analog)
-\item[•]Tín hiệu analog từ 0 ~ 5V.
-\item[•]Dải phát hiện từ 10 đến 1000ppm
-\end{itemize}
-\begin{center}
-\begin{figure}[htp]
-\centering    
-\includegraphics[width=0.7\textwidth]{mq135_mqh1}
-\caption[Giản đồ chỉ sự biến đổi của Rs/Ro và giá trị ppm của MQ135]{Giản đồ chỉ sự biến đổi của Rs/Ro và giá trị ppm của MQ135}
-\label{fig:mq135_mqh1}
-\end{figure}
-\end{center}
-\begin{center}
-\begin{figure}[htp]
-\centering    
-\includegraphics[width=0.7\textwidth]{mq135_mqh2}
-\caption[Giản đồ chỉ sự biến đổi của Rs/Ro đối với nhiệt độ, độ ẩm]{Giản đồ chỉ sự biến đổi của Rs/Ro đối với nhiệt độ, độ ẩm}
-\label{fig:mq135_mqh2}
-\end{figure}
-\end{center}
-
-Giá trị chất lượng không khí(ppm) được xác định theo biểu đồ Hình \ref{fig:mq135_mqh1} giá trị này thay đổi theo sự biến đổi của giá trị Rs/Ro, theo Hình \ref{fig:mq135_mqh2} thì giá trị Rs/Ro bị ảnh hưởng bởi nhiệt độ và độ ẩm.
-
-Để xác định được giá trị Rs/Ro từ ngõ ra analog của mạch cảm biến MQ-135 ta có công thức như sau:
-\begin{center}
-$\displaystyle \frac{R_{S}}{R_{L}} = \frac{V_{C}-V_{RL}}{V_{RL}}$
-\end{center}
-
-Giá trị Rs/Ro này được vi xử lý tính toán dựa trên đầu ra analog của cảm biến MQ-135 và được đưa vào thư viện mq135.h để có thể lấy được giá trị chất lượng không khí ppm theo sự thay đổi của nhiệt độ và độ ẩm của môi trường thực tế.
-
-Thư viện mq135.h cung cấp cho chúng ta các hàm toán học đã được nhà sản xuất tính toán sẵn để có thể lấy được giá trị chất lượng không khí ppm dựa vào thay đổi của môi trường nhiệt độ và độ ẩm.
-
-
-
-%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	MQ07	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
-\newpage
-\subsection*{Cảm biến chất lượng không khí MQ07} 
-Cảm biến khí CO MQ-7 có thể pháp hiện khí CO tập trung ở những nơi khác nhau từ 10 đến 1000ppm. Cám biến này với độ nhạy cao và thời gian đáp ứng nhanh. Tín hiệu ngõ ra dạng analog và digital. Cảm biến này có thể hoạt động ở nhiệt độ từ khoảng: -10C đến 50C và tiêu thụ dòng khoảng 250mA tại 5V.
-\begin{center}
-\begin{figure}[htp]
-\centering    
-\includegraphics[width=0.7\textwidth]{mq07}
-\caption[Cảm biến MQ07]{Cảm biến MQ07}
-\label{fig:mq07}
-\end{figure}
-\end{center}
-
-Thông số kỹ thuật:
-\begin{itemize}
-\item[•]Điện áp cung cấp: 3 ~ 5VDC.
-\item[•]Sử dụng chip so sánh LM393 và MQ-7.
-\item[•]Hai tín hiệu đầu ra (digital và analog)
-\item[•]Tín hiệu analog từ 0 ~ 5V.
-\item[•]Dải phát hiện từ 10 đến 1000ppm
-\item[•]Kích thước: 33 x 20 x 16mm.
-\end{itemize}
-\begin{center}
-\begin{figure}[htp]
-\centering    
-\includegraphics[width=0.7\textwidth]{mq07_mqh1}
-\caption[Giản đồ chỉ sự biến đổi của Rs/Ro và giá trị ppm của MQ07]{Giản đồ chỉ sự biến đổi của Rs/Ro và giá trị ppm của MQ07}
-\label{fig:mq07_mqh1}
-\end{figure}
-\end{center}
-\begin{center}
-\begin{figure}[htp]
-\centering    
-\includegraphics[width=0.7\textwidth]{mq07_mqh2}
-\caption[Giản đồ chỉ sự biến đổi của Rs/Ro đối với nhiệt độ, độ ẩm]{Giản đồ chỉ sự biến đổi của Rs/Ro đối với nhiệt độ, độ ẩm}
-\label{fig:mq07_mqh2}
-\end{figure}
-\end{center}
-
-Giá trị chất lượng không khí(ppm) được xác định theo biểu đồ Hình \ref{fig:mq07_mqh1} giá trị này thay đổi theo sự biến đổi của giá trị Rs/Ro, theo Hình \ref{fig:mq07_mqh2} thì giá trị Rs/Ro bị ảnh hưởng bởi nhiệt độ và độ ẩm.
-
-Để xác định được giá trị Rs/Ro từ ngõ ra analog của mạch cảm biến MQ-7 ta có công thức như sau:
-\begin{center}
-$\displaystyle \frac{R_{S}}{R_{L}} = \frac{V_{C}-V_{RL}}{V_{RL}}$
-\end{center}
-
-Giá trị Rs/Ro này được vi xử lý tính toán dựa trên đầu ra analog của cảm biến MQ-7 và được đưa vào thư viện mq07.h để có thể lấy được giá trị chất lượng không khí ppm theo sự thay đổi của nhiệt độ và độ ẩm của môi trường thực tế.
-
-Thư viện mq07.h cung cấp cho chúng ta các hàm toán học đã được nhà sản xuất tính toán sẵn để có thể lấy được giá trị chất lượng không khí ppm dựa vào thay đổi của môi trường nhiệt độ và độ ẩm.
-
-
-
-
-
-
-%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	Cảm biến nhiệt độ DS18B20 IC	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
-\newpage
-\subsection*{Cảm biến nhiệt độ DS18B20 IC} 
-Cảm biến nhiệt độ DS18B20 là cảm biến loại tín hiệu đầu ra digital đo nhiệt độ mới của hãng MAXIM với độ phân giải cao (12bit). IC được sử dụng giao tiếp 1 dây rất gọn gàng, dễ lập trình và giao tiếp nhiều DS18B20 trên cùng 1 dây. IC còn có chức năng cảnh báo nhiệt độ khi vượt ngưỡng và đặc biệt hơn là có thể cấp nguốn từ chân data.
-\begin{center}
-\begin{figure}[htp]
-\centering    
-\includegraphics[width=0.7\textwidth]{ds18b20}
-\caption[Cảm biến nhiệt độ DS18B20]{Cảm biến nhiệt độ DS18B20}
-\label{fig:ds18b20}
-\end{figure}
-\end{center}
-Thông số kỹ thuật:
-\begin{itemize}
-\item[•]Nguồn: 3-5.5V
-\item[•]Dải đo nhiệt độ: -55 -125 * C
-\item[•]Sai số: +-0.5 *C
-\item[•]Độ phân giải: 9-12bits
-\item[•]Thời gian chuyển đổi nhiệt độ: 750ms
-\end{itemize}
-Sơ đồ kết nối IC BS18B20 để lấy được tín hiệu data
-\begin{center}
-\begin{figure}[htp]
-\centering    
-\includegraphics[width=0.7\textwidth]{ds18b20_ketnoi}
-\caption[Sơ đồ kết nối DS18B20]{Sơ đồ kết nối DS18B20}
-\label{fig:ds18b20_ketnoi}
-\end{figure}
-\end{center}	
-
-Chân Digital input sẽ được đưa tới chân Digital input của board arduino nano, hiện tại nhà sản xuất cũng cung cấp cho lập trình viên về bộ thư viện để có thể sử dụng trong việc phát triển.
-
-\newpage
 
 
 
@@ -529,7 +347,7 @@ void loop() {
 
 
 %\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	SIM800L	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
-\subsection{Module SIM800L}
+\subsection{Module SIM800L}\label{sec:sim800l}
 \subsection*{Giới thiệu về Sim800L}
 Thừa kế các chức năng từ các thế hệ modile sim trước như sim900, Module GSM sim 800L có khả năng nhắn tin SMS, nghe gọi, GPRS, … như một điện thoại nhưng có kích thuốc nhỏ nhất trong các loại module SIM (25 mm x 22 mm). Điều khiển module sử dụng các bộ tập lệnh AT dễ dàng, chân kết nối dùng rào đực thông dụng chuẩn 100mil.
 Thông số kỹ thuật:
@@ -720,47 +538,6 @@ Kết quả  & OK  \\ \hline
 
 \caption[Tập lệnh AT+CIPSEND: gửi dữ liệu qua giao thức TCP/UCP]{Tập lệnh AT+CIPSEND}
 \end{table}
-
-
-
-
-
-
-
-\newpage
-
-\subsection*{Quá trình kết nối giao thức TCP tới máy chủ thông qua GPRS}
-Quá trình kết nối tới máy chủ thông qua giao thức TCP được thực hiện dựa trên mô hình máy trạng thái như sau:
-
-
-\begin{center}
-
-\begin{figure}[H]
-
-\centering    
-\includegraphics[width=0.9\textwidth]{sim800_status}
-\caption[Sơ đồ trạng thái GPRS cho đơn kết nối]{Sơ đồ trạng thái GPRS cho đơn kết nối}
-\label{fig:sim800_status}
-\end{figure}
-\end{center}
-
-Để gửi được dữ liệu đến máy chủ cần phải thiết lập được kết nối TCP từ module SIM800 đến máy chủ thông qua 11 trạng thái như Hình \ref{fig:sim800_status}. Đến trạng thái 7 (CONNET OK) chúng ta đã giữ được kết nối TCP tới máy chủ và tại trạng thái này dùng lệnh AT+CIPSEND để thực hiện việc gửi gói dữ liệu lên cho máy chủ.
-
-Gói dữ liệu được gửi theo phương thức GET, bên máy chủ phải hỗ trợ được phương thức GET này và định nghĩa rõ ràng các kiểu và số lượng dữ liệu gửi lên. 
-
-Dữ liệu sensor node gửi lên cho máy chủ gồm các dữ liệu sau:
-\begin{table}[]
-\centering
-\label{table:sensornode_api}
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-\begin{tabular}[c]{@{}l@{}}NODE\\ ID\end{tabular} & \begin{tabular}[c]{@{}l@{}}Giá trị CO\\ (ppm)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Giá trị \\ nhiệt độ \\ (Độ C)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Giá trị\\ độ bụi\\ (ppm)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Giá trị chất\\ lượng không \\ khí (ppm)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Giá trị dung\\ lượng pin (\%)\end{tabular} \\ \hline
-\end{tabular}
-\end{table}
-
-
-
-
 
 
 
