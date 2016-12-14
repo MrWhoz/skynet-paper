@@ -2,7 +2,7 @@
 %****************************** Second Chapter *********************************
 %*******************************************************************************
 
-\chapter{IoT và Các kiến thức cơ bản về IoT}
+\chapter{CƠ SỞ LÝ THUYẾT}
 
 \ifpdf
     \graphicspath{{Chapter2/Figs/Raster/}{Chapter2/Figs/PDF/}{Chapter2/Figs/}{Chapter2/Figs/web/}}
@@ -15,7 +15,7 @@
 \section{Giới thiệu về Internet of Things và các ứng dụng giám sát}
 \subsection{Internet of Things (IoT)}\label{sec:xuhuongiot}
 Với sự phát triển nhanh chóng của công nghê máy tính hiện nay, những công nghệ cao đã đang và ngày càng được ứng dụng trong nhiều lĩnh vực của cuộc sống con người. IoT là mạng lưới của các đối tượng vật lý, các thiết bị, các phương tiện và các đối tượng này được nhúng với các thiết bị điện tử, cảm biến, phần mềm điều khiển, và nó có khả năng trao đổi dữ liệu và thao tác với nhau. IoT cho phép các đối tượng được lắng nghe và điều khiển từ xa trên cơ sở hạ tầng mạng hiện có, các hệ thống máy tính có thể thu thập dữ liệu và điều khiển các thiết bị đối tượng một cách hiệu quả, chính xác và lợi ích kinh tế nhất có thể. 
-\begin{figure}[htbp!] 
+\begin{figure}[H] 
 \centering    
 \includegraphics[width=1.0\textwidth]{pic4}
 \caption[Hình ảnh mô tả Internet of Things ]{Hình ảnh mô tả Internet of Things }
@@ -45,7 +45,7 @@ Việc tích hợp trí thông minh vào IoT còn có thể giúp các thiết b
 \subsection*{Mô hình theo xu hướng IoT thực tế}
 Mô hình (Hình ~\ref{fig:pic5}): Các thiết bị sẽ có thể kết nối với nhau bằng TCP/UDP và có thể kết nối trực tiếp đến máy chủ mà không cần thông qua thiết bị khác.
 
-\begin{figure}[htbp!] 
+\begin{figure}[H] 
 \centering    
 \includegraphics[width=0.5\textwidth]{pic5}
 \caption[Mô hình IoT không có Gateway ]{Mô hình IoT không có Gateway}
@@ -56,7 +56,7 @@ Mô hình (Hình ~\ref{fig:pic6}): Các thiết bị sẽ được hỗ trợ nh
 	
 	
 
-\begin{figure}[htbp!] 
+\begin{figure}[H] 
 \centering    
 \includegraphics[width=0.5\textwidth]{pic6}
 \caption[Mô hình IoT có Gateway]{Mô hình IoT có Gateway}
@@ -67,7 +67,7 @@ Mô hình (Hình ~\ref{fig:pic6}): Các thiết bị sẽ được hỗ trợ nh
 Sơ đồ lớp Chung của cả hai mô hình trên:
 
 
-\begin{figure}[htbp!] 
+\begin{figure}[H] 
 \centering    
 \includegraphics[width=1\textwidth]{pic7}
 \caption[Kiến trúc mô hình IoT tham khảo]{Kiến trúc mô hình IoT tham khảo}
@@ -115,8 +115,8 @@ Lớp này cung cấp một cách cho các thiết bị để chúng giao tiếp
 Khi kết nối một chuỗi khổng lồ các cảm biến (sensor) thu thập dữ liệu, thiết bị và máy móc với nhau, điều quan trọng cần nhận ra là thông tin sẽ được chuyển đổi thành hành động với một tốc độ mà chúng ta chưa từng thấy trước kia. Chúng ta đang tiến đến gần, nếu không phải là đã chạm được vào một thế giới của những khoảng thời gian phản ứng cực nhỏ, phản hồi tức thì với mọi điều kiện biến đổi, và mức độ điều khiển chưa từng có trong việc quản lý tài nguyên và tài sản.
 Điểm mấu chốt ở đây là đừng nghĩ hẹp. Internet of Things (IoT) không đơn thuần là mang đến sự tiết kiệm trong các mô hình công nghiệp hiện tại. Nó đảo lộn hoàn toàn những mô hình cũ, tạo ra những sản phẩm và dịch vụ mới. Không có một lĩnh vực nào mà trong đó IoT tạo ra ảnh hưởng đặc biệt lớn nhất; bởi IoT sẽ thay đổi hoàn toàn mọi lĩnh vực một cách không thể tưởng tượng được, bao gồm nông nghiệp, năng lượng, an ninh, quản lý thảm họa, y tế, và đó chỉ là một vài lĩnh vực được nhắc đến.
 
-\subsection*{Ứng dụng trong xây dụng }
-\begin{figure}[htbp!] 
+\subsubsection*{Ứng dụng trong xây dụng }
+\begin{figure}[H] 
 \centering    
 \includegraphics[width=1\textwidth]{pic8}
 \caption[Ứng dụng IoT trong xây dựng ]{Ứng dụng IoT trong xây dựng }
@@ -125,9 +125,9 @@ Khi kết nối một chuỗi khổng lồ các cảm biến (sensor) thu thập
 
 Ví dụ: Các công ty xây dựng đã bắt đầu trang bị các silo (hầm chứa đồ) và xe tải có các cảm biến theo dõi mức hàng tồn kho, như là lượng bê tông, và biến đổi nó thông qua platform trên nền điện toán đám mây để gia tăng tốc độ phân phối và đảm bảo một dòng lưu thông vật liệu ổn định. Các ông lớn trong ngành công nghiệp dầu mỏ đã bắt đầu thực thi các công nghệ mobile, cảm biến tới máy móc để dự phòng từ trước cho các tai nạn thông qua các phân tích nhanh chóng và hành động tức thời. Khi các cảm biến phát hiện ra một sự cố như rò rỉ hoặc thất thoát đường ống, công nghệ IoT cho phép các công nhân lập tức xác định vị trí của chúng.
 
-\subsection*{Ứng dụng trong năng lượng }
+\subsubsection*{Ứng dụng trong năng lượng }
 
-\begin{figure}[htbp!] 
+\begin{figure}[H] 
 \centering    
 \includegraphics[width=1\textwidth]{pic9}
 \caption[Ứng dụng IoT trong năng lượng]{Ứng dụng IoT trongnăng lượng}
@@ -136,9 +136,9 @@ Ví dụ: Các công ty xây dựng đã bắt đầu trang bị các silo (hầ
 Một ví dụ khác của công nghệ IoT mới ứng dụng trong công nghiệp dầu mỏ, đó là giếng thông minh. Đây là một dạng giếng cài đặt các thiết bị điều khiển dòng chảy và cảm biến lỗ khoan, để có thể giám sát và điều khiển từ trên bề mặt mà không đe dọa an toàn của công nhân. Giếng thông minh có trang bị công nghệ địa chấn 4D, cho phép theo dõi sự rò rỉ khí ga, dòng chảy nước, thay đổi áp lực, và bất cứ thay đổi nào khác gây ra bởi những biến động địa chấn, giúp cho việc dự đoán và điều khiển các tác động địa chấn có thể gây ra những hỏng hóc nghiêm trọng.
 Nhưng như thế, chúng ta vẫn nghĩ quá hẹp. Hãy vượt ra khỏi lĩnh vực xây dựng hay năng lượng. Chúng ta có các cảm biến có thể đo lực, tải, moment, và áp lực; các cảm biến có thể ngửi thấy mùi khí ga hay hóa chất; những cảm biến có thể nghe thấy rung động và phân biệt giữa các âm hưởng khác nhau; những cảm biến có thể đo nhiệt độ, phát hiện chuyển động, vận tốc và chuyển vị; xác định vị trí, sự có mặt, và khoảng cách. Nói cách khác, chúng ta có khả năng thu thập những hiểu biết gần như không giới hạn, trong thời gian thực.
 
-\subsection*{Ứng dụng trong dân dụng  }
+\subsubsection*{Ứng dụng trong dân dụng  }
 
-\begin{figure}[htbp!] 
+\begin{figure}[H] 
 \centering    
 \includegraphics[width=1\textwidth]{pic10}
 \caption[Ứng dụng IoT trong dân dụng ]{Ứng dụng IoT trong dân dụng}
@@ -147,8 +147,8 @@ Nhưng như thế, chúng ta vẫn nghĩ quá hẹp. Hãy vượt ra khỏi lĩn
 
 Làm thế nào chúng ta có thể tận dụng thông tin thời gian thực từ rất nhiều sensor? Hãy nhìn vào ngôi nhà của chúng ta. Những phần nào trong đó có thể thông minh hóa? Ví dụ đơn giản. Tôi từng quan sát 1 hệ thống video conference cho phép người chủ nói chuyện với chú cún của mình, gọi nó đến, cho nó ăn từ xa thông qua một thiết bị thông minh. Hãy nghĩ lớn hơn nữa. Một ngôi nhà biết khi nào bạn về nhà bởi nó kết nối với một cảm biến trên xe hay smartphone của bạn. Một ngôi nhà kết nối các cảm biến báo khói, hệ thống an ninh, và thiết bị giải trí tới điện thoại của bạn. Một ngôi nhà với các cảm biến được gắn vào đường ống để có thể phát hiện ra rò rỉ trước cả khi điều đó thực sự diễn ra.
 
-\subsection*{Ứng dụng trong y tế}
-\begin{figure}[htbp!] 
+\subsubsection*{Ứng dụng trong y tế}
+\begin{figure}[H] 
 \centering    
 \includegraphics[width=1\textwidth]{pic11}
 \caption[Ứng dụng IoT trong y tế ]{Ứng dụng IoT trong y tế}
@@ -158,9 +158,16 @@ Công nghệ thiết bị đeo cũng sẽ biến đổi hoàn toàn lĩnh vực 
 
 
 \section{Giới thiệu về các công cụ hỗ trợ phát triển ứng dụng IoT}
+\subsection*{Thingspeak}
+ThingSpeak là một mã nguồn mở cho các ứng dụng của Internet of Things. Mã nguồn này hỗ trợ các API lưu trữ, lấy dữ liệu từ các thiết bị, sản phẩm sử dụng HTTP qua Internet hoặc thông qua một Local Area Network. Như một HUB đợi các thông tin cảm biến từ thiết bị và có nhiệm vụ lưu trữ và xử lý dữ liệu, với ThingSpeak, bạn có thể tạo ra các ứng dụng phân tích dữ liệu, lưu trữ dữ liệu, quản lý dữ liệu một cách đơn giản.\\
+ThinkSpeak được phát triển bởi ioBridge và được opensource trên GITHUB  \url{https://github.com/iobridge/thingspeak}
 
-
-
+\begin{figure}[H] 
+\centering    
+\includegraphics[width=0.7\textwidth]{thingspeak}
+\caption[Ứng dụng phát triển IoT Thingspeak]{Ứng dụng phát triển IoT Thingspeak}
+\label{fig:thingspeak}
+\end{figure}
 
 \section{Những yếu tố ảnh hưởng môi trường từ khí thải phương tiện giao thông}\label{sec:yeuto_khithai}
 Để hình dung được những yếu tố ảnh hưởng môi trường từ khí thải xe máy và ô tô thì chúng ta cần biết được quá trình hoạt động của xe máy và ô tô, từ đó chúng ta sẽ biết được những loại khí thải nào mà xe máy và ô tô sẽ thải ra môi trường. Qua quá trình tìm hiểu và đọc thông tin tài liệu trên mạng khí thải của xe máy và ô tô tuỳ thuộc chủ yếu vào chất lượng đốt cháy hỗn hợp xăng và không khí bên trong buồng đốt (combustion chamber) của động cơ, cũng như nồng độ các chất ô nhiễm trong khí xả phụ thuộc vào đặc điểm động cơ cũng như các thông số điều chỉnh, vận hành.
@@ -201,14 +208,14 @@ Từ những cơ sơ lý thuyết trên cho chúng ta biết được những y�
 
 
 \section{Các hệ thống quan trắc hiện hữu}
-\textbf{VoV giao thông:}  sử dụng hệ thống camera an ninh kết hợp với lượng phóng viên thường trực khắp thành phố để giám sát trực tiếp và cảnh báo tình trạng lưu thông trên các đoạn đường. Hệ thống có tính hiệu quả rất cao vì sử dụng CCTV giám sát tình trạng giao thông theo thời gian thực nên có góc nhìn thực tế nhất và không phục thuộc, có thể hoạt động độc lập. Tuy nhiên hệ thống vẫn có nhiều hạn chế như:
+\subsection{VoV giao thông}
+Sử dụng hệ thống camera an ninh kết hợp với lượng phóng viên thường trực khắp thành phố để giám sát trực tiếp và cảnh báo tình trạng lưu thông trên các đoạn đường. Hệ thống có tính hiệu quả rất cao vì sử dụng CCTV giám sát tình trạng giao thông theo thời gian thực nên có góc nhìn thực tế nhất và không phục thuộc, có thể hoạt động độc lập. Tuy nhiên hệ thống vẫn có nhiều hạn chế như:
 \begin{itemize}
 \item[•]Vẫn chủ yếu hoạt động một cách thủ công, điều tiết và đưa ra kết quả bởi con người, chưa có áp dụng thuật toán xử lý máy tính vào công việc nhiều.
 \item[•]Tốn nhiều công sức và nhân lực, cần có nhiều phóng viên trực thuộc các đoạn đường cũng như người quản lý theo dõi hệ thống camera giao thông.
 \item[•]Chi phí duy trì và lắp đặt còn khá cao, và cần tốn chi phí bảo trì đắt đỏ và trình độ chuyên môn nhân viên điều hành cao, chi phí một hệ thống có thể lên tới hàng trăm tỉ. Cụ thể như hệ thống trị giá 270 tỉ VNĐ bao gồm 19 trạm giám sát camera được triển khai ở Bà Rịa - Vũng Tàu.
 \end{itemize}
-
-\begin{figure}[htbp!] 
+\begin{figure}[H] 
 \centering    
 \includegraphics[width=1.0\textwidth]{pic1}
 \caption[Trạm giám sát VOV Giao thông ]{Trạm giám sát VOV Giao thông}
@@ -217,26 +224,24 @@ Từ những cơ sơ lý thuyết trên cho chúng ta biết được những y�
 
 
 
-
-\textbf{Bktraffic}  \url{http://traffic.hcmut.edu.vn} kết hợp hệ thống xe bus cùng với định vị GPS và gửi dữ liệu qua hạ tầng mạng 3G để theo dõi vị trí xe và tính toán tốc độ lưu thông trên đoạn đường xe đang lưu thông. Dự án này có hiệu quả cao vì hệ thống xe bus dày đặc và có thời gian hoạt động rộng. Tuy nhiên vẫn có những hạn chế như:
+\subsection{BKTraffic}
+Bktraffic \url{http://traffic.hcmut.edu.vn} kết hợp hệ thống xe bus cùng với định vị GPS và gửi dữ liệu qua hạ tầng mạng 3G để theo dõi vị trí xe và tính toán tốc độ lưu thông trên đoạn đường xe đang lưu thông. Dự án này có hiệu quả cao vì hệ thống xe bus dày đặc và có thời gian hoạt động rộng. Tuy nhiên vẫn có những hạn chế như:
 \begin{itemize}
 \item[•]Vì chỉ giám sát trên xe bus nhưng nhiều trường hợp không hiệu quả khi áp dụng cho giao thông tại Việt Nam. Bởi vì đa số phương tiện giao thông ở Việt Nam là xe 2 bánh, do đó hệ thống bus di chuyển không phản ảnh được tình trạng lưu thông chung trên tuyến đường đó.
 \item[•]Nhiều tuyến đường trên địa bàn thành phố mà xe bus vẫn chưa hoạt động, do vậy vẫn chưa có đủ dữ liệu cần thiết để.
 \item[•]Mang tính phụ thuộc vào xe bus, vậy nên có sẽ có những trường hợp ảnh hưởng bởi hệ thống xe bus mà hệ thống sẽ không hoạt động hiệu quả được.
 \end{itemize}
 
-\begin{figure}[htbp!] 
+\begin{figure}[H] 
 \centering    
 \includegraphics[width=1.0\textwidth]{pic2}
 \caption[Ứng dụng Web SmartBKTraffic ]{ Ứng dụng Web SmartBKTraffic}
 \label{fig:pic2}
 \end{figure}
 
-
-
-
-\textbf{Hệ thống quan trắc môi trường ở Hà Nội:} Thủ đô Hà Nội vừa lắp đặt hệ thống 80 trạm quan trắc. Hệ thống này có tính tương đồng với đề tài đang thực hiện. Tuy nhiên mục đích chính là để theo dõi môi trường sau sự cố bụi Thủy ngân và chưa thấy hướng ứng dụng vào hệ thống giao thông. Hơn nữa, các trạm này chiếm diện tích lắp đặt nên hạn chế khả năng triển khai số lượng lớn trên diện rộng.
-\begin{figure}[htbp!] 
+\subsection{Hệ thống quan trắc môi trường ở Hà Nội}
+Thủ đô Hà Nội vừa lắp đặt hệ thống 80 trạm quan trắc. Hệ thống này có tính tương đồng với đề tài đang thực hiện. Tuy nhiên mục đích chính là để theo dõi môi trường sau sự cố bụi Thủy ngân và chưa thấy hướng ứng dụng vào hệ thống giao thông. Hơn nữa, các trạm này chiếm diện tích lắp đặt nên hạn chế khả năng triển khai số lượng lớn trên diện rộng.
+\begin{figure}[H] 
 \centering    
 \includegraphics[width=1.0\textwidth]{pic3}
 \caption[Trạm quan trắc môi trường tại Hà Nội ]{Trạm quan trắc môi trường tại Hà Nội}
@@ -244,30 +249,16 @@ Từ những cơ sơ lý thuyết trên cho chúng ta biết được những y�
 \end{figure}
 
 \section{Các thiết bị phần cứng}
-\subsection{Thiết bị thu thập dữ liệu}
-
-
-
-
-
-\subsection{Các loại sensor}
-
-
-
 \subsection{Mạch vi xử lý Arduino}
-\subsection*{Giới thiệu về Arduino Nano}
+\subsubsection*{Giới thiệu về Arduino Nano}
 Arduino là một board mạch vi xử lý, nhằm xây dựng các ứng dụng tương tác với nhau hoặc với môi trường được thuận lợi hơn. Phần cứng bao gồm một board mạch nguồn mở được thiết kế trên nền tảng vi xử lý AVR Atmel 8bit, hoặc ARM Atmel 32-bit. Những Model hiện tại được trang bị gồm 1 cổng giao tiếp USB, 6 chân đầu vào analog, 14 chân I/O kỹ thuật số tương thích với nhiều board mở rộng khác nhau. Đi cùng với nó là một môi trường phát triển tích hợp (IDE) chạy trên các máy tính cá nhân thông thường và cho phép người dùng viết các chương trình cho Aduino bằng ngôn ngữ C hoặc C++.
 
-\begin{center}
-\begin{figure}[htp]
+\begin{figure}[H]
 \centering    
 \includegraphics[width=0.4\textwidth]{arduinonano}
 \caption[Mạch vi xử lý Arduino Nano]{Mạch vi xử lý Arduino Nano}
 \label{fig:arduinonano}
 \end{figure}
-\end{center}
-
-\newpage
 
 \begin{center}
 \begin{table}[]
@@ -296,21 +287,17 @@ Kích thước                    & 1.85cm x 4.3cm                              
 \end{center}
 
 
-\subsection*{Lập trình cho Arduino Nano}
+\subsubsection*{Lập trình cho Arduino Nano}
 Arduino Nano sử dụng chương trình Arduino IDE để lập trình, và ngôn ngữ lập trình cho Arduino cũng tên là Arduino (được xây dựng trên ngôn ngữ C). 
 
 Arduino IDE là môi trường phát triển tích hợp (IDE) của Arduino là một ứng dụng cross-platform (nền tảng) được viết bằng Java, và từ IDE này sẽ được sử dụng cho ngôn ngữ lập trình xử lý (Processing programming language) và project Wiring. Nó được thiết kế để dành cho những người mới tập tành làm quen với lĩnh vực phát triển phần mềm. Nó bao gồm một chương trình code editor với các chức năng như đánh dấu cú pháp, tự động brace matching, và tự động canh lề, cũng như compile và upload chương trình lên board chỉ với 1 cú click chuột. Một chương trình hoặc code viết cho Arduino được gọi là một sketch.
 
-\newpage
-
-\begin{center}
-\begin{figure}[htp]
+\begin{figure}[H]
 \centering    
 \includegraphics[width=1\textwidth]{arduinonano_ide}
 \caption[Môi trường phát triển của Arduino]{Môi trường phát triển của Arduino}
 \label{fig:arduinonano_ide}
 \end{figure}
-\end{center}
 
 Các chương trình Arduino được viết bằng C hoặc C++. Arduino IDE đi kèm với một thư viện phần mềm được gọi là "Wiring", từ project Wiring gốc, có thể giúp các thao tác input/output được dễ dàng hơn. Người dùng chỉ cần định nghĩa 2 hàm để tạo ra một chương trình vòng thực thi (cyclic executive) có thể chạy được:
 \begin{itemize}
@@ -348,7 +335,7 @@ void loop() {
 
 %\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	SIM800L	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
 \subsection{Module SIM800L}\label{sec:sim800l}
-\subsection*{Giới thiệu về Sim800L}
+\subsubsection*{Giới thiệu về Sim800L}
 Thừa kế các chức năng từ các thế hệ modile sim trước như sim900, Module GSM sim 800L có khả năng nhắn tin SMS, nghe gọi, GPRS, … như một điện thoại nhưng có kích thuốc nhỏ nhất trong các loại module SIM (25 mm x 22 mm). Điều khiển module sử dụng các bộ tập lệnh AT dễ dàng, chân kết nối dùng rào đực thông dụng chuẩn 100mil.
 Thông số kỹ thuật:
 \begin{itemize}
@@ -364,14 +351,12 @@ Thông số kỹ thuật:
 \end{itemize}
 
 Chức năng các chân của module Sim800L
-\begin{center}
-\begin{figure}[htp]
+\begin{figure}[H]
 \centering    
 \includegraphics[width=0.7\textwidth]{sim800l}
 \caption[Sơ đồ module sim800l]{Sơ đồ module sim800l}
 \label{fig:sim800l}
 \end{figure}
-\end{center}	
 
 \begin{itemize}
 \item[•]TXD: chân truyền UART TX
@@ -386,7 +371,7 @@ Chức năng các chân của module Sim800L
 
 %/////////////////////////////////////////////////////////////////////////AT SIM 800L
 \newpage
-\subsection*{Một số tập lệnh AT của module Sim800L dùng trong đề tại luận văn}
+\subsubsection*{Một số tập lệnh AT của module Sim800L dùng trong đề tại luận văn}
 
 
  AT+CBC: trả về kết quả dung lượng pin hiện tại.
@@ -553,34 +538,25 @@ Kết quả  & OK  \\ \hline
 Pin năng lượng mặt trời (pin mặt trời/pin quang điện) là thiết bị giúp chuyển hóa trực tiếp năng lượng ánh sáng mặt trời (quang năng) thành năng lượng điện (điện năng) dựa trên hiệu ứng quang điện. Hiệu ứng quang điện là khả năng phát ra điện tử (electron) khi được ánh sáng chiếu vào của vật chất.
 
 Tấm pin mặt trời, những tấm có bề mặt lớn thu thập ánh nắng mặt trời và biến nó thành điện năng, được làm bằng nhiều tế bào quang điện có nhiệm vụ thực hiện quá trình tạo ra điện từ ánh sáng mặt trời.
-
-
-
-\begin{center}
-\begin{figure}[htp]
+\begin{figure}[H]
 \centering    
 \includegraphics[width=0.7\textwidth]{solarpanel}
 \caption[Tấm pin năng lượng mặt trời]{Tấm pin năng lượng mặt trời}
 \label{fig:solarpanel}
 \end{figure}
-\end{center}
 
-\subsection*{Chất bán dẫn Silicon}
+\subsubsection*{Chất bán dẫn Silicon}
 Silicon được biết đến là một chất bán dẫn. "Chất bán dẫn là vật liệu trung gian giữa chất dẫn điện và chất cách điện. Chất bán dẫn hoạt động như một chất cách điện ở nhiệt độ thấp và có tính dẫn điện ở nhiệt độ phòng". Với tính chất như vậy, silicon là một thành phần quan trọng trong cấu tạo của pin năng lượng mặt trời.
 
 Silicon tuy có mức dẫn điện hạn chế nhưng nó có cấu trúc tinh thể rất phù hợp cho việc tạo ra chất bán dẫn. Nguyên tử silicon cần 4 electron để trung hòa điện tích nhưng lớp vỏ bên ngoài một nguyên tử silicon chỉ có một nửa số electron cần thiết nên nó sẽ bám chặt với các nguyên tử khác để tìm cách trung hòa điện tích.
 
 Để tăng độ dẫn điện của silicon, các nhà khoa học đã “tạp chất hóa” nó bằng cách kết hợp nó với các vật liệu khác. Quá trình này được gọi là “doping” và silicon pha tạp với các tạp chất tạo ra nhiều electron tự do và lỗ trống. Một chất bán dẫn silicon có hai phần, mỗi phần được pha tạp với một loại vật liệu khác. Phần đầu tiên được pha với phốt pho, phốt pho cần 5 electron để trung hòa điện tích và có đủ 5 electron trong vỏ của nó. Khi kết hợp với silicon, một electron sẽ bị dư ra. Electron đặc trưng cho điện tích âm nên phần này sẽ được gọi là silicon loại N (điện cực N). Để tạo ra silicon loại P (điện cực P), các nhà khoa học kết hợp silicon với boron. Boron chỉ cần 3 electron để trung hòa điện tích và khi kết hợp với silicon sẽ tạo ra những lỗ trống cần được lấp đầy bởi electron.
-
-
-\begin{center}
-\begin{figure}[htp]
+\begin{figure}[H]
 \centering    
 \includegraphics[width=0.7\textwidth]{solarpanel_hinhthanhdientich}
 \caption[Tấm pin năng lượng mặt trời]{Tấm pin năng lượng mặt trời}
 \label{fig:solarpanel_hinhthanhdientich}
 \end{figure}
-\end{center}
 
 
 Khi chất bán dẫn silicon tiếp xúc với năng lượng, các electron tự do ở điện cực N sẽ di chuyển sang để lấp đầy các lỗ trống bên điện cực P. Sau đó, các electron từ điện cực N và điện cực P sẽ cùng nhau tạo ra điện trường. Các tế bào năng lượng mặt trời sẽ trở thành một diode, cho phép electron di chuyển từ điện cực P đến điện cực N, không cho phép di chuyển ngược lại.
@@ -591,29 +567,8 @@ Tất nhiên, để kích hoạt quá trình cần có năng lượng tiếp xú
 
 
 
-\subsection*{Hiệu suất của pin mặt trời}
+\subsubsection*{Hiệu suất của pin mặt trời}
 Các công nghệ biến ánh sáng mặt trời thành điện hiện tại vẫn kém hiệu quả. Các tấm pin mặt trời chưa thể hấp thụ toàn bộ năng lượng của ánh sáng mặt trời. Nói chung, những tế bào năng lượng mặt trời tốt nhất hiện tại chỉ có thể chuyển 25\% năng lượng mà nó nhận được thành điện. Tại sao vậy? Thực tế là ánh sáng mặt trời, như tất cả các loại ánh sáng khác, bao gồm một quang phổ với các bước sóng khác nhau, mỗi bước sóng có một cường độ khác nhau. Có những bước sóng quá yếu không thể giải phóng các electron còn một số bước sóng lại quá mạnh với silicon.
-
-
-\subsection*{Tấm pin mặt trời được dùng cho đề tài}
-
-Pin năng lượng mặt trời Poly 5V /220 mA
-
-\begin{center}
-\begin{figure}[htp]
-\centering    
-\includegraphics[width=0.6\textwidth]{solarpanel_real}
-\caption[Pin năng lượng mặt trời Poly 5V /220 mA]{Pin năng lượng mặt trời Poly 5V /220 mA}
-\label{fig:solarpanel_real}
-\end{figure}
-\end{center}
-
-
-Với kích thước: 100x80x2mm
-Nguồn đầu ra: 5V
-Dòng tối đa cung cấp được là 220mA
-
-
 
 
 
@@ -841,28 +796,34 @@ Vì sao lựa chọn Raspberry:
 
 • Hiệu suất đáp ứng nhu cầu làm server của đề tài yêu cầu với mức độ tiêu thụ năng lượng cực kì ít.
 
+
+
+
+
+
+
+
+
 \subsection{Framework Ionic}
-\subsection*{Giới thiệu về Ionic framework}
+\subsubsection*{Giới thiệu về Ionic framework}
 Ionic là một framework được sử dụng để phát triển các ứng dụng di động dựa trên nền tảng công nghệ web HTML5 để tạo ra các ứng dụng lai hóa [ hybrid apps ] chạy trên các thiết bị di động khác nhau. Ứng dụng lai hóa ở đây được hiểu cơ bản là các ứng dụng chạy trên nền các trình duyệt được nhúng vào trong một ứng dụng được cài đặt và có thể giao tiếp, truy cập, điều khiển sử dụng các thiết bị phần cứng và hệ điều hành mobile.
 
 Hãy tưởng tượng Ionic như là một khung phát triển giao diện người dùng để xử lý tất cả các tương tác giao diện người dùng làm cho ứng dụng trở nên thuyết phục và dễ dàng sử dụng. Kiểu như “Bootstrap for Native”, tức là như các ứng dụng Native nhưng có sự hỗ bởi một loạt các thành phần giao diện, động và thiết kế đẹp.
 
-\begin{center}
-\begin{figure}[htp]
+\begin{figure}[H]
 \centering    
 \includegraphics[width=0.7\textwidth]{ionic}
 \caption[Một số giao diện của Ionic ]{Một số giao diện của Ionic}
 \label{fig:ionic}
 \end{figure}
-\end{center}
 
 
 Bản chất Ionic là một khung phát triển HTML5, nó cần một vỏ bọc native như Cordova hay PhoneGap để có thể khởi động như một ứng dụng native. Ionic được hỗ trợ mạnh mẽ bởi Cordova. Việc cài đặt và khởi tạo một dự án Ionic rất dễ dàng thông qua giao diện dòng lệnh dựa trên Node.js
 
 
-\subsection*{Ưu điểm và nhược điểm của Ionic}
+\subsubsection*{Ưu điểm và nhược điểm của Ionic}
 
-\subsubsection*{Ưu điểm }
+Ưu điểm:
 \begin{itemize}
 \item[•] Dễ học, thời gian phát triển nhanh, có thể sử dụng các kỹ năng từ lập trình web.
 \item[•] Đa nền tảng.
@@ -875,7 +836,7 @@ Bản chất Ionic là một khung phát triển HTML5, nó cần một vỏ b�
 \end{itemize}
 
 
-\subsubsection*{Nhược điểm }
+Nhược điểm:
 
 
 \begin{itemize}
@@ -890,15 +851,12 @@ Bản chất Ionic là một khung phát triển HTML5, nó cần một vỏ b�
 
 Angular là một bộ Javascript Framework rất mạnh và thường được sử dụng để xây dựng project Single Page Application (SPA). Nó hoạt động dựa trên các thuộc tính mở rộng HTML (các atributes theo quy tắc của Angular). Đây là một Framework mã nguồn mở hoàn toàn miễn phí và được hàng ngàn các lập trình viên trên thế giới ưa chuộng và sử dụng.
 
-
-\begin{center}
-\begin{figure}[htp]
+\begin{figure}[H]
 \centering    
 \includegraphics[width=0.7\textwidth]{angularjs}
 \caption[Angular JS kết hợp với ionic ]{Angular JS kết hợp với ionic}
 \label{fig:angularjs}
 \end{figure}
-\end{center}
 
 Ionic sử dụng AngularJS để cung cấp các cấu trúc ứng dụng, trong khi bản thân Ionic tập trung chính vào giao diện người dùng. Nói cách khác, chúng ta thấy được sự phối hợp ăn ý giữa sức mạnh của AngularJS và vẻ đẹp của Ionic UI.
 
@@ -912,14 +870,12 @@ Mặc dù, Ionic có thành phần giao diện sử dụng Angular, nhưng devel
 
 \subsection{Framework Cordova}
 
-\begin{center}
-\begin{figure}[htp]
+\begin{figure}[H]
 \centering    
 \includegraphics[width=0.7\textwidth]{cordova}
 \caption[Apache Cordova ]{Apache Cordova}
 \label{fig:cordova}
 \end{figure}
-\end{center}
 
 Apache Cordova là một bộ khung để xây dựng ứng dụng di động sử dụng HTML, CSS và Javascript. Apache Cordova bao gồm một tập hợp các API thiết bị cho phép người lập trình di động truy cập, sử dụng các chức năng native của thiết bị như là camera hay cảm biến gia tốc bằng Javascript. Kết hợp với một bộ khung phát triển giao diện như jQuery Mobile or Dojo Mobile hoặc Ionic, cho phép ứng dụng di động có thể được phát triển chỉ dựa trên HTML, CSS và Javascript.
 

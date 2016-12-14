@@ -5,12 +5,9 @@
 \graphicspath{{Chapter3/Figs/Vector/}{Chapter3/Figs/}}
 \fi
 
-\chapter{Thiết kế và Hiện thực}
+\chapter{THIẾT KẾ VÀ HIỆN THỰC}
 \section{Thiết kế hệ thống}
-\subsection{Kiến trúc mô hình hệ thống}
-<<<<<<< HEAD
-\label{sec: struc}
-=======
+\subsection{Kiến trúc mô hình hệ thống}\label{sec: struc}
 Như đã giới thiệu một số mô hình IoT thực tế ở Mục \ref{sec:xuhuongiot}, mô hình IoT phù hợp mà nhóm sẽ áp dụng cho việc pháp triển hệ thống giám sát được trình bày như Hình \ref{fig:pic5}. Hệ thống bao gồm các thành phần chính như sau: các node cảm biến, trung tâm lưu trữ dữ liệu và ứng dụng truy xuất và hiển thị thông tin phân tích dữ liệu.
 
 \begin{figure}[H]
@@ -22,7 +19,7 @@ Như đã giới thiệu một số mô hình IoT thực tế ở Mục \ref{sec
 
 \newpage
 
-\subsection{Các node cảm biến}
+\subsection{Các node cảm biến}\label{sec:cacloaicambien}
 Các node cảm biến: là một thiết bị được lắp đặt trên những đoạn đường hoặc các địa điểm thích hợp cần để lấy dữ liệu tại khu vực đó, nhiệm vụ chủ yếu là lấy dữ liệu từ các cảm biến đo được sau đó gửi dữ liệu đó lên máy chủ bằng module Sim GPRS.
 Để các node cảm biến này được hoạt động dưới tác nhân của môi trường như gió, mưa, bụi, và hơn hết có thể tận dụng nguồn năng lượng mặt trời để nạp pin cho mạch hoạt động độc lập với điện lưới, chúng tôi đã đề xuất mô hình thiết kế node cảm biến để có thể đáp ứng các yêu cầu như sau:
  
@@ -399,29 +396,146 @@ Cũng như các dự án IoT quy mô rộng khác, đề tài cũng yêu cầu n
 \subsubsection*{Đồng bộ hóa:} Hệ thống giám sát môi trường có nhiều thiết thiết bị khác nhau, nhiều phương pháp và cách thức truyền dữ liệu khác nhau. Do đó ta cần phải có sự chuẩn hóa các giao thức giao tiếp, đồng bộ các gói dữ liệu. Tuy nhiên điều này sẽ dẫn đến vấn nạn được đề cập ở mục sau.
 
 \subsubsection*{Tính bảo mật:} Vấn đề bảo mật và an toàn dữ liệu hiện tại vẫn là một trong những khó khăn mà hệ thống IoT đang mắc phải. Vì hệ thống IoT đòi hỏi cần phải có giao thức kết nối giữa các thiết bị phải được chuẩn hóa và động bộ, cũng như tối giản kích thước gói tin để tối ưu trong việc truyền dữ liệu giữa các thiết bị, do đó gói tin truyền đi có thiết lập cấu trúc đơn giản và hệ thống dễ bị thâm nhập. Điều này sẽ dẫn đến hệ thống có thể bị đánh cắp dữ liệu, và thậm chí mất quyền kiểm soát toàn bộ hệ thống bởi vì tất cả đều được kết nối với nhau. Vậy nên cần phải cân nhắc trade-off giữa hiệu năng hệ thống và tính bảo mật.
-\begin{center}
-\begin{figure}[htp]
+\begin{figure}[H]
 \centering    
 \includegraphics[width=5in]{virusiot}
 \caption[Tính bảo mật]{Tính bảo mật}
 \label{fig:virusiot}
 \end{figure}
-\end{center}
+
 Các mối nguy hại chính ảnh hưởng trực tiếp tới hệ thống IoT như: DDoS, Ransomware, Cyber Criminals và Cyber Warfare. 
 
 
 
+\newpage
 
-
-
-
-
-
-
-
-\section{Hiện thực Node cảm biến}
+\section{Hiện thực node cảm biến}
 \subsection{Các node cảm biến thu thập dữ liệu}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+Trong quá trình hiện thực và thực nghiệm, nhóm nghiên cứu đã tiến hành thử nghiệm với các loại thiết bị khác nhau phù hợp với từng nhiệm vụ chức năng theo thời điểm thực hiện đề tài. Và node cảm biến được xây dựng theo 2 giai đoạn phát triển như sau:
+\begin{itemize}
+\item[•]Giai đoạn 1 phát triển bản thiết kế đầu tiên cho việc thử nghiệm và mức độ hiệu quả của các cảm biến.
+\item[•]Giai đoạn 2 thiết kế hoàn thiện các mạch nguồn sử dụng năng lượng mặt trời và vỏ hộp để bảo vệ thiết bị trong các điều kiện mưa, gió, bụi.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\subsubsection*{Hiện thực prototype đầu tiên}
+Chức năng chính của node cảm biến là dùng để lấy các dữ liệu môi trường như giá trị nồng độ CO, chất lượng không khí, nhiệt độ và lượng bụi, trong quá trình tìm các loại cảm biến trên thị trường hiện có thì nhóm chúng tôi đã đề xuất sử dụng các cảm biến được đề cập tại mục \ref{sec:cacloaicambien} như sau:
+\begin{itemize}
+\item[•]Cảm biến GP2: dùng để đo lượng bụi có trong không khí.
+\item[•]Cảm  biến MQ135: dùng để đo chất lượng của môi trường không khí.
+\item[•]Cảm biến MQ07: dùng để đo nồng độ khí CO trong không khí.
+\item[•]Cảm biến DS18B20: dùng để đo nhiệt độ môi trường xung quanh. 
+\end{itemize}
+Như vậy, các thành phần chính của prototype biến đầu tiên chúng tôi đã xây dựng như sau:
+\begin{figure}[H]
+\centering    
+\includegraphics[width=5in]{prototype_1}
+\caption[Mô hình prototype đầu tiên]{Mô hình prototype đầu tiên}
+\label{fig:prototype_1}
+\end{figure}
+Ngoài những cảm biến đã đề cập thì sơ đồ hoạt động của các khối chức năng trong Hình \ref{fig:prototype_1} còn có thêm những khối chính sau:
+\begin{itemize}
+\item[•] Khối Arduino Nano: mạch xử lý trung tâm có nhiệm vụ định thời và điều khiển các khối cảm biến khác để thu thập dữ liệu cảm biến sau đó sẽ xử lý các số liệu thô sang số liệu chính xác, cuối cùng gửi dữ liệu đã được xử lý lên cho máy chủ thông qua khối Sim800L.
+\item[•] Khối Sim800L: chức năng mở kết nối TCP tới máy chủ thông qua dịch vụ GPRS của nhà mạng cung cấp và đưa các dữ liệu từ mạch vi xử lý gửi thông qua giao thức UART.
+\end{itemize}
+
+Các thư viện đã sử dụng
+\begin{lstlisting}[language=C][caption=Thư viện sử dụng]
+#include "MQ135.h" // Thu vien cac ham toan hoc de xu ly so lieu MQ135
+#include "MQ07.h" // Cung cap cac ham toan hoc de xu ly so lieu Mq07
+#include "OneWire.h" // Thu vien cau hinh giao thuc I2C
+#include "DallasTemperature.h" // Thu vien cho cam bien nhiet do
+#include "SoftwareSerial.h" // Thu vien mo rong cac chan UART
+#include "TimerOne.h" // Thu vien cau hinh timer
+\end{lstlisting}
+
+Kết quả hiện thực prototype đầu tiên:
+\begin{figure}[H]
+\centering    
+\includegraphics[width=5in]{prototype_2}
+\caption[Kết quả prototype đầu tiên]{Kết quả prototype đầu tiên}
+\label{fig:prototype_2}
+\end{figure}
+
+
+\subsubsection*{Hiện thực hoàn thiện node cảm biến}
+Giai đoạn thiết kế hoàn thiện các mạch nguồn sử dụng năng lượng mặt trời và vỏ hộp để bảo vệ thiết bị trong các điều kiện mưa, gió, bụi.
+
+Trước hết để có thể tận dụng nguồn năng lượng mặt trời để nạp pin cho mạch hoạt động độc lập với điện lưới thì chúng tôi đã đề xuất mô hình khối nguồn như sau:
+\begin{figure}[H]
+\centering    
+\includegraphics[width=6in]{khoinguon}
+\caption[Mô hình khối nguồn]{Mô hình khối nguồn}
+\label{fig:khoinguon}
+\end{figure}
+
+\begin{itemize}
+\item[•]Mạch tăng áp mini HT106 là module tăng áp cực kì nhỏ gọn, ngõ vào là cổng mircoUSB. Mạch có khả năng tăng đến 28v tối đa. Dưới đây là một số thông số kỹ thuật:\\
+-	Điện áp vào: 2-24V\\
+-	Điện áp ra: 5-28V\\
+-	Dòng tối đa: 2A đỉnh, dòng liên tục khoảng 1A.\\
+-	Công suất: 6W\\
+-	Hiệu suất: 93%
+	\begin{figure}[H]
+	\centering    
+	\includegraphics[width=3in]{ht06}
+	\caption[Mạch tăng áp mini HT106]{Mạch tăng áp mini HT106}
+	\label{fig:ht06}
+	\end{figure}
+
+\item[•]Mạch sạc pin Lithium TP4056v2 sử dụng IC quản lý sạc TP4056 nhưng được nâng cấp để có thể ngắt khi pin yếu dưới 2.4V nhằm bảo vệ pin. Một số thông số kỹ thuật của mạch sạc pin Lithium TP4056v2\\
+-	Điện áp đầu vào: 5VDC mini USB\\
+-	Điện áp ngưỡng ra tự động ngắt: 4.2V +- 1%\\
+-	Dòng sạc tối đa: 1000mA\\
+-	Điện áp ngưỡng cần sạc là 2.5V\\
+-	Tích hợp tự động ngắt bảo vệ pin khi pin yếu dưới 2.4 V qua 2 chân OUT+ và OUT-
+	\begin{figure}[H]
+	\centering    
+	\includegraphics[width=5in]{tp4056}
+	\caption[Mạch sạc pin Lithium TP4056v2]{Mạch sạc pin Lithium TP4056v2}
+	\label{fig:tp4056}
+	\end{figure}
+
+
+
+
+
+\item[•]Pin năng lượng mặt trời Poly 5.5V /220 mA\\
+-	Với kích thước: 100x80x2mm\\
+-	Nguồn đầu ra: 5.5V\\
+-	Dòng tối đa cung cấp được: 220mA\\
+\begin{figure}[H]
+\centering    
+\includegraphics[width=0.6\textwidth]{solarpanel_real}
+\caption[Pin năng lượng mặt trời Poly 5V /220 mA]{Pin năng lượng mặt trời Poly 5V /220 mA}
+\label{fig:solarpanel_real}
+\end{figure}
+
+\item[•]Nguồn năng lượng ngoài: sử dụng trong một số trường hợp thời tiết mưa nhiều hoặc gió nhiều mà thiếu nguồn năng lượng mặt trời, chúng ta có thể tận dụng nguồn mưa và gió nhờ các tuapin phát năng lượng nhờ vào sức gió và mưa.
+\item[•] Nguồn đầu ra 3.7VDC dùng để cấp cho module Sim800L còn đối với nguồn 6.5VDC dùng để cung cấp cho mạch vi xử lý.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Ứng dụng theo dõi dữ liệu và đánh giá}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 \section{Hệ thống Server lưu trữ dữ liệu và cung cấp API}
