@@ -423,7 +423,7 @@ Các mối nguy hại chính ảnh hưởng trực tiếp tới hệ thống IoT
 \newpage
 
 \section{Hiện thực node cảm biến}
-\subsection{Hiện thực chức năng node cảm biến}
+\subsection{Hiện thực prototype node cảm biến}
 Chức năng chính của node cảm biến là dùng để lấy các dữ liệu môi trường như giá trị nồng độ CO, chất lượng không khí, nhiệt độ và lượng bụi, trong quá trình tìm các loại cảm biến trên thị trường hiện có thì nhóm chúng tôi đã đề xuất sử dụng các cảm biến được đề cập tại mục \ref{sec:cacloaicambien} như sau:
 \begin{itemize}
 \item[•]Cảm biến GP2: dùng để đo lượng bụi có trong không khí.
@@ -444,15 +444,7 @@ Ngoài những cảm biến đã đề cập thì sơ đồ hoạt động của
 \item[•] Khối Sim800L: chức năng mở kết nối TCP tới máy chủ thông qua dịch vụ GPRS của nhà mạng cung cấp và đưa các dữ liệu từ mạch vi xử lý gửi thông qua giao thức UART.
 \end{itemize}
 
-\subsubsection*{Các thư viện đã sử dụng} 
-\begin{lstlisting}[language=C][caption=Thư viện sử dụng]
-#include "MQ135.h" //Thu vien cac ham toan hoc de xu ly so lieu MQ135
-#include "MQ07.h" //Thu vien cac ham toan hoc de xu ly so lieu MQ07
-#include "OneWire.h" // Thu vien cau hinh giao thuc I2C
-#include "DallasTemperature.h" // Thu vien cho cam bien nhiet do
-#include "SoftwareSerial.h" // Thu vien mo rong cac chan UART
-#include "TimerOne.h" // Thu vien cau hinh timer
-\end{lstlisting}
+
 
 \subsubsection*{Mô hình khối nguồn cho node cảm biến}
 Tiếp đến phần thiết kế thì để có thể tận dụng nguồn năng lượng mặt trời để nạp pin cho mạch hoạt động độc lập với điện lưới thì chúng tôi đã đề xuất mô hình khối nguồn như sau:
@@ -505,6 +497,21 @@ Tiếp đến phần thiết kế thì để có thể tận dụng nguồn năn
 \end{itemize}
 
 
+
+
+
+\subsubsection*{Các thư viện đã sử dụng} 
+\begin{lstlisting}[language=C]
+#include "MQ135.h" //Thu vien cac ham toan hoc de xu ly so lieu MQ135
+#include "MQ07.h" //Thu vien cac ham toan hoc de xu ly so lieu MQ07
+#include "OneWire.h" // Thu vien cau hinh giao thuc I2C
+#include "DallasTemperature.h" // Thu vien cho cam bien nhiet do
+#include "SoftwareSerial.h" // Thu vien mo rong cac chan UART
+#include "TimerOne.h" // Thu vien cau hinh timer
+\end{lstlisting}
+
+
+
 \subsubsection*{Kết quả hiện thực}
 \begin{figure}[H]
 \centering    
@@ -519,6 +526,9 @@ Tiếp đến phần thiết kế thì để có thể tận dụng nguồn năn
 \caption[Kết quả prototype đầu tiên 2]{Kết quả prototype đầu tiên 2}
 \label{fig:prototype_3}
 \end{figure}
+
+
+
 \subsubsection*{Nhận xét}
 \begin{itemize}
 \item[•] Hoàn thành các chức năng có thể đọc được các dữ liệu từ cảm biến MQ135, MQ07, DS18B20, và GP2.
@@ -530,10 +540,150 @@ Tiếp đến phần thiết kế thì để có thể tận dụng nguồn năn
 
 
 \subsection{Hiện thực mô hình tổng thể node cảm biến}
-\subsubsection*{}
+\subsubsection*{Hoàn thiện chức năng}
+Sau khi hoàn thành prototype đầu tiên node cảm biến thì chúng tôi đã bắt đầu lên kế hoạch nâng cấp chúng thêm những chức năng để có thể tối ưu tốt nhất có thể. Chức năng của node cảm biến bao gồm:
+\begin{itemize}
+\item[•] 
+\item[•]
+\item[•]
+\end{itemize}
+
+\subsubsection*{Hiện thực board mạch vi xử lý}
+Board mạch vi xử lý được thiết kế và hiện thực gọn nhất có thể và hỗ trợ các header nối các dây bus đến các cảm biến và module Sim800L. Chúng tôi đã thực hiện thiết kế board mạch vi xử lý như Hình \ref{fig:botrimcu}
+
+\begin{figure}[H]
+\centering  
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=3in]{mcu}
+    \caption[Mô hình 1]{Mô hình 1}
+    \label{fig:mcu}
+  \end{subfigure}\hfill
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=3in]{mcu_2}
+  	 \caption[Mô hình 2]{Mô hình 2}
+    \label{fig:mcu_2}
+  \end{subfigure}
+  \caption{Bố trí board mạch vi xử lý}\label{fig:botrimcu}
+\end{figure}
+
+Một số khai báo được sử dụng như sau:
+\begin{lstlisting}[numbers=left,firstnumber=1,language=C]
+#define ONE_WIRE_BUS 4
+#define MQ135_PIN A0
+#define MQ7_PIN A1
+#define RX_SIM_OUT 11
+#define TX_SIM_OUT 10
+#define DUST_OUT A2
+#define DUST_PIN 2
+
+// Gia tri % Pin thap se khong cho phep mach hoat dong
+#define LOW_BATTERY 30 
+
+// So lan gui lai du lieu len may chu neu khong thanh cong
+#define TIMEFAIL_SENDSMS 5 
+
+// Mo rong UART tren chan so 11 va 10
+SoftwareSerial sim900(RX_SIM_OUT, TX_SIM_OUT);
+
+int TIMEON = 3; //Thoi gian dot nong cam bien MQ135, MQ07
+
+//Thoi gian ngat nguon cam bien MQ135, MQ07 ban ngay
+int TIMEOFF_DAY = 13; 
+//Thoi gian ngat nguon cam bien MQ135, MQ07 ban dem
+int TIMEOFF_NIGHT = 28;
+
+// Moc thoi gian xac dinh buoi sang va buoi toi
+int time_s1 = 6;
+int time_s2 = 19;
+
+String apiKey = "7"; //Node ID
+\end{lstlisting}
+Lập trình cho vi xử lý Arduino Nano được mô hình hóa theo lưu đồ xử lý dưới Hình \ref{fig:node_status}:
+
+\begin{figure}[H]
+\centering    
+\includegraphics[width=2.5in]{node_status}
+\caption[Lưu đồ xử lý hàm main]{Lưu đồ xử lý hàm main}
+\label{fig:node_status}
+\end{figure}
+
+\begin{itemize}
+\item[•]Khởi tạo cài đặt ban đầu gồm các công việc: \\
+- Thiết lập chế độ hoạt động của các chân trên vi xử lý.\\
+- Thiết lập tốc độ truyền UART.\\
+- Thiết lập timer định thời.\\
+- Khởi động Module Sim800L.\\
+- Đồng bộ thời gian module Sim800L với máy chủ The Network Time Protocol(NTP).\\
+
+Việc Đồng bộ thời gian module Sim800L với máy chủ NTP được Sim800L hỗ trợ qua các tập lệnh sau:
+\begin{lstlisting}[numbers=left,firstnumber=1,language=C]
+void syncTime()
+{
+  //  Network time sync
+  sim900.println("AT+SAPBR=1,1");
+  delay(2000);
+  sim900.println("AT+CNTPCID=1");
+  delay(2000);
+  sim900.println("AT+CNTP=\"128.4.24.98\",28");
+  delay(2000);
+  sim900.println("AT+CNTP");
+  delay(4000);  
+  sim900.println("AT+SAPBR=0,1");
+  delay(2000);
+  Serial.println("Sync time - Done");
+  updateTime();
+}
+\end{lstlisting}
 
 
 
+
+
+
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\subsubsection*{Bố trí các linh kiện trong hộp cảm biến}
+Việc bố trí các linh kiện trong hộp cảm biến nhầm giúp cho việc thu thập dữ liệu của các cảm biến được hiệu quả hơn và không bị ảnh hưởng bởi mưa. Nó cũng giúp cho việc phát triển trong tương lai nếu các cảm biến hoặc linh kiện bị hư thì dễ dàng thay thế hơn.
+
+Đối với các cảm biến MQ135, MQ07 và cảm biến nhiệt DS18B20 thì được bố trí đặt ở lớp dưới của chiếc hộp như Hình \ref{fig:botri}
+
+\begin{figure}[H]
+\centering  
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=2.5in]{house_sensor}
+    \caption[Mô hình]{Mô hình}
+    \label{fig:house_sensor}
+  \end{subfigure}\hfill
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=2.5in]{house_sensor_2}
+  	 \caption[Thực tế]{Thực tế}
+    \label{fig:house_sensor_2}
+  \end{subfigure}
+  \caption{Bố trí các cảm biến}\label{fig:botri}
+\end{figure}
+Đối với các cảm biến bụi GP2 chúng tôi đề xuất vị trí được đặt như Hình \ref{house_dust} sau:
+\begin{figure}[H]
+\centering    
+\includegraphics[width=2.5in]{house_dust}
+\caption[Mô hình đặt cảm biến GP2]{Mô hình đặt cảm biến GP2}
+\label{fig:house_dust}
+\end{figure}
+Còn các board mạch vi xử lý, module Sim800L và pin được đặc vị trí bên trong chiếc hộp như Hình \ref{fig:house_board_kogps} sau:
+\begin{figure}[H]
+\centering    
+\includegraphics[width=2.5in]{house_board_kogps}
+\caption[Mô hình bố trị các linh kiện khác]{Mô hình bố trị các linh kiện khác}
+\label{fig:house_board_kogps}
+\end{figure}
 
 
 
