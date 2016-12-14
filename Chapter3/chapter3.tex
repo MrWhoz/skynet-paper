@@ -229,7 +229,7 @@ Dữ liệu sensor node gửi lên cho máy chủ gồm các dữ liệu sau:
 \end{table}
 \subsection{Thiết kế API}
 \label{sec: api}
-Mục tiêu đề tài không chỉ thu thập và phân tích mà còn chia sẻ dữ liệu. Để làm được điều đó thì cần phải có API cung cấp cho những nhà phát triển thứ 3, có thể dùng API được cung cấp để sử dụng dữ liệu để phát triển. Bởi vì vậy hệ thống có xây dựng hệ thống API mở.
+Mục tiêu đề tài không chỉ thu thập và thống kê mà còn chia sẻ dữ liệu. Để làm được điều đó thì cần phải có API cung cấp cho những nhà phát triển thứ 3, có thể dùng API được cung cấp để sử dụng dữ liệu để phát triển. Bởi vì vậy hệ thống có xây dựng hệ thống API mở.
 
 Ở bảng \ref{table: apilist}, hệ thống cung cấp các API về quản lý và truy vấn dữ liệu của các sensor node. Sử dụng hai method POST và GET để gửi request tới Server. 
 
@@ -249,9 +249,23 @@ Mục tiêu đề tài không chỉ thu thập và phân tích mà còn chia s�
 	\label{table: apilist}
 \end{table}
 
-Giao thức được lựa chọn sử dụng trong việc push data là giao thức HTTP mà không phải các giao thức thuần để phát triển IoT như MQTT hay CoAp vì tính phổ biến và dễ thiết lập sử dụng. Chỉ cần thiết lập chuỗi URL có đính kèm thông tin là có thể hòa nhập với hệ thống mà không cần thiết lập gì thêm, có thể ví như là "plug and play" vì tính đơn giản. 
+Giao thức được lựa chọn sử dụng trong việc push data là giao thức HTTP mà không phải các giao thức thuần để phát triển IoT như MQTT hay CoAp vì tính phổ biến và dễ thiết lập sử dụng. Chỉ cần thiết lập chuỗi URL có đính kèm thông tin là có thể hòa nhập với hệ thống mà không cần thiết lập gì thêm, có thể ví như là "plug and play" vì tính đơn giản và hoạt động với mọi thiết bị có hỗ trợ kết nối Internet.
 
 Bù lại, so với các giao thức tối ưu dung lượng gói tin cho phát triển IoT như MQTT, gói tin gửi qua HTTP có dung lượng nhiều hơn đáng kể nhưng với tần số hoạt động truyền dữ liệu của đề tài thì vẫn có thể chấp nhận được và không tạo ra sự khác biệt lớn khi hoạt động.
+
+Về phần API trợ giúp đăng ký và xác thực người dùng được quy ước như bảng \ref{table: apiuser}.
+\begin{table}[H]
+	\centering
+	\caption{Bảng API tương tác với dữ liệu về các node}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		Method & URL            & Miêu tả                \\ \hline
+		POST   & /auth/login       & Đăng nhập                           \\ \hline
+		GET   & /auth/logout   & Đăng xuất   \\ \hline
+		POST   & /user/register     & Đăng ký người dùng mới \\ \hline
+	\end{tabular}
+	\label{table: apiuser}
+\end{table}
 \subsection{Cách thức tương tác cập nhật dữ liệu}
 
 Trong việc tương tác cập nhật dữ liệu, hiện nay mô hình truy thường được sử dụng là \textbf{polling}. Client và server phải liên tục gửi các request liên tục cách nhau trong một thời gian cố định để kiểm tra liệu có sự thay đổi cập nhật dữ liệu. 
@@ -383,7 +397,7 @@ Cũng như các dự án IoT quy mô rộng khác, đề tài cũng yêu cầu n
 \subsubsection*{Tính đáp ứng thời gian thực:}Để giải quyết tình trạng giao thông hiện thời và trong thời gian gần, ta cần phải có dữ liệu thời gian thực. Ta không thể sử dụng dữ liệu của nửa tiếng hoặc 1 giờ trước để vẽ nên bản đồ lưu thông hiện tại cũng như cách điều hướng giải quyết. Do đó, hệ thống cần phải có thời gian đáp ứng nhanh khi có yêu cầu dữ liệu khi được gọi. Để đạt được kết quả đó, ta cần phải có những phần cứng với thiết lập kết nối có khả năng đáp ứng nhanh, cùng với khả năng hoạt động ổn định liên tục trong thời gian dài để cung cấp dữ liệu liên tục và liền mạch.
 
 
-\subsubsection*{Toàn ven dữ liệu (Data Integrity):} Mục đích chính của dự án là thu thập dữ liệu và từ đó phát triển ứng dụng. Vì thế tính toàn vẹn dữ liệu đóng vai trò quan trọng. Dữ liệu thu thập cần phải đáp ứng đủ các yếu tố: tin cậy, chính xác và đầy đủ. Ta cần phải có đủ dữ liệu thì mới có thể đủ dữ kiện để giải quyết bài toán. Ta không thể giải quyết khi chỉ có được dữ liệu một đoạn đường, 1 thời gian ngắn mà đòi hỏi phải có dữ liệu của một khu vực đủ lớn và tương quan với nhau. Bên cạnh đó cần phải có tính chính xác dữ liệu và đòi hỏi sự ổn định của lượng dữ liệu đó qua yếu tố độ tin cậy. 
+\subsubsection*{Toàn vẹn dữ liệu (Data Integrity):} Mục đích chính của dự án là thu thập dữ liệu và từ đó phát triển ứng dụng. Vì thế tính toàn vẹn dữ liệu đóng vai trò quan trọng. Dữ liệu thu thập cần phải đáp ứng đủ các yếu tố: tin cậy, chính xác và đầy đủ. Ta cần phải có đủ dữ liệu thì mới có thể đủ dữ kiện để giải quyết bài toán. Ta không thể giải quyết khi chỉ có được dữ liệu một đoạn đường, 1 thời gian ngắn mà đòi hỏi phải có dữ liệu của một khu vực đủ lớn và tương quan với nhau. Bên cạnh đó cần phải có tính chính xác dữ liệu và đòi hỏi sự ổn định của lượng dữ liệu đó qua yếu tố độ tin cậy. 
 \begin{center}
 \begin{figure}[htp]
 \centering    
@@ -538,8 +552,9 @@ Trước hết để có thể tận dụng nguồn năng lượng mặt trời 
 
 \subsection{Ứng dụng theo dõi dữ liệu và đánh giá}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+\newpage
 \section{Hệ thống Server lưu trữ dữ liệu và cung cấp API}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+
 \subsection{Cấu trúc tổ chức tập tin}
 \subsubsection*{Các thư mục và chức năng}
 Chúng ta có những thư mục được làm việc trực tiếp:
@@ -670,12 +685,67 @@ Dựa trên mô hình thiết kế API tại \ref{sec: api}, API được hiện
 
 
 \subsubsection*{API đăng ký và xác thực người dùng}
-Sử dụng session để quả
+
+Các API này được xây dựng để quản lý và phân quyền người dùng, cho phép sử dụng các API về quản lý thông tin của các sensor node.
+
+\textbf{Đăng nhập:}
+
+Hệ thống sử dụng module Passport chạy trên nền Nodejs, có chức năng dễ dàng thiết lập xác thực người dùng. Module này có thể liên kết với các tài khoản phổ biến như Facebook, Google, Twitter... để hỗ trợ phương thức đăng nhập tiện lợi nhất cho người dùng. Tuy nhiên hệ thống chỉ sử dụng phương thức đăng nhập và quản lý người dùng ở mức local vì là phương thức phù hợp với đề tài.
+
+Chi tiết API đăng nhập:
+\begin{Verbatim}[xleftmargin=2em]
+POST: /auth/login
+data: {username,password}
+RESPOND:
+case Success:
+	{
+		code: 1,
+		username,
+		message: 'Login successful'
+	}
+case Failure	
+	{
+		code: 0,
+		message: "Invalid username or password"
+	}
+======================
+\end{Verbatim}
+
+\textbf{Lưu thông tin người dùng bằng session:}
+
+Sau khi đăng nhập, một session, còn gọi là phiên làm việc, sẽ được hình thành và lưu trữ trong thời gian nhất định. Session cho phép người dùng có thể vào các trang quản lý với quyền hạn cho phép mà không yêu cầu đăng nhập lại, cũng như được phép sử dụng các API quản lý sensor node.
+
+Session sẽ tự động xóa sau một thời gian quy định, cụ thể ở hệ thống này là 10 ngày kể từ lần đăng nhập gần nhất. Người dùng có thể xóa thủ công bằng cách đăng xuất qua phương thức:
+\begin{Verbatim}[xleftmargin=2em]
+GET: /auth/logout
+\end{Verbatim}
+
+\textbf{Đăng ký:}
+
+\begin{Verbatim}[xleftmargin=2em]
+POST: /user/register
+	data:{username, password, name, mail}
+======================	
+RESPOND:
+	{
+		code: -1,
+		message: "Username existed"
+	}
+	{
+		code: -2,
+		message: "Mail is used",
+	}
+	{
+		code: 1,
+		message: "Account created successful"
+	}
+======================	
+\end{Verbatim}
 \subsubsection*{API cung cấp và quản lý sensor node}
 Các API được miêu tả tại bảng \ref{table: apilist}, các request và respond được miêu tả chi tiết:
 
 • API thiết lập và cấu hình các sensor node: initnew, updatenode và replace node yêu cầu phải có đăng nhập từ API xác thực người dùng để giữ session và sau đó mới có thể sử dụng. Các API này có cấu trúc tương tự nhau và được mô tả:
-\begin{lstlisting}
+\begin{Verbatim}[xleftmargin=2em]
 POST: /node/initnew
 data: {node\_id,lat,lng,phone,status}
 ======================
@@ -700,33 +770,36 @@ case Not authenticated:
 		code: -1,
 		message: 'You are not authenticated'
 	}
-\end{lstlisting}
+======================	
+\end{Verbatim}
 
 • API get thông tin và dữ liệu các sensor node: sử dụng phương thức GET để truy xuất dữ liệu về thông tin sensor node và dữ liệu các cảm biến. Hệ thống được thiết kế mang tính mở và chia sẻ nên không yêu cầu đăng nhập để truy xuất dữ liệu. Các thông tin đặc tả chi tiết API:
-\begin{lstlisting}
+\begin{Verbatim}[xleftmargin=2em]
 GET:	/node/getinfo?*query
 Ex: 	/node/getinfo?id=1&status=0
-		/node/getinfo?list=1&status=1
+	    /node/getinfo?list=1&status=1
 Query:
-+ id=*node ID* to get by ID
-+ phone: *node phonenumber* to get by phone number
-+ list=1 to get list
-+ status=1 to get active node info recode, 0 to get all nodes history, showing disable nodes
++ id=*node ID* để get node bằng ID
++ phone: *node phonenumber* để get node bằng phone number
++ list=1 để get list các node
++ status=1 để get node đang ở trạng thái active,= 0 để node ở tất cả 
+trạng thái, cũng như lịch sử thay đổi node
 ======================
 RESPOND:
 data:
 - single node:{node_id,location:{lat,lng},phone,,time,data_id,status}
 - list: array of {node_id,location:{lat,lng},phone,time,data_id,status}
-\end{lstlisting}
+======================
+\end{Verbatim}
 
 • API push dữ liệu từ sensor node: cũng tương tự như API get dữ liệu, API push dữ liệu sử dụng method GET thay cho POST để hỗ trợ dễ dàng trong việc thiết lập các thiết bị IoT đóng góp dữ liệu. Lượng dữ liệu của các sensor node không quá lớn, chỉ bao gồm những trường sensor ID và node ID nên có thể tích hợp vào thanh header của request.
 
-\begin{lstlisting}
+\begin{Verbatim}[xleftmargin=2em]
 GET: 	/node/pushdata?*query
 Ex: 	/node/pushdata?node_id=1&s1=22&s2=33&s3=44&s4=55&s5=66
 Query:
 + node_id: node ID
-+ s1,s2,s4,s5: value of each sensor
++ s1,s2,s3,s4,s5: value of each sensor
 ======================
 RESPOND:
 case Success:
@@ -739,7 +812,8 @@ case Failure:
 		code: 0,
 		message: 'Add node data failure'
 	}
-\end{lstlisting}
+======================
+\end{Verbatim}
 
 \subsubsection*{Cung cấp API log}
 
@@ -755,7 +829,7 @@ case Failure:
 Ví dụ cụ thể của một đoạn log:
 \begin{lstlisting}
 {"level":"info","message":"IP:123.151.42.61 GET /route","timestamp":"10:48:56"}
-{"level":"info","message":"IP:14.161.14.94 GET /static route","timestamp":"10:49:22"}
+{"level":"info","message":"IP:14.161.14.94 GET /statis route","timestamp":"10:49:22"}
 {"level":"info","message":"IP:14.161.14.94 GET /graph route","timestamp":"10:49:27"}
 {"level":"info","message":"IP:14.161.14.94 GET /node/getinfo: get list node info - number of nodes 12","timestamp":"10:49:27"}
 {"level":"info","message":"IP:14.161.14.94 GET /node/getinfo: get node info by id:9","timestamp":"10:49:29",{"data_id":"106c59fe-753d-4a76-8418-88fd0df68d0c","id":"87b7f859-8c1e-4608-9645-5105ebb38e9b", "location":{"lat":10.91085286140159,"lng":106.99790954589844}, "node_id":"9","phone":"0123456899","status":1,"time":"2016-12-06T02:08:57.943Z"}}
