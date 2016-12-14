@@ -424,23 +424,7 @@ Các mối nguy hại chính ảnh hưởng trực tiếp tới hệ thống IoT
 \newpage
 
 \section{Hiện thực node cảm biến}
-\subsection{Các node cảm biến thu thập dữ liệu}
-Trong quá trình hiện thực và thực nghiệm, nhóm nghiên cứu đã tiến hành thử nghiệm với các loại thiết bị khác nhau phù hợp với từng nhiệm vụ chức năng theo thời điểm thực hiện đề tài. Và node cảm biến được xây dựng theo 2 giai đoạn phát triển như sau:
-\begin{itemize}
-\item[•]Giai đoạn 1 phát triển bản thiết kế đầu tiên cho việc thử nghiệm và mức độ hiệu quả của các cảm biến.
-\item[•]Giai đoạn 2 thiết kế hoàn thiện các mạch nguồn sử dụng năng lượng mặt trời và vỏ hộp để bảo vệ thiết bị trong các điều kiện mưa, gió, bụi.
-\end{itemize}
-
-
-
-
-
-
-
-
-
-
-\subsubsection*{Hiện thực prototype đầu tiên}
+\subsection{Hiện thực chức năng node cảm biến}
 Chức năng chính của node cảm biến là dùng để lấy các dữ liệu môi trường như giá trị nồng độ CO, chất lượng không khí, nhiệt độ và lượng bụi, trong quá trình tìm các loại cảm biến trên thị trường hiện có thì nhóm chúng tôi đã đề xuất sử dụng các cảm biến được đề cập tại mục \ref{sec:cacloaicambien} như sau:
 \begin{itemize}
 \item[•]Cảm biến GP2: dùng để đo lượng bụi có trong không khí.
@@ -461,29 +445,18 @@ Ngoài những cảm biến đã đề cập thì sơ đồ hoạt động của
 \item[•] Khối Sim800L: chức năng mở kết nối TCP tới máy chủ thông qua dịch vụ GPRS của nhà mạng cung cấp và đưa các dữ liệu từ mạch vi xử lý gửi thông qua giao thức UART.
 \end{itemize}
 
-Các thư viện đã sử dụng
+\subsubsection*{Các thư viện đã sử dụng} 
 \begin{lstlisting}[language=C][caption=Thư viện sử dụng]
-#include "MQ135.h" // Thu vien cac ham toan hoc de xu ly so lieu MQ135
-#include "MQ07.h" // Cung cap cac ham toan hoc de xu ly so lieu Mq07
+#include "MQ135.h" //Thu vien cac ham toan hoc de xu ly so lieu MQ135
+#include "MQ07.h" //Thu vien cac ham toan hoc de xu ly so lieu MQ07
 #include "OneWire.h" // Thu vien cau hinh giao thuc I2C
 #include "DallasTemperature.h" // Thu vien cho cam bien nhiet do
 #include "SoftwareSerial.h" // Thu vien mo rong cac chan UART
 #include "TimerOne.h" // Thu vien cau hinh timer
 \end{lstlisting}
 
-Kết quả hiện thực prototype đầu tiên:
-\begin{figure}[H]
-\centering    
-\includegraphics[width=5in]{prototype_2}
-\caption[Kết quả prototype đầu tiên]{Kết quả prototype đầu tiên}
-\label{fig:prototype_2}
-\end{figure}
-
-
-\subsubsection*{Hiện thực hoàn thiện node cảm biến}
-Giai đoạn thiết kế hoàn thiện các mạch nguồn sử dụng năng lượng mặt trời và vỏ hộp để bảo vệ thiết bị trong các điều kiện mưa, gió, bụi.
-
-Trước hết để có thể tận dụng nguồn năng lượng mặt trời để nạp pin cho mạch hoạt động độc lập với điện lưới thì chúng tôi đã đề xuất mô hình khối nguồn như sau:
+\subsubsection*{Mô hình khối nguồn cho node cảm biến}
+Tiếp đến phần thiết kế thì để có thể tận dụng nguồn năng lượng mặt trời để nạp pin cho mạch hoạt động độc lập với điện lưới thì chúng tôi đã đề xuất mô hình khối nguồn như sau:
 \begin{figure}[H]
 \centering    
 \includegraphics[width=6in]{khoinguon}
@@ -517,11 +490,6 @@ Trước hết để có thể tận dụng nguồn năng lượng mặt trời 
 	\caption[Mạch sạc pin Lithium TP4056v2]{Mạch sạc pin Lithium TP4056v2}
 	\label{fig:tp4056}
 	\end{figure}
-
-
-
-
-
 \item[•]Pin năng lượng mặt trời Poly 5.5V /220 mA\\
 -	Với kích thước: 100x80x2mm\\
 -	Nguồn đầu ra: 5.5V\\
@@ -538,21 +506,88 @@ Trước hết để có thể tận dụng nguồn năng lượng mặt trời 
 \end{itemize}
 
 
+\subsubsection*{Kết quả hiện thực}
+\begin{figure}[H]
+\centering    
+\includegraphics[width=5in]{prototype_2}
+\caption[Kết quả prototype đầu tiên]{Kết quả prototype đầu tiên}
+\label{fig:prototype_2}
+\end{figure}
+
+\begin{figure}[H]
+\centering    
+\includegraphics[width=5in]{prototype_3}
+\caption[Kết quả prototype đầu tiên 2]{Kết quả prototype đầu tiên 2}
+\label{fig:prototype_3}
+\end{figure}
+\subsubsection*{Nhận xét}
+\begin{itemize}
+\item[•] Hoàn thành các chức năng có thể đọc được các dữ liệu từ cảm biến MQ135, MQ07, DS18B20, và GP2.
+\item[•] Xử lý được dữ liệu thông qua các thư viện do nhà sản xuất cảm biến cung cấp.
+\item[•] Gửi được dữ liệu lên máy chủ thông qua dịch vụ GPRS của Sim800L, hệ thống máy chủ của chúng tôi ban đầu chưa được hoàn thành nên nhờ đến công cụ phát triển IoT Thingspeak thì chúng tôi đã kiểm tra được, xem thêm tại: \url{https://thingspeak.com/channels/157120}
+\end{itemize}
+
+
+
+
+\subsection{Hiện thực mô hình tổng thể node cảm biến}
+\subsubsection*{}
 
 
 
 
 
 
-
-
-
-
-
-
-\subsection{Ứng dụng theo dõi dữ liệu và đánh giá}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 \newpage
+\subsection{Mức độ tiêu hao năng lượng}
+Để biết được mức tiêu hao năng lượng của mạch hoạt động như thế nào thì chúng tôi đã bắt đầu tính toán từ những thông số tiêu thụ chuẩn của các linh kiện được sử dụng trong node cảm biến. Nhầm nắm bắt được và đưa ra dung lượng pin cần thiết cho các node cảm biến chạy mà không phụ thuộc vào mạng lưới điện.\\
+Chú ý: các thông số tính toán dưới lấy từ thông số chuẩn của nhà sản xuất kèm với một số thông số chuẩn của chúng tôi như sau:
+\begin{itemize}
+\item[•] Thời gian cho việc đốt nóng cảm biến MQ135 và MQ07 trước khi lấy dữ liệu: 3 phút
+\item[•] Ban ngày từ 7AM-8PM: cứ mỗi 15 phút gửi dữ liệu lên máy chủ.
+\item[•] Ban đêm từ 8PM-7AM: cứ mỗi 30 phút gửi dữ liệu lên máy chủ.
+\end{itemize}
+
+Mức tiêu hao năng lượng vào 1 buổi sáng 7AM-8PM:
+
+\begin{table}[H]
+\centering
+\caption{Bảng tiêu thụ năng lượng buổi sáng}
+\label{table:buoisang}
+\begin{tabular}{|l|l|r|r|r|r|}
+\hline
+\textbf{STT}  & \textbf{Module}                                                       & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Dòng tiêu \\ thụ (mA)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Giờ hoạt \\ động (h)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Tổng dòng \\ tiêu thụ(mA)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Công suất\\ (mW)\end{tabular}}} \\ \hline
+1             & Cảm biến bụi                                                          & 20                                                                                          & 13                                                                                         & 260                                                                                             & 858                                                                                    \\ \hline
+2             & Cảm biến MQ07                                                         & 250                                                                                         & 2.6                                                                                        & 650                                                                                             & 3250                                                                                   \\ \hline
+3             & Cảm biến MQ135                                                        & 300                                                                                         & 2.6                                                                                        & 780                                                                                             & 3900                                                                                   \\ \hline
+4             & \begin{tabular}[c]{@{}l@{}}Cảm biến nhiệt độ\\ 18BS20\end{tabular}    & 1.5                                                                                         & 13                                                                                         & 19.5                                                                                            & 97.5                                                                                   \\ \hline
+5             & \begin{tabular}[c]{@{}l@{}}Module Sim800L \\ (idea mode)\end{tabular} & 10                                                                                          & 12.35                                                                                      & 123.5                                                                                           & 456.95                                                                                 \\ \hline
+6             & \begin{tabular}[c]{@{}l@{}}Module Sim800L\\ (Hoạt động)\end{tabular}  & 500                                                                                         & 0.65                                                                                       & 325                                                                                             & 1202.5                                                                                 \\ \hline
+7             & Arduino nano                                                          & 10                                                                                          & 13                                                                                         & 130                                                                                             & 780                                                                                    \\ \hline
+\textbf{Tổng} & \textbf{}                                                             & \textbf{1091.5}                                                                             & \textbf{}                                                                                  & \textbf{2288}                                                                                   & \textbf{10544.95}                                                                      \\ \hline
+\end{tabular}
+\end{table}
+
+
+Mức tiêu hao năng lượng vào 1 buổi tối 8PM-7AM:
+\begin{table}[H]
+\centering
+\caption{Bảng tiêu thụ năng lượng buổi tối}
+\label{table:buoitoi}
+\begin{tabular}{|l|l|r|r|r|r|}
+\hline
+\textbf{STT}  & \textbf{Module}                                                       & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Dòng tiêu \\ thụ (mA)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Giờ hoạt \\ động (h)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Tổng dòng \\ tiêu thụ(mA)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Công suất\\ (mW)\end{tabular}}} \\ \hline
+1             & Cảm biến bụi                                                          & 20                                                                                          & 11                                                                                         & 220                                                                                             & 726                                                                                    \\ \hline
+2             & Cảm biến MQ07                                                         & 250                                                                                         & 2.2                                                                                        & 550                                                                                             & 2750                                                                                   \\ \hline
+3             & Cảm biến MQ135                                                        & 300                                                                                         & 2.2                                                                                        & 660                                                                                             & 3300                                                                                   \\ \hline
+4             & \begin{tabular}[c]{@{}l@{}}Cảm biến nhiệt độ\\ 18BS20\end{tabular}    & 1.5                                                                                         & 11                                                                                         & 16.5                                                                                            & 82.5                                                                                   \\ \hline
+5             & \begin{tabular}[c]{@{}l@{}}Module Sim800L \\ (idea mode)\end{tabular} & 10                                                                                          & 10.45                                                                                      & 104.5                                                                                           & 386.65                                                                                 \\ \hline
+6             & \begin{tabular}[c]{@{}l@{}}Module Sim800L\\ (Hoạt động)\end{tabular}  & 500                                                                                         & 0.55                                                                                       & 275                                                                                             & 1017.5                                                                                 \\ \hline
+7             & Arduino nano                                                          & 10                                                                                          & 11                                                                                         & 110                                                                                             & 660                                                                                    \\ \hline
+\textbf{Tổng} & \textbf{}                                                             & \textbf{1091.5}                                                                             & \textbf{}                                                                                  & \textbf{1936}                                                                                   & \textbf{8922.65}                                                                       \\ \hline
+\end{tabular}
+\end{table}
+
 \section{Hệ thống Server lưu trữ dữ liệu và cung cấp API}
 
 \subsection{Cấu trúc tổ chức tập tin}
