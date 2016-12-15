@@ -575,8 +575,7 @@ Các công nghệ biến ánh sáng mặt trời thành điện hiện tại v�
 \section{Kiến thức căn bản về ứng dụng web - di động và xây dựng Server}
 
 \subsection{Giao thức TCP}
-%TODO: ref https://vi.wikipedia.org/wiki/TCP
-TCP (Transmission Control Protocol - "Giao thức điều khiển truyền vận") là một trong các giao thức cốt lõi của bộ giao thức TCP/IP. Sử dụng TCP, các ứng dụng trên các máy chủ được nối mạng có thể tạo các "kết nối" với nhau, mà qua đó chúng có thể trao đổi dữ liệu hoặc các gói tin. Giao thức này đảm bảo chuyển giao dữ liệu tới nơi nhận một cách đáng tin cậy và đúng thứ tự. TCP còn phân biệt giữa dữ liệu của nhiều ứng dụng (chẳng hạn, dịch vụ Web và dịch vụ thư điện tử) đồng thời chạy trên cùng một máy chủ.
+TCP (Transmission Control Protocol - "Giao thức điều khiển truyền vận") là một trong các giao thức cốt lõi của bộ giao thức TCP/IP. Sử dụng TCP, các ứng dụng trên các máy chủ được nối mạng có thể tạo các "kết nối" với nhau, mà qua đó chúng có thể trao đổi dữ liệu hoặc các gói tin. Giao thức này đảm bảo chuyển giao dữ liệu tới nơi nhận một cách đáng tin cậy và đúng thứ tự. TCP còn phân biệt giữa dữ liệu của nhiều ứng dụng (chẳng hạn, dịch vụ Web và dịch vụ thư điện tử) đồng thời chạy trên cùng một máy chủ.\cite{c2tcp}
 
 TCP hỗ trợ nhiều giao thức ứng dụng phổ biến nhất trên Internet và các ứng dụng kết quả, trong đó có WWW, thư điện tử và Secure Shell.
 
@@ -671,8 +670,7 @@ Nhằm mục đích giúp thời gian tương tác giữa người sử dụng v
 
 
 \subsection{NodeJs}
-%TODO: http://vietjack.com/nodejs/nodejs_la_gi.jsp
-NodeJS là một nền tảng Server side được xây dựng dựa trên Javascript Engine (V8 Engine). Node.js được phát triển bởi Ryan Dahl năm 2009. Định nghĩa Nodejs bởi tài liệu chính thức : Node.js là một nền tảng dựa vào Chrome Javascript runtime để xây dựng các ứng dụng nhanh, có độ lớn. 
+NodeJS là một nền tảng Server side được xây dựng dựa trên Javascript Engine (V8 Engine). Node.js được phát triển bởi Ryan Dahl năm 2009. Định nghĩa Nodejs bởi tài liệu chính thức : Node.js là một nền tảng dựa vào Chrome Javascript runtime để xây dựng các ứng dụng nhanh, có độ lớn.  \cite{c2node}
 
 \begin{figure}[H]
 	\centering    
@@ -691,11 +689,9 @@ Node.js sử dụng các phần phát sinh các sự kiện (event-driven), mô 
 \end{figure}
 
 \subsection{Javascripts}
-%TODO: ref https://vi.wikipedia.org/wiki/JavaScript
-JavaScript, theo phiên bản hiện hành, là một ngôn ngữ lập trình kịch bản dựa trên đối tượng được phát triển từ các ý niệm nguyên mẫu. Ngôn ngữ này được dùng rộng rãi cho các trang web, nhưng cũng được dùng để tạo khả năng viết script sử dụng các đối tượng nằm sẵn trong các ứng dụng. Nó vốn được phát triển bởi Brendan Eich tại Hãng truyền thông Netscape với cái tên đầu tiên Mocha, rồi sau đó đổi tên thành LiveScript, và cuối cùng thành JavaScript. Giống Java, JavaScript có cú pháp tương tự C, nhưng nó gần với Self hơn Java. .js là phần mở rộng thường được dùng cho tập tin mã nguồn JavaScript.
+JavaScript, theo phiên bản hiện hành, là một ngôn ngữ lập trình kịch bản dựa trên đối tượng được phát triển từ các ý niệm nguyên mẫu. Ngôn ngữ này được dùng rộng rãi cho các trang web, nhưng cũng được dùng để tạo khả năng viết script sử dụng các đối tượng nằm sẵn trong các ứng dụng. Nó vốn được phát triển bởi Brendan Eich tại Hãng truyền thông Netscape với cái tên đầu tiên Mocha, rồi sau đó đổi tên thành LiveScript, và cuối cùng thành JavaScript. Giống Java, JavaScript có cú pháp tương tự C, nhưng nó gần với Self hơn Java. .js là phần mở rộng thường được dùng cho tập tin mã nguồn JavaScript.\cite{c2js}
 
-%TODO: ref http://freetuts.net/javascript-la-gi-viet-ung-dung-javascript-dau-tien-263.html
-Những ứng dụng to lớn của Javascript khiến người ta không thể quên nó được. Hiện nay có rất nhiều libraries, Framework được viêt như:
+Những ứng dụng to lớn của Javascript khiến người ta không thể quên nó được. Hiện nay có rất nhiều libraries, Framework được viêt như: \cite{c2js2}
 
 • AngularJS: Một thư viện dùng để xây dựng ứng dụng Single Page
 
@@ -708,25 +704,33 @@ Những ứng dụng to lớn của Javascript khiến người ta không thể 
 • jQuery: Một thư viện rất mạnh về hiểu ứng
 
 \subsection{Websocket - Socket.io}
-%TODO: http://blog.rikkeisoft.com/seminar-gioi-thieu-ve-websocket-va-node-js/
-WebSoket là công nghệ hỗ trợ giao tiếp hai chiều giữa client và server bằng cách sử dụng một TCP socket để tạo một kết nối hiệu quả và ít tốn kém. Mặc dù được thiết kế để chuyên sử dụng cho các ứng dụng web, lập trình viên vẫn có thể đưa chúng vào bất kì loại ứng dụng nào.
+WebSoket là công nghệ hỗ trợ giao tiếp hai chiều giữa client và server bằng cách sử dụng một TCP socket để tạo một kết nối hiệu quả và ít tốn kém. Mặc dù được thiết kế để chuyên sử dụng cho các ứng dụng web, lập trình viên vẫn có thể đưa chúng vào bất kì loại ứng dụng nào.\cite{c2wk}
 \begin{figure}[H]
 	\centering    
-	\includegraphics[width=0.5\textwidth]{websk}
-	\caption[Mô hình hoạt động Websocket]{Mô hình hoạt động Websocket}
+	\includegraphics[width=0.7\textwidth]{websk}
+	\caption[Mô hình hoạt động Websocket]{Mô hình hoạt động Websocket\cite{c2wk2}} 
 	\label{fig: websk}
 \end{figure}
 
 Kết nối được duy trì có thể viết và nhận dữ liệu bằng JavaScript như khi bạn đang sử dụng một TCP socket đơn thuần.
 
-- HTTP: 871 x 10,000 = 8,710,000 bytes = 69,680,000 bits per second (66 Mbps)
-- WebSocket: 2 x 10,000 = 20,000 bytes = 160,000 bits per second (0.153 Kbps)
+So sánh dung lượng giữa hai hình thức sử dụng polling HTTP và Websocket trong việc truyền 10000 gói tin:
+
+- HTTP: 871 x 10,000 = 8,710,000 bytes
+
+- WebSocket: 2 x 10,000 = 20,000 bytes
 
 
-\textbf{Socket.IO}
+
+\subsection{Socket.IO}
 
 Socket.IO là một thư viện javascript có mục đích tạo ra các ứng dụng realtime trên trình duyệt cũng như thiết bị di động. Việc sử dụng thư viện này cũng rất đơn giản và giống nhau ở cả server lẫn client. 
-
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=0.9\textwidth]{socketio}
+	\caption[Mô hình cơ bản của Socket.IO]{Mô hình cơ bản của Socket.IO}
+	\label{fig: socketio}
+\end{figure}
 \textbf{Tại sao Socket.IO ra đời?}
 
 \begin{itemize}
@@ -734,7 +738,13 @@ Socket.IO là một thư viện javascript có mục đích tạo ra các ứng 
 \item[•]Node.js chạy non-blocking việc hệ thống không phải tạm ngừng để xử lý xong một request sẽ giúp cho server trả lời client gần như ngay tức thì.
 \item[•]Lập trình socket yêu cầu bạn phải xây dựng được mô hình lắng nghe – trả lời từ cả 2 bên. Nói khác đi, vai trò của client và server phải tương đương nhau, mà client thì chạy bằng javascript, nên nếu server cũng chạy bằng javascript nữa, thì việc lập trình sẽ dễ dàng và thân thiện hơn.
 \end{itemize}
-
+Bởi vì thế, socket.io được ra đời để để phát triển việc giao tiếp theo thời gian thực giữa client và server dựa trên sức mạnh có sẵn của Javascript và Nodejs.
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=0.9\textwidth]{socketio2}
+	\caption[Mô hình hoạt động giao tiếp của Socket.IO]{Mô hình hoạt động giao tiếp của Socket.IO}
+	\label{fig: socketio2}
+\end{figure}
 Socket.IO hoạt động dựa trên các events tương tự như Websocket:
 
 • \textbf{connect()}: kết nối với server socket
@@ -749,7 +759,7 @@ Socket.IO hoạt động dựa trên các events tương tự như Websocket:
 
 \textbf{RethinkDB là gì?}
 
-RethinkDB là một mã nguồn mở, dựa theo cấu trúc cơ sở dữ liệu NoSQL, tổ chức dữ liệu theo kiểu document-oriented database - một thiết kế riêng biệt cho việc lưu trữ document. Các cài đặt có thể là giả lập tương tác trên relational database, object database hay key-value store. Cơ sở dữ liệu được lưu trữ dưới dạng JSON  với các giản đồ động, và được thiết kế giúp hoạt động dễ dàng trong việc cập nhật và truy xuất dữ liệu theo thời gian thực với các ứng dụng. 
+RethinkDB là một mã nguồn mở, dựa theo cấu trúc cơ sở dữ liệu NoSQL \cite{c2nosql}, tổ chức dữ liệu theo kiểu document-oriented database - một thiết kế riêng biệt cho việc lưu trữ document. Các cài đặt có thể là giả lập tương tác trên relational database, object database hay key-value store. Cơ sở dữ liệu được lưu trữ dưới dạng JSON  với các giản đồ động, và được thiết kế giúp hoạt động dễ dàng trong việc cập nhật và truy xuất dữ liệu theo thời gian thực với các ứng dụng. \cite{c2rethink}
 
 \begin{figure}[H]
 	\centering    
@@ -779,10 +789,9 @@ Như hình \ref{fig: rethink1} là ví dụ trực quan được demo trực ti�
 
 • \textbf{changes()} : đây chính là đặc điểm khiến RethinkDB khác biệt so với các hệ quản lý dữ liệu khác. RethinkDB sẽ gọi hàm thực thi khi vùng giá trị truy vấn có thay dổi giá trị theo thời gian thật. không hoạt động theo cơ chế polling thường thấy ở các kiểu truy vấn dữ liệu khác.
 
-%TODO: tham khảo tại https://vi.wikipedia.org/wiki/NoSQL
 \subsection{Raspberry}
 
-Raspbian là hệ điều hành mở và miễn phí được phát triển tối ưu hóa dựa trên nền Debian dành riêng cho thiết bị phần cứng Raspberry Pi. Hệ điều hành này bao gồm nhóm các chức năng và ứng dụng giúp Raspberry hoạt động. Hơn nữa, Raspbian cung cấp nhiều hơn là hệ điều hành thuần: hỗ trợ tới hơn 35,000 gói mở rộng và dễ dàng cài đặt trên Raspberry Pi. Raspbian ổn định và hiệu suất cao được hoàn thiện vào tháng 6 năm 2012. Tuy nhiên Raspbian vẫn đang được phát triển tới ngày nay và ngày càng cải thiện hiệu suất cũng như hỗ trợ các gói chức năng nhiều nhất có thể.
+Raspbian là hệ điều hành mở và miễn phí được phát triển tối ưu hóa dựa trên nền Debian dành riêng cho thiết bị phần cứng Raspberry Pi. Hệ điều hành này bao gồm nhóm các chức năng và ứng dụng giúp Raspberry hoạt động. Hơn nữa, Raspbian cung cấp nhiều hơn là hệ điều hành thuần: hỗ trợ tới hơn 35,000 gói mở rộng và dễ dàng cài đặt trên Raspberry Pi. Raspbian ổn định và hiệu suất cao được hoàn thiện vào tháng 6 năm 2012. Tuy nhiên Raspbian vẫn đang được phát triển tới ngày nay và ngày càng cải thiện hiệu suất cũng như hỗ trợ các gói chức năng nhiều nhất có thể. \cite{c2rasp}
 \begin{figure}[H]
 	\centering    
 	\includegraphics[width=0.9\textwidth]{rasp}
