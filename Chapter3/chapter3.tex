@@ -70,7 +70,7 @@ Thông số kỹ thuật:
 \item[•]Điện áp heater: 5V AC/DC
 \item[•]Sử dụng chip so sánh LM393c.
 \item[•]Hai tín hiệu đầu ra (digital và analog)
-\item[•]Tín hiệu analog từ 0 ~ 5V.
+\item[•]Tín hiệu analog từ 0 đến 5V.
 \item[•]Dải phát hiện từ 10 đến 1000ppm
 \end{itemize}
 
@@ -113,10 +113,10 @@ Cảm biến khí CO MQ-7 có thể pháp hiện khí CO tập trung ở những
 \end{figure}
 Thông số kỹ thuật:
 \begin{itemize}
-\item[•]Điện áp cung cấp: 3 ~ 5VDC.
+\item[•]Điện áp cung cấp: từ 3 đến 5VDC.
 \item[•]Sử dụng chip so sánh LM393 và MQ-7.
 \item[•]Hai tín hiệu đầu ra (digital và analog)
-\item[•]Tín hiệu analog từ 0 ~ 5V.
+\item[•]Tín hiệu analog từ 0 đến 5V 
 \item[•]Dải phát hiện từ 10 đến 1000ppm
 \item[•]Kích thước: 33 x 20 x 16mm.
 \end{itemize}
@@ -163,8 +163,8 @@ Cảm biến nhiệt độ DS18B20 là cảm biến loại tín hiệu đầu ra
 Thông số kỹ thuật:
 \begin{itemize}
 \item[•]Nguồn: 3-5.5V
-\item[•]Dải đo nhiệt độ: -55 -125 * C
-\item[•]Sai số: +-0.5 *C
+\item[•]Dải đo nhiệt độ: $-55 -125_{o}C$
+\item[•]Sai số: $+-0.5_{o}C$
 \item[•]Độ phân giải: 9-12bits
 \item[•]Thời gian chuyển đổi nhiệt độ: 750ms
 \end{itemize}
@@ -193,10 +193,8 @@ Chân Digital input sẽ được đưa tới chân Digital input của board ar
 
 Để gửi được dữ liệu đến máy chủ cần phải thiết lập được kết nối TCP từ module SIM800 đến máy chủ thông qua 11 trạng thái như Hình \ref{fig:sim800_status}, các trạng thái được chuyển đổi thông qua các tập lệnh AT đã được đề cập tại mục \ref{sec:sim800l}. Đến trạng thái 7 (CONNET OK) chúng ta đã giữ được kết nối TCP tới máy chủ và tại trạng thái này dùng lệnh AT+CIPSEND để thực hiện việc gửi gói dữ liệu lên cho máy chủ.
 
-Gói dữ liệu được gửi theo phương thức GET, bên máy chủ phải hỗ trợ được phương thức GET này và định nghĩa rõ ràng các kiểu và số lượng dữ liệu gửi lên. 
-
-Dữ liệu sensor node gửi lên cho máy chủ gồm các dữ liệu sau:
-\begin{table}[]
+Gói dữ liệu được gửi theo phương thức GET, và gói tin được gửi lên máy chủ bao gồm:
+\begin{table}[H]
 \centering
 \label{table:sensornode_api}
 \begin{tabular}{|l|l|l|l|l|l|}
