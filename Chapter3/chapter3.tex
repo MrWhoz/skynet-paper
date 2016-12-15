@@ -9,10 +9,9 @@
 \section{Thiết kế hệ thống}
 \subsection{Kiến trúc mô hình hệ thống}\label{sec:struc}
 Như đã giới thiệu một số mô hình IoT thực tế ở Mục \ref{sec:xuhuongiot}, mô hình IoT phù hợp mà nhóm sẽ áp dụng cho việc pháp triển hệ thống giám sát được trình bày như Hình \ref{fig:pic5}. Hệ thống bao gồm các thành phần chính như sau: các node cảm biến, trung tâm lưu trữ dữ liệu và ứng dụng truy xuất và hiển thị thông tin phân tích dữ liệu.
-
 \begin{figure}[H]
 	\centering    
-	\includegraphics[width=1\textwidth]{system}
+	\includegraphics[width=0.7\textwidth]{system}
 	\caption[Kiến trúc mô hình hệ thống]{Kiến trúc mô hình hệ thống}
 	\label{fig:system}
 \end{figure}
@@ -55,28 +54,13 @@ Thông số kỹ thuật:
 	\label{fig:gp2}
 \end{figure}
 
-Sơ đồ kết nối cảm biến bụi GP2 với Arduino
-Theo hướng dẫn của tài liệu kỹ thuật, nó có tất cả gồm 6 chân đầu ra để kết nối tới thiết bị. Để có thể cảm biến bụi GP2 hoạt động với vi xử lý Arduino cần kết nối như sơ đồ luận lý sau:
-
-\begin{figure}[H]
-	\centering    
-	\includegraphics[width=0.7\textwidth]{sodogp2}
-	\caption[Sơ đồ GP2 kết nối với Arduino ]{Sơ đồ GP2 kết nối với Arduino}
-	\label{fig:sodogp2}
-\end{figure}
-
-
-
-
-
-
 %\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	MQ135	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
 \newpage
 \subsubsection*{Cảm biến chất lượng không khí MQ135} 
 Cảm biến chất lượng không khí MQ135 thường được dùng trong các thiết bị kiểm tra chất lượng không khí bên trong cao ốc, văn phòng, thích hợp để phát hiện khí NH3, Nox, Ancol, Benzen, khói và khí CO2.Cám biến này với độ nhạy cao và thời gian đáp ứng nhanh. Tín hiệu ngõ ra dạng analog và digital. Cảm biến này có thể hoạt động ở nhiệt độ từ khoảng: $-10^{o}$C đến $50^{o}$C và tiêu thụ dòng khoảng 300mA tại 5V.
 \begin{figure}[H]
 	\centering    
-	\includegraphics[width=0.7\textwidth]{mq135}
+	\includegraphics[width=0.5\textwidth]{mq135}
 	\caption[Cảm biến MQ135]{Cảm biến MQ135}
 	\label{fig:mq135}
 \end{figure}
@@ -119,17 +103,14 @@ Thư viện mq135.h cung cấp cho chúng ta các hàm toán học đã được
 
 
 %\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	MQ07	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
-\newpage
 \subsubsection*{Cảm biến chất lượng không khí MQ07} 
 Cảm biến khí CO MQ-7 có thể pháp hiện khí CO tập trung ở những nơi khác nhau từ 10 đến 1000ppm. Cám biến này với độ nhạy cao và thời gian đáp ứng nhanh. Tín hiệu ngõ ra dạng analog và digital. Cảm biến này có thể hoạt động ở nhiệt độ từ khoảng: -10C đến 50C và tiêu thụ dòng khoảng 250mA tại 5V.
 \begin{figure}[H]
 \centering    
-\includegraphics[width=0.7\textwidth]{mq07}
+\includegraphics[width=0.6\textwidth]{mq07}
 \caption[Cảm biến MQ07]{Cảm biến MQ07}
 \label{fig:mq07}
 \end{figure}
-
-
 Thông số kỹ thuật:
 \begin{itemize}
 \item[•]Điện áp cung cấp: 3 ~ 5VDC.
@@ -168,11 +149,7 @@ Thư viện mq07.h cung cấp cho chúng ta các hàm toán học đã được 
 
 
 
-
-
-
 %\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	Cảm biến nhiệt độ DS18B20 IC	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
-\newpage
 \subsubsection*{Cảm biến nhiệt độ DS18B20 IC} 
 Cảm biến nhiệt độ DS18B20 là cảm biến loại tín hiệu đầu ra digital đo nhiệt độ mới của hãng MAXIM với độ phân giải cao (12bit). IC được sử dụng giao tiếp 1 dây rất gọn gàng, dễ lập trình và giao tiếp nhiều DS18B20 trên cùng 1 dây. IC còn có chức năng cảnh báo nhiệt độ khi vượt ngưỡng và đặc biệt hơn là có thể cấp nguốn từ chân data.
 
@@ -194,7 +171,7 @@ Thông số kỹ thuật:
 Sơ đồ kết nối IC BS18B20 để lấy được tín hiệu data
 \begin{figure}[H]
 	\centering    
-	\includegraphics[width=0.7\textwidth]{ds18b20_ketnoi}
+	\includegraphics[width=0.6\textwidth]{ds18b20_ketnoi}
 	\caption[Sơ đồ kết nối DS18B20]{Sơ đồ kết nối DS18B20}
 	\label{fig: ds18b20_ketnoi}
 \end{figure}
@@ -314,26 +291,24 @@ Một điểm mạnh ở mô hình này nữa là có thể phát triển nhiề
 \end{itemize}
 
 \subsubsection*{Biểu đồ High level Usecase của Web Server}
-
 \begin{figure}[H]
 \centering    
-\includegraphics[width=0.7\textwidth]{usecase_diagram}
+\includegraphics[width=0.6\textwidth]{usecase_diagram}
 \caption[Biểu đồ High level Usecase]{Biểu đồ High level Usecase }
 \label{fig:usecase_diagram}
 \end{figure}
-
 Mô tả giản đồ Usecase
-
-\begin{table}[]
+\begin{table}[H]
 \centering
 \caption{Bảng mô tả giản đồ Usecase của Web Server}
-\label{my-label}
+\label{table:usewebsite}
 \begin{tabular}{|l|l|l|}
 \hline
 STT & Tên            & Miêu tả                                                                                            \\ \hline
 1   & View map       & Người dùng thấy được các node đang chạy trên google maps                                           \\ \hline
 2   & View Node Info & Thông tin tương ứng của Node( Lat, Lng, Phone)                                                     \\ \hline
-3   & View Graph     & \begin{tabular}[c]{@{}l@{}}Đồ thị hoạt động của Node(các số liệu đo được theo\\ ngày)\end{tabular} \\ \hline
+3   & View Graph     & Đồ thị hoạt động của Node
+\\ \hline
 4   & Contact        & Phản hồi ý kiến người dùng qua Gmail                                                               \\ \hline
 5   & Add Node       & Thêm mới Node vào hoạt động                                                                        \\ \hline
 6   & Update Node    & Thay đổi thông tin của Node( Lat, Lng, Phone)                                                      \\ \hline
@@ -488,7 +463,7 @@ Tiếp đến phần thiết kế thì để có thể tận dụng nguồn năn
 \begin{figure}[H]
 \centering    
 \includegraphics[width=0.6\textwidth]{solarpanel_real}
-\caption[Pin năng lượng mặt trời Poly 5V /220 mA]{Pin năng lượng mặt trời Poly 5V /220 mA}
+\caption[Pin năng lượng mặt trời Poly 5.5V /220 mA]{Pin năng lượng mặt trời Poly 5.5V /220 mA}
 \label{fig:solarpanel_real}
 \end{figure}
 
@@ -496,10 +471,7 @@ Tiếp đến phần thiết kế thì để có thể tận dụng nguồn năn
 \item[•] Nguồn đầu ra 3.7VDC dùng để cấp cho module Sim800L còn đối với nguồn 6.5VDC dùng để cung cấp cho mạch vi xử lý.
 \end{itemize}
 
-
-
-
-
+\newpage
 \subsubsection*{Các thư viện đã sử dụng} 
 \begin{lstlisting}[language=C]
 #include "MQ135.h" //Thu vien cac ham toan hoc de xu ly so lieu MQ135
@@ -538,16 +510,8 @@ Tiếp đến phần thiết kế thì để có thể tận dụng nguồn năn
 
 
 
-
+\newpage
 \subsection{Hiện thực mô hình tổng thể node cảm biến}
-\subsubsection*{Hoàn thiện chức năng}
-Sau khi hoàn thành prototype đầu tiên node cảm biến thì chúng tôi đã bắt đầu lên kế hoạch nâng cấp chúng thêm những chức năng để có thể tối ưu tốt nhất có thể. Chức năng của node cảm biến bao gồm:
-\begin{itemize}
-\item[•] 
-\item[•]
-\item[•]
-\end{itemize}
-
 \subsubsection*{Hiện thực board mạch vi xử lý}
 Board mạch vi xử lý được thiết kế và hiện thực gọn nhất có thể và hỗ trợ các header nối các dây bus đến các cảm biến và module Sim800L. Chúng tôi đã thực hiện thiết kế board mạch vi xử lý như Hình \ref{fig:botrimcu}
 
@@ -613,7 +577,7 @@ Lập trình cho vi xử lý Arduino Nano được mô hình hóa theo lưu đ�
 - Thiết lập tốc độ truyền UART.\\
 - Thiết lập timer định thời.\\
 - Khởi động Module Sim800L.\\
-- Đồng bộ thời gian module Sim800L với máy chủ The Network Time Protocol(NTP).\\
+- Đồng bộ thời gian module Sim800L với máy chủ NTP.\\
 
 Việc Đồng bộ thời gian module Sim800L với máy chủ NTP được Sim800L hỗ trợ qua các tập lệnh sau:
 \begin{lstlisting}[numbers=left,firstnumber=1,language=C]
@@ -670,26 +634,31 @@ Việc bố trí các linh kiện trong hộp cảm biến nhầm giúp cho vi�
   \end{subfigure}
   \caption{Bố trí các cảm biến}\label{fig:botri}
 \end{figure}
-Đối với các cảm biến bụi GP2 chúng tôi đề xuất vị trí được đặt như Hình \ref{house_dust} sau:
+Đối với các cảm biến bụi GP2 chúng tôi đề xuất vị trí được đặt như Hình \ref{fig:house_dust} sau:
 \begin{figure}[H]
 \centering    
 \includegraphics[width=2.5in]{house_dust}
 \caption[Mô hình đặt cảm biến GP2]{Mô hình đặt cảm biến GP2}
 \label{fig:house_dust}
 \end{figure}
-Còn các board mạch vi xử lý, module Sim800L và pin được đặc vị trí bên trong chiếc hộp như Hình \ref{fig:house_board_kogps} sau:
+Còn các board mạch vi xử lý, module Sim800L và pin được đặc vị trí bên trong chiếc hộp như Hình \ref{fig:botrikhac} sau:
 \begin{figure}[H]
-\centering    
-\includegraphics[width=2.5in]{house_board_kogps}
-\caption[Mô hình bố trị các linh kiện khác]{Mô hình bố trị các linh kiện khác}
-\label{fig:house_board_kogps}
+\centering  
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=2.5in]{house_board_kogps}
+    \caption[Mô hình]{Mô hình}
+    \label{fig:house_board_kogps}
+  \end{subfigure}\hfill
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=2.5in]{pic1}
+  	 \caption[Thực tế]{Thực tế}
+    \label{fig:pic1}
+  \end{subfigure}
+  \caption{Bố trí các cảm biến khác}\label{fig:botrikhac}
 \end{figure}
-
-
-
-\newpage
 \subsection{Mức độ tiêu hao năng lượng}
-Để biết được mức tiêu hao năng lượng của mạch hoạt động như thế nào thì chúng tôi đã bắt đầu tính toán từ những thông số tiêu thụ chuẩn của các linh kiện được sử dụng trong node cảm biến. Nhầm nắm bắt được và đưa ra dung lượng pin cần thiết cho các node cảm biến chạy mà không phụ thuộc vào mạng lưới điện.\\
+Để biết được mức tiêu hao năng lượng của mạch hoạt động như thế nào thì chúng tôi đã bắt đầu tính toán từ những thông số tiêu thụ chuẩn của các linh kiện được sử dụng trong node cảm biến. Nhầm nắm bắt được và đưa ra dung lượng pin cần thiết cho các node cảm biến chạy mà không phụ thuộc vào mạng lưới điện.
+
 Chú ý: các thông số tính toán dưới lấy từ thông số chuẩn của nhà sản xuất kèm với một số thông số chuẩn của chúng tôi như sau:
 \begin{itemize}
 \item[•] Thời gian cho việc đốt nóng cảm biến MQ135 và MQ07 trước khi lấy dữ liệu: 3 phút
@@ -697,8 +666,7 @@ Chú ý: các thông số tính toán dưới lấy từ thông số chuẩn c�
 \item[•] Ban đêm từ 8PM-7AM: cứ mỗi 30 phút gửi dữ liệu lên máy chủ.
 \end{itemize}
 
-Mức tiêu hao năng lượng vào 1 buổi sáng 7AM-8PM:
-
+\textbf{Mức tiêu hao năng lượng vào 1 buổi sáng 7AM-8PM:}
 \begin{table}[H]
 \centering
 \caption{Bảng tiêu thụ năng lượng buổi sáng}
@@ -717,8 +685,7 @@ Mức tiêu hao năng lượng vào 1 buổi sáng 7AM-8PM:
 \end{tabular}
 \end{table}
 
-
-Mức tiêu hao năng lượng vào 1 buổi tối 8PM-7AM:
+\textbf{Mức tiêu hao năng lượng vào 1 buổi tối 8PM-7AM:}
 \begin{table}[H]
 \centering
 \caption{Bảng tiêu thụ năng lượng buổi tối}
@@ -1104,29 +1071,47 @@ Khu vực này dành cho người quản lý truy cập nhầm mục đích ch�
 \label{fig:web_nodeinfo}
 \end{figure}
 \end{center}
+
+
+
+
+
+
+\newpage
 \section{Ứng dụng thiết bị di động}
 \subsection{Hiện thực giao diện và chức năng}
 \subsubsection*{Giao diện chính ứng dụng di động}
 Tại giao diện chính của ứng dụng di động người dùng có thể xem được danh sách thông tin chi tiết của các node cảm biến có trong hệ thống.
-\begin{center}
 \begin{figure}[H]
-\centering    
-\includegraphics[width=0.4\textwidth]{app_main}
-\caption[Giao diện chính ứng dụng di động]{Giao diện chính ứng dụng di động}
-\label{fig:app_main}
+\centering  
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=2.5in]{main_1}
+    \caption[Giao diện chính]{Giao diện chính}
+    \label{fig:main_1}
+  \end{subfigure}\hfill
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=2.5in]{main_2}
+  	 \caption[Giao diện thanh menu]{Giao diện thanh menu}
+    \label{fig:main_2}
+  \end{subfigure}
+  \caption{Giao diện chính ứng dụng di động}\label{fig:giaodienchinh}
 \end{figure}
-\end{center}
 
 
 \subsubsection*{Giao diện xem dữ liệu trên ứng dụng di động}
 Giao diện này cho phép người dùng theo dõi được dữ liệu của từng node cảm biến theo 2 loại biểu đồ như Hình \ref{fig:app_graph} thể hiện.
-\begin{center}
 \begin{figure}[H]
-\centering    
-\includegraphics[width=0.4\textwidth]{app_graph}
-\caption[Giao diện xem dữ liệu trên ứng dụng di động]{Giao diện xem dữ liệu trên ứng dụng di động}
-\label{fig:app_graph}
+\centering  
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=2.5in]{main_4}
+    \caption[Giao diện xem dữ liệu]{Giao diện xem dữ liệu}
+    \label{fig:main_4}
+  \end{subfigure}\hfill
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=2.5in]{main_3}
+  	 \caption[Giao diện thống kê]{Giao diện thống kê}
+    \label{fig:main_3}
+  \end{subfigure}
+  \caption{Giao diện ứng dụng di động}\label{fig:giaodienchinh2}
 \end{figure}
-\end{center}
-
 

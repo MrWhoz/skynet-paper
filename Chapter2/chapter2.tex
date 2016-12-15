@@ -17,17 +17,17 @@
 Với sự phát triển nhanh chóng của công nghê máy tính hiện nay, những công nghệ cao đã đang và ngày càng được ứng dụng trong nhiều lĩnh vực của cuộc sống con người. IoT là mạng lưới của các đối tượng vật lý, các thiết bị, các phương tiện và các đối tượng này được nhúng với các thiết bị điện tử, cảm biến, phần mềm điều khiển, và nó có khả năng trao đổi dữ liệu và thao tác với nhau. IoT cho phép các đối tượng được lắng nghe và điều khiển từ xa trên cơ sở hạ tầng mạng hiện có, các hệ thống máy tính có thể thu thập dữ liệu và điều khiển các thiết bị đối tượng một cách hiệu quả, chính xác và lợi ích kinh tế nhất có thể. 
 \begin{figure}[H] 
 \centering    
-\includegraphics[width=1.0\textwidth]{pic4}
-\caption[Hình ảnh mô tả Internet of Things ]{Hình ảnh mô tả Internet of Things }
+\includegraphics[width=0.7\textwidth]{pic4}
+\caption[Hình ảnh mô tả Internet of Things]{Hình ảnh mô tả Internet of Things}
 \label{fig:pic4}
 \end{figure}
 
 
-\subsection*{Khả năng định danh độc nhất }
+\subsubsection{Khả năng định danh độc nhất }
 Điểm quan trọng của IoT đó là các đối tượng phải có thể được nhận biết và định dạng. Nếu mọi đội tượng, kể cả con người, được "đánh dấu" để phân biệt bản thân đối tượng đó với những thứ xung quanh thì chúng ta có thể hoàn toàn quản lí được nó thông qua máy tính. Việc đánh dấu có thể được thực hiện thông qua nhiều công nghệ, chẳng hạn như RFID, NFC, mã vạch, mã QR, watermark kĩ thuật số... Việc kết nối thì có thể thực hiện qua Wi-Fi, mạng viễn thông băng rộng (3G, 4G), Bluetooth, ZigBee, hồng ngoại...
 Ngoài những kĩ thuật nói trên, nếu nhìn từ thế giới web, chúng ta có thể sử dụng các địa chỉ độc nhất để xác định từng vật, chẳng hạn như địa chỉ IP. Mỗi thiết bị sẽ có một IP riêng biệt không nhầm lẫn. Sự xuất hiện của IPv6 với không gian địa chỉ cực kì rộng lớn sẽ giúp mọi thứ có thể dễ dàng kết nối vào Internet cũng như kết nối với nhau.
 
-\subsection*{Xu hướng và tính chất của The Internet of Things }
+\subsubsection{Xu hướng và tính chất của The Internet of Things}
 \textbf{Thông minh:} Sự thông minh và tự động trong điều khiển thực chất không phải là một phần trong ý tưởng về IoT. Các máy móc có thể dễ dàng nhận biết và phản hồi lại môi trường xung quanh (ambient intelligence), chúng cũng có thể tự điều khiển bản thân (autonomous control) mà không cần đến kết nối mạng. Tuy nhiên, trong thời gian gần đây người ta bắt đầu nghiên cứu kết hợp hai khái niệm IoT và autonomous control lại với nhau. Tương lai của IoT có thể là một mạng lưới các thực thể thông minh có khả năng tự tổ chức và hoạt động riêng lẻ tùy theo tình huống, môi trường, đồng thời chúng cũng có thể liên lạc với nhau để trao đổi thông tin, dữ liệu.
 
 Việc tích hợp trí thông minh vào IoT còn có thể giúp các thiết bị, máy móc, phần mềm thu thập và phân tích các dấu vết điện tử của con người khi chúng ta tương tác với những thứ thông minh, từ đó phát hiện ra các tri thức mới liên quan tới cuộc sống, môi trường, các mối tương tác xã hội cũng như hành vi con người.
@@ -42,39 +42,35 @@ Việc tích hợp trí thông minh vào IoT còn có thể giúp các thiết b
 
 \newpage
 
-\subsection*{Mô hình theo xu hướng IoT thực tế}
-Mô hình (Hình ~\ref{fig:pic5}): Các thiết bị sẽ có thể kết nối với nhau bằng TCP/UDP và có thể kết nối trực tiếp đến máy chủ mà không cần thông qua thiết bị khác.
-
-\begin{figure}[H] 
-\centering    
-\includegraphics[width=0.5\textwidth]{pic5}
-\caption[Mô hình IoT không có Gateway ]{Mô hình IoT không có Gateway}
-\label{fig:pic5}
+\subsubsection{Mô hình theo xu hướng IoT thực tế}
+\begin{figure}[H]
+\centering  
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=0.8\textwidth]{pic5}
+    \caption[Không Gateway]{Không Gateway}
+    \label{fig:pic5}
+  \end{subfigure}\hfill
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=0.8\textwidth]{pic6}
+  	 \caption[Có Gateway]{Có Gateway}
+    \label{fig:pic6}
+  \end{subfigure}
+  \caption{Mô hình IoT}\label{fig:mohinhiot}
 \end{figure}
 
+Mô hình (Hình ~\ref{fig:pic5}): Các thiết bị sẽ có thể kết nối với nhau bằng TCP/UDP và có thể kết nối trực tiếp đến máy chủ mà không cần thông qua thiết bị khác.\\
 Mô hình (Hình ~\ref{fig:pic6}): Các thiết bị sẽ được hỗ trợ nhiều chuẩn giao tiếp khác nhau (BLE, ZWave,…) nên cần cầu nối là Gateway để kết nối đến máy chủ. 
-	
-	
 
-\begin{figure}[H] 
-\centering    
-\includegraphics[width=0.5\textwidth]{pic6}
-\caption[Mô hình IoT có Gateway]{Mô hình IoT có Gateway}
-\label{fig:pic6}
-\end{figure}
 
+\newpage
 
 Sơ đồ lớp Chung của cả hai mô hình trên:
-
-
 \begin{figure}[H] 
 \centering    
-\includegraphics[width=1\textwidth]{pic7}
+\includegraphics[width=0.8\textwidth]{pic7}
 \caption[Kiến trúc mô hình IoT tham khảo]{Kiến trúc mô hình IoT tham khảo}
 \label{fig:pic7}
 \end{figure}
-
-
 
 \begin{itemize}
 \item[•]Lớp Device \\
@@ -84,7 +80,6 @@ Mỗi thiết bị thường cần một ID. ID có thể là: Bluetooth identif
 Các lớp truyền thông hỗ trợ các kết nối của các thiết bị tới máy chủ. Có nhiều giao thức để giao tiếp giữa các thiết bị và máy chủ. Nổi bật nhất là HTTP hoặc MQTT.\\
 HTTP rất thông dụng. Bởi vì nó là một giao thức dựa trên văn bản đơn giản, nhiều thiết bị nhỏ như bộ điều khiển 8-bit có thể hỗ trợ một phần các giao thức - ví dụ đủ dữ liệu để POST hoặc GET một nguồn tài nguyên. Các thiết bị lớn hơn 32-bit có thể sử dụng đầy đủ các thư viện HTTP client đúng cách để hiện thực toàn bộ giao thức.\\
 MQTT được phát minh vào năm 1999 để giải quyết các vấn đề trong hệ thống nhúng và SCADA. Nó đã được thông qua một số lần lặp lại và phiên bản hiện tại (3.1.1) đang trải qua những tiêu chuẩn hoá trong OASIS MQTT kỹ thuật Committee8. MQTT là một hệ thống tin nhắn publish-subscribe dựa trên một mô hình broker. Các giao thức có một chi phí rất nhỏ (ít nhất là 2 byte cho mỗi tin nhắn). MQTT được thiết kế để vận hành qua TCP.
-
 \item[•]Lớp Aggregation/Bus \\
 Một lớp quan trọng của kiến trúc là lớp mà tập hợp và là cầu nối, có khả năng tổng hợp và kết hợp các thông tin liên lạc từ các thiết bị khác nhau và đưa thông tin liên lạc đến một thiết bị cụ thể (có thể thông qua một gateway).
 \item[•]Lớp Event Processing and Analytic: \\
@@ -94,11 +89,11 @@ Lớp này cung cấp một cách cho các thiết bị để chúng giao tiếp
 \end{itemize}
 
 % Please add the following required packages to your document preamble:
-
+Bảng \ref{table:danhgiamohinh} trình bày tổng kết và đánh giá các mô hình trên.
 \begin{table}[]
 \centering
 \caption{My caption}
-\label{my-label}
+\label{table:danhgiamohinh}
 \begin{tabular}{|l|l|l|}
 \hline
 \textbf{MÔ HÌNH} & \textbf{ƯU ĐIỂM} & \textbf{NHƯỢC ĐIỂM} \\ \hline
@@ -294,7 +289,7 @@ Arduino IDE là môi trường phát triển tích hợp (IDE) của Arduino là
 
 \begin{figure}[H]
 \centering    
-\includegraphics[width=1\textwidth]{arduinonano_ide}
+\includegraphics[width=0.7\textwidth]{arduinonano_ide}
 \caption[Môi trường phát triển của Arduino]{Môi trường phát triển của Arduino}
 \label{fig:arduinonano_ide}
 \end{figure}
