@@ -743,22 +743,22 @@ Mức tiêu hao năng lượng vào 1 buổi tối 8PM-7AM:
 \subsubsection*{Các thư mục và chức năng}
 Chúng ta có những thư mục được làm việc trực tiếp:
 
-• libs: chứa các hàm function hỗ trợ về xác thực và log.
+• \textbf{libs}: chứa các hàm function hỗ trợ về xác thực và log.
 
-• models: thư mục này bao gồm các mô hình quản lý cơ sở dữ liệu.
+• \textbf{models}: thư mục này bao gồm các mô hình quản lý cơ sở dữ liệu.
 
-• routes: điều khiển và điều hướng theo các url.
+• \textbf{routes}: điều khiển và điều hướng theo các url.
 
-• log: chứa các file ghi lại log trong quá trình hoạt động.
+• \textbf{log}: chứa các file ghi lại log trong quá trình hoạt động.
 
-• views: là bộ mặt của web server, giúp người dùng có thể tương tác được với server qua web browser, bao gồm các file giao diện như html, ejs...   
+• \textbf{views}: là bộ mặt của web server, giúp người dùng có thể tương tác được với server qua web browser, bao gồm các file giao diện như html, ejs...   
 
 
 \subsubsection*{Các file khởi tạo và cấu hình Server}
 
 \textbf{Các file khởi tạo này bao gồm:}
 
-• emap.js: file có chức năng đọc file cấu hình và khởi tạo kết nối server.
+• \textbf{emap.js}: file có chức năng đọc file cấu hình và khởi tạo kết nối server.
 \begin{lstlisting}[caption=emap.js]
 ...
 server.on('listening', onListening); // open for listening
@@ -773,7 +773,7 @@ function onListening() {
 ...
 \end{lstlisting}
 
-• app.js: là file điều khiển và thiết lập các chức năng, khai báo các modules chính được sử dụng. Bên cạnh đó, còn có chức năng gán điều hướng tới các file trong thư mục route
+• \textbf{app.js}: là file điều khiển và thiết lập các chức năng, khai báo các modules chính được sử dụng. Bên cạnh đó, còn có chức năng gán điều hướng tới các file trong thư mục route
 \begin{lstlisting}[caption=app.js]
 ...
 // initial server
@@ -796,8 +796,8 @@ app.use('/auth', auth);
 
 \textbf{Các file cấu hình này bao gồm:}
 
-• package.json: khai báo các thông tin cơ bản về project và các modules được sử dụng.
-\begin{lstlisting}[caption=package.json]
+• \textbf{package.json}: khai báo các thông tin cơ bản về project và các modules được sử dụng.
+\begin{Verbatim}[xleftmargin=2em]
 {
 	"name": "emap-server",
 	"version": "1.0.0",
@@ -806,7 +806,7 @@ app.use('/auth', auth);
 	"author": "Cuong, Tung and Ny",
 	"license": "ISC",
 	"homepage": "www.codingyourfuture.com",
-	"dependencies": {			// dependancies modules
+	"dependencies": {// dependancies modules
 		"angular-chart.js": "^1.0.3",
 		"asyncawait": "^1.0.6",
 		"babel": "^6.5.2",
@@ -817,9 +817,9 @@ app.use('/auth', auth);
 		"socket.io": "^1.5.0",
 	}
 }
-\end{lstlisting}
-• config.json: khai báo các thông số cấu hình được sử dụng. Tại đây ta cấu hình thông số kết nối tới RethinkDB và port ứng dụng server nodejs.
-\begin{lstlisting}[caption=config.json]
+\end{Verbatim}
+• \textbf{config.json}: khai báo các thông số cấu hình được sử dụng. Tại đây ta cấu hình thông số kết nối tới RethinkDB và port ứng dụng server nodejs.
+\begin{Verbatim}[xleftmargin=2em]
 {
 	"app":{
 		"port": "8888"
@@ -829,11 +829,11 @@ app.use('/auth', auth);
 		"port" : "28015",
 		"db": "emap",
 		"address":"localhost:28015",
-		"tableList":["nodeData"]
+		"tableList":["nodeData","nodeList","user"]
 	}
 }
 
-\end{lstlisting}
+\end{Verbatim}
 
 
 %% Thiết kế API
@@ -880,6 +880,7 @@ Chi tiết API đăng nhập:
 \begin{Verbatim}[xleftmargin=2em]
 POST: /auth/login
 data: {username,password}
+======================
 RESPOND:
 case Success:
 	{
@@ -902,6 +903,18 @@ Sau khi đăng nhập, một session, còn gọi là phiên làm việc, sẽ đ
 Session sẽ tự động xóa sau một thời gian quy định, cụ thể ở hệ thống này là 10 ngày kể từ lần đăng nhập gần nhất. Người dùng có thể xóa thủ công bằng cách đăng xuất qua phương thức:
 \begin{Verbatim}[xleftmargin=2em]
 GET: /auth/logout
+======================
+RESPOND:
+case Success:
+	{
+		code: 1,
+		message: "User has logged out"
+	}
+case Failure:	
+	{
+		code: 0,
+		message: "User has not logged in yet"
+	}	
 \end{Verbatim}
 
 \textbf{Đăng ký:}
@@ -931,7 +944,7 @@ Các API được miêu tả tại bảng \ref{table: apilist}, các request và
 • API thiết lập và cấu hình các sensor node: initnew, updatenode và replace node yêu cầu phải có đăng nhập từ API xác thực người dùng để giữ session và sau đó mới có thể sử dụng. Các API này có cấu trúc tương tự nhau và được mô tả:
 \begin{Verbatim}[xleftmargin=2em]
 POST: /node/initnew
-data: {node\_id,lat,lng,phone,status}
+data: {node_id,lat,lng,phone,status}
 ======================
 RESPOND:
 case Success:
