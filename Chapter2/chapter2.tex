@@ -23,11 +23,11 @@ Với sự phát triển nhanh chóng của công nghê máy tính hiện nay, n
 \end{figure}
 
 
-\subsubsection{Khả năng định danh độc nhất }
+\subsubsection*{Khả năng định danh độc nhất }
 Điểm quan trọng của IoT đó là các đối tượng phải có thể được nhận biết và định dạng. Nếu mọi đội tượng, kể cả con người, được "đánh dấu" để phân biệt bản thân đối tượng đó với những thứ xung quanh thì chúng ta có thể hoàn toàn quản lí được nó thông qua máy tính. Việc đánh dấu có thể được thực hiện thông qua nhiều công nghệ, chẳng hạn như RFID, NFC, mã vạch, mã QR, watermark kĩ thuật số... Việc kết nối thì có thể thực hiện qua Wi-Fi, mạng viễn thông băng rộng (3G, 4G), Bluetooth, ZigBee, hồng ngoại...
 Ngoài những kĩ thuật nói trên, nếu nhìn từ thế giới web, chúng ta có thể sử dụng các địa chỉ độc nhất để xác định từng vật, chẳng hạn như địa chỉ IP. Mỗi thiết bị sẽ có một IP riêng biệt không nhầm lẫn. Sự xuất hiện của IPv6 với không gian địa chỉ cực kì rộng lớn sẽ giúp mọi thứ có thể dễ dàng kết nối vào Internet cũng như kết nối với nhau.
 
-\subsubsection{Xu hướng và tính chất của The Internet of Things}
+\subsubsection*{Xu hướng và tính chất của The Internet of Things}
 \textbf{Thông minh:} Sự thông minh và tự động trong điều khiển thực chất không phải là một phần trong ý tưởng về IoT. Các máy móc có thể dễ dàng nhận biết và phản hồi lại môi trường xung quanh (ambient intelligence), chúng cũng có thể tự điều khiển bản thân (autonomous control) mà không cần đến kết nối mạng. Tuy nhiên, trong thời gian gần đây người ta bắt đầu nghiên cứu kết hợp hai khái niệm IoT và autonomous control lại với nhau. Tương lai của IoT có thể là một mạng lưới các thực thể thông minh có khả năng tự tổ chức và hoạt động riêng lẻ tùy theo tình huống, môi trường, đồng thời chúng cũng có thể liên lạc với nhau để trao đổi thông tin, dữ liệu.
 
 Việc tích hợp trí thông minh vào IoT còn có thể giúp các thiết bị, máy móc, phần mềm thu thập và phân tích các dấu vết điện tử của con người khi chúng ta tương tác với những thứ thông minh, từ đó phát hiện ra các tri thức mới liên quan tới cuộc sống, môi trường, các mối tương tác xã hội cũng như hành vi con người.
@@ -42,7 +42,7 @@ Việc tích hợp trí thông minh vào IoT còn có thể giúp các thiết b
 
 \newpage
 
-\subsubsection{Mô hình theo xu hướng IoT thực tế}
+\subsubsection*{Mô hình theo xu hướng IoT thực tế}
 \begin{figure}[H]
 \centering  
   \begin{subfigure}[b]{0.5\textwidth}
@@ -92,7 +92,7 @@ Lớp này cung cấp một cách cho các thiết bị để chúng giao tiếp
 Bảng \ref{table:danhgiamohinh} trình bày tổng kết và đánh giá các mô hình trên.
 \begin{table}[]
 \centering
-\caption{My caption}
+\caption{So sánh ưu và nhược điểm của các mô hình IoT}
 \label{table:danhgiamohinh}
 \begin{tabular}{|l|l|l|}
 \hline
@@ -152,17 +152,7 @@ Làm thế nào chúng ta có thể tận dụng thông tin thời gian thực t
 Công nghệ thiết bị đeo cũng sẽ biến đổi hoàn toàn lĩnh vực chăm sóc sức khỏe theo những cách phi thường. Chúng ta đều biết rằng đồng hộ Apple Watch sẽ tích hợp một cảm biến theo dõi nhịp tim và cung cấp cho chủ của nó những ứng dụng tạo điều kiện và khuyến khích một cách sống lành mạnh. Chúng ta đã có các cảm biến gắn trong giày để theo dõi việc chạy xa đến đâu và bao nhiêu calo đã được đốt. Còn gì tiếp theo? Sẽ có một quy trình tối ưu chăm sóc sức khỏe, theo đó có những cảm biến có thể phát hiện vi khuẩn trong thiết bị, và thiết bị diệt khuẩn phát hiện virus có thể di chuyển từ bệnh nhân.
 
 
-\section{Giới thiệu về các công cụ hỗ trợ phát triển ứng dụng IoT}
-\subsection*{Thingspeak}
-ThingSpeak là một mã nguồn mở cho các ứng dụng của Internet of Things. Mã nguồn này hỗ trợ các API lưu trữ, lấy dữ liệu từ các thiết bị, sản phẩm sử dụng HTTP qua Internet hoặc thông qua một Local Area Network. Như một HUB đợi các thông tin cảm biến từ thiết bị và có nhiệm vụ lưu trữ và xử lý dữ liệu, với ThingSpeak, bạn có thể tạo ra các ứng dụng phân tích dữ liệu, lưu trữ dữ liệu, quản lý dữ liệu một cách đơn giản.\\
-ThinkSpeak được phát triển bởi ioBridge và được opensource trên GITHUB  \url{https://github.com/iobridge/thingspeak}
 
-\begin{figure}[H] 
-\centering    
-\includegraphics[width=0.7\textwidth]{thingspeak}
-\caption[Ứng dụng phát triển IoT Thingspeak]{Ứng dụng phát triển IoT Thingspeak}
-\label{fig:thingspeak}
-\end{figure}
 
 \section{Những yếu tố ảnh hưởng môi trường từ khí thải phương tiện giao thông}\label{sec:yeuto_khithai}
 Để hình dung được những yếu tố ảnh hưởng môi trường từ khí thải xe máy và ô tô thì chúng ta cần biết được quá trình hoạt động của xe máy và ô tô, từ đó chúng ta sẽ biết được những loại khí thải nào mà xe máy và ô tô sẽ thải ra môi trường. Qua quá trình tìm hiểu và đọc thông tin tài liệu trên mạng khí thải của xe máy và ô tô tuỳ thuộc chủ yếu vào chất lượng đốt cháy hỗn hợp xăng và không khí bên trong buồng đốt (combustion chamber) của động cơ, cũng như nồng độ các chất ô nhiễm trong khí xả phụ thuộc vào đặc điểm động cơ cũng như các thông số điều chỉnh, vận hành.
@@ -243,7 +233,7 @@ Thủ đô Hà Nội vừa lắp đặt hệ thống 80 trạm quan trắc. Hệ
 \label{fig:pic3}
 \end{figure}
 
-\section{Các thiết bị phần cứng}
+\section{Các thiết bị phần cứng hỗ trợ phát triển IoT}
 \subsection{Mạch vi xử lý Arduino}
 \subsubsection*{Giới thiệu về Arduino Nano}
 Arduino là một board mạch vi xử lý, nhằm xây dựng các ứng dụng tương tác với nhau hoặc với môi trường được thuận lợi hơn. Phần cứng bao gồm một board mạch nguồn mở được thiết kế trên nền tảng vi xử lý AVR Atmel 8bit, hoặc ARM Atmel 32-bit. Những Model hiện tại được trang bị gồm 1 cổng giao tiếp USB, 6 chân đầu vào analog, 14 chân I/O kỹ thuật số tương thích với nhiều board mở rộng khác nhau. Đi cùng với nó là một môi trường phát triển tích hợp (IDE) chạy trên các máy tính cá nhân thông thường và cho phép người dùng viết các chương trình cho Aduino bằng ngôn ngữ C hoặc C++.
@@ -565,7 +555,17 @@ Tất nhiên, để kích hoạt quá trình cần có năng lượng tiếp xú
 \subsubsection*{Hiệu suất của pin mặt trời}
 Các công nghệ biến ánh sáng mặt trời thành điện hiện tại vẫn kém hiệu quả. Các tấm pin mặt trời chưa thể hấp thụ toàn bộ năng lượng của ánh sáng mặt trời. Nói chung, những tế bào năng lượng mặt trời tốt nhất hiện tại chỉ có thể chuyển 25\% năng lượng mà nó nhận được thành điện. Tại sao vậy? Thực tế là ánh sáng mặt trời, như tất cả các loại ánh sáng khác, bao gồm một quang phổ với các bước sóng khác nhau, mỗi bước sóng có một cường độ khác nhau. Có những bước sóng quá yếu không thể giải phóng các electron còn một số bước sóng lại quá mạnh với silicon.
 
+\section{Công cụ hỗ trợ phát triển ứng dụng IoT}
+\subsection{Thingspeak}
+ThingSpeak là một mã nguồn mở cho các ứng dụng của Internet of Things. Mã nguồn này hỗ trợ các API lưu trữ, lấy dữ liệu từ các thiết bị, sản phẩm sử dụng HTTP qua Internet hoặc thông qua một Local Area Network. Như một HUB đợi các thông tin cảm biến từ thiết bị và có nhiệm vụ lưu trữ và xử lý dữ liệu, với ThingSpeak, bạn có thể tạo ra các ứng dụng phân tích dữ liệu, lưu trữ dữ liệu, quản lý dữ liệu một cách đơn giản.\\
+ThinkSpeak được phát triển bởi ioBridge và được opensource trên GITHUB  \url{https://github.com/iobridge/thingspeak}
 
+\begin{figure}[H] 
+\centering    
+\includegraphics[width=0.7\textwidth]{thingspeak}
+\caption[Ứng dụng phát triển IoT Thingspeak]{Ứng dụng phát triển IoT Thingspeak}
+\label{fig:thingspeak}
+\end{figure}
 
 \section{Kiến thức căn bản về ứng dụng web - di động và xây dựng Server}
 
