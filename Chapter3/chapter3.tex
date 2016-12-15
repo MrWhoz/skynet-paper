@@ -917,6 +917,16 @@ case Failure:
 	}	
 \end{Verbatim}
 
+Quá trình đăng nhập và tạo session được mô tả như hình \ref{fig: apilogin}
+
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=1\textwidth]{apilogin}
+	\caption[Quá trình đăng nhập và tạo session]{Quá trình đăng nhập và tạo session}
+	\label{fig: apilogin}
+\end{figure}
+
+
 \textbf{Đăng ký:}
 
 \begin{Verbatim}[xleftmargin=2em]
@@ -968,7 +978,16 @@ case Not authenticated:
 		message: 'You are not authenticated'
 	}
 ======================	
+
 \end{Verbatim}
+Quá trình đăng nhập và tạo session được mô tả như hình \ref{fig: apipost}
+
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=1\textwidth]{apipost}
+	\caption[Quá trình kiểm tra session của API POST]{Quá trình kiểm tra session của API POST}
+	\label{fig: apipost}
+\end{figure}
 
 • API get thông tin và dữ liệu các sensor node: sử dụng phương thức GET để truy xuất dữ liệu về thông tin sensor node và dữ liệu các cảm biến. Hệ thống được thiết kế mang tính mở và chia sẻ nên không yêu cầu đăng nhập để truy xuất dữ liệu. Các thông tin đặc tả chi tiết API:
 \begin{Verbatim}[xleftmargin=2em]
