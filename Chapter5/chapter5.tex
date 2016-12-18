@@ -8,34 +8,61 @@
 \fi
 
 \section{Tổng kết}
-\subsection{Những gì đạt được}
+\subsection{Kết quả đạt được}
+
+\subsubsection*{Sensor Box}
+\begin{itemize}
+\item[•] Tìm hiểu được về các thành phần trong khí thải và mức độ ảnh hưởng tới môi trường.
+\item[•] Tìm hiểu các loại cảm biến và cách thức hoạt động. 
+\item[•] Hiện thực hoàn chỉnh các chức năng module thu thập dữ liệu từ các cảm biến.
+\item[•] Thiết kế và hiện thực được Sensor Box có khả năng hoạt động dưới những môi trường nắng, mưa, gió, bụi.
+\item[•] Nghiên cứu và tích hợp được thêm module sử dụng năng lượng mặt trời và mạch nạp pin cho phép hệ thống hoạt động độc lập với điện lưới.
+\item[•] Thu thập được dữ liệu từ 3 Sensor Node đã hiện thực tại những địa điểm khác nhau trong suốt thời gian gần 2 tháng.
+\end{itemize}
 
 \subsubsection*{Server}
 \begin{itemize}
-\item[•]Cung cấp API và API log cho nhà phát triển.
-\item[•]Áp dụng mô hình kiến trúc hệ thống thuận tiện cho phát triển ứng dụng realtime.
-\item[•]Xây dựng giao diện trực quan và thân thiện với người dùng, liên kết cơ sở dữ liệu thời gian thực cung cấp thông tin kịp thời để tiện lợi cho quá trình theo dõi và đánh giá.
-\item[•]Đồ thị cho việc theo dõi các thông số.
-\item[•]Giao tiếp thông qua gmail giữa người dùng và người quản lý.
+\item[•] Cung cấp API và API log cho nhà phát triển.
+\item[•] Áp dụng mô hình kiến trúc hệ thống thuận tiện cho phát triển ứng dụng realtime.
+\item[•] Xây dựng giao diện trực quan và thân thiện với người dùng, liên kết cơ sở dữ liệu thời gian thực cung cấp thông tin kịp thời để tiện lợi cho quá trình theo dõi và đánh giá.
+\item[•] Đồ thị Google Maps và đồ thị dữ liệu cho việc theo dõi các thông số.
+\item[•] Giao tiếp thông qua gmail giữa người dùng và người quản lý.
 \end{itemize}
-
 
 \subsubsection*{Ứng dụng thiết bị di động}
 \begin{itemize}
 \item[•] Sử dụng Framework Ionic xây dựng được ứng dụng di động trên nhiều nền tảng khác nhau.
-\item[•] Liên kết ứng dụng với API được cung cấp, thực hiện một số chức năng cơ bản: hiên thị thông tin node, đồ thị…
+\item[•] Liên kết ứng dụng với API được cung cấp, thực hiện một số chức năng cơ bản: hiên thị thông tin node, đồ thị, thống kê.
 \end{itemize}
 
-\subsection{Những khó khăn và hạn chế}
-
+\subsection{Những thuận lợi,khó khăn và mặt hạn chế}
+\subsubsection*{Thuận lợi}
 \begin{itemize}
-\item[•] Các thiết bị module không có sẵn, phải tìm các thiết bị khác thay thế.
-\item[•] Dành nhiều thời gian để tiếp cận với hướng lập trình phần mềm và công nghệ mới.
-\item[•] Dữ liệu xử lý lớn, server cần phải đáp ứng được vấn đề thời gian thực và tránh xảy ra lỗi.
-\item[•] Chỉ dừng ở mức thu thập và thống kê, chưa phát triển phân tích các thông số môi trường.
-\item[•] Vẫn còn một số chức năng chưa hoàn thiện: quản lý người dùng cho Mobile app.
-\item[•] Cụm server đặt trên Raspberry Pi 3 khổng đủ sức mạnh đáp ứng số lượng lớn người dùng cùng một lúc.
+\item[•] Giáo viên hướng dẫn thường xuyên lên kế hoạch báo cáo 2 tuần một lần để cập nhật tình hình và giúp đỡ nhóm giải quyết những vấn đề khó khăn trong suốt quá trình làm đề tài luận văn.
+\item[•] Được hỗ trợ kinh phí từ giáo viên hướng dẫn.
+\item[•] Thời tiết nắng, mưa, gió, bụi đầy đủ để có thể thử nghiệm độ hiểu quả của Sensor Box.
+\item[•] Được phòng Lab BKIT hỗ trợ về mặt máy móc, kỹ thuật trong suốt quá trình làm luận văn tốt nghiệp.
 \end{itemize}
+
+\subsubsection*{Khó khăn}
+\begin{itemize}
+\item[•] Các module năng lượng mặt trời không có sẵn, phải tìm các module khác để thay thế.
+\item[•] 2 trong số 3 sinh viên đi làm full-time nên hầu hết thời gian làm luận văn nằm vào buổi tối và 2 ngày cuối tuần.
+\item[•] Dành nhiều thời gian để tiếp cận với hướng lập trình phần mềm và công nghệ mới.
+\item[•] Cụm server đặt trên Raspberry Pi 3 khổng đủ sức mạnh đáp ứng số lượng lớn người dùng cùng một lúc.
+\item[•] Thiếu các thiết bị di động để thử nghiệm tính đa nền tảng của ứng dụng di động trên các nền tảng iOS, Windows Phone.
+\end{itemize}
+\subsubsection*{Mặt hạn chế của đề tài luận văn}
+\begin{itemize}
+\item[•] Việc tích hợp module năng lượng mặt trời và mạch nạp pin chưa thật sự hiệu quả để Sensor Box hoạt động ổn định độc lập với điện lưới.
+\item[•] Chỉ dừng ở mức thu thập và thống kê, chưa phát triển phân tích các thông số môi trường.
+\item[•] Dữ liệu xử lý lớn, server cần phải đáp ứng được vấn đề thời gian thực và tránh xảy ra lỗi.
+\item[•] Vẫn còn một số chức năng chưa hoàn thiện: quản lý người dùng cho ứng dụng di động.
+\end{itemize}
+
+
+
+
 \section{Những kiến thức tiếp thu được qua đề tài}
 \subsection{Về mặt kiến thức tổng quát}
 \begin{itemize}

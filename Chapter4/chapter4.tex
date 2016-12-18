@@ -8,7 +8,7 @@
 \fi
 Từ những thiết kế đề tài tại \textbf{chương 3: Thiết kế hệ thống}, chương này tiếp tục trình bày về cách thức hiện thực đề tài và phương pháp thử nghiệm cũng như đánh giá.
 \section{Hiện thực node cảm biến}
-\subsection{Hiện thực prototype node cảm biến}
+\subsection{Hiện thực prototype node cảm biến}\label{sc:prototype_dautien}
 Chức năng chính của node cảm biến là dùng để lấy các dữ liệu môi trường như giá trị nồng độ CO, chất lượng không khí, nhiệt độ và lượng bụi, trong quá trình tìm các loại cảm biến trên thị trường hiện có thì nhóm chúng tôi đã đề xuất sử dụng các cảm biến được đề cập tại mục \ref{sec:cacloaicambien} như sau:
 \begin{itemize}
 	\item[•]Cảm biến GP2: dùng để đo lượng bụi có trong không khí.
@@ -266,6 +266,23 @@ Còn các board mạch vi xử lý, module Sim800L và pin được đặc vị 
 	\end{subfigure}
 	\caption{Bố trí các cảm biến khác}\label{fig:botrikhac}
 \end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Mức độ tiêu hao năng lượng}
 Để biết được mức tiêu hao năng lượng của mạch hoạt động như thế nào thì chúng tôi đã bắt đầu tính toán từ những thông số tiêu thụ chuẩn của các linh kiện được sử dụng trong node cảm biến. Nhầm nắm bắt được và đưa ra dung lượng pin cần thiết cho các node cảm biến chạy mà không phụ thuộc vào mạng lưới điện.
 
@@ -726,10 +743,90 @@ Giao diện này cho phép người dùng theo dõi được dữ liệu của t
 \end{figure}
 \newpage
 \section{Thử nghiệm và đánh giá}
-\subsection{Thử nghiệm Sensor Box}
-\textbf{này nói về mấy tháng đo, gió mưa đồ}
+\subsection{Thử nghiệm và đánh giá Sensor Box}
+\subsubsection*{Phương pháp thử nghiệm}
+Để thử nghiệm và đưa ra những kết quả đánh giá gần nhất với mục tiêu của đề tài luận văn chúng tôi đã bố trí các phương pháp thử nghiệm sau:
+\begin{itemize}
+\item[•] Phương pháp thử nghiệm 1: nhầm đưa ra kết quả đánh giá cho các chức năng hoạt động đúng như những gì đã thiết kế và hiện thực thì chúng tôi đã cho board mạch thu thập dữ liệu trong phòng và cung cấp nguồn điện đầy đủ liên tục.
+\item[•] Phương pháp thực nghiệm 2: để đánh giá được khả năng hoạt đồng dưới tác nhân của môi trường như gió, mưa, bụi và hơn hết có thể tận dụng nguồn năng lượng mặt trời để nạp pin cho mạch hoạt động độc lập với điện lưới, chúng tôi đã lắp đặt 3 Sensor Box tại những địa điểm ngoài trời.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+\end{itemize}
+
+\subsubsection*{Quá trình thử nghiệm và kết quả}
+Chúng tôi đã có những quá trình thử nghiệm như sau:
+
+Trong các ngày 5/11, 6/11, 14/11 của năm 2016 chúng tôi đã cho Sensor Node với mã Node ID: 7 áp dụng phương pháp thử nghiệm 1 và đây là kết quả trong 3 ngày chạy thử:
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=6in]{5nov}
+	\caption[Kết quả thử nghiệm vào ngày 05/11/2016]{Kết quả thử nghiệm vào ngày 05/11/2016}
+	\label{fig:5nov}
+\end{figure}
+
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=6in]{6nov}
+	\caption[Kết quả thử nghiệm vào ngày 06/11/2016]{Kết quả thử nghiệm vào ngày 06/11/2016}
+	\label{fig:6nov}
+\end{figure}
+
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=6in]{14nov}
+	\caption[Kết quả thử nghiệm vào ngày 14/11/2016]{Kết quả thử nghiệm vào ngày 14/11/2016}
+	\label{fig:14nov}
+\end{figure}
+
+
+
+Trong các ngày của tháng 11 và đầu tháng 12 năm 2016 chúng tôi đã bắt đầu lắp đặt 3 Sensor Box với Node ID 7,8,9 trong những môi trường khác nhau dưới những điều kiện như nắng, gió, mưa, bụi. Và đây là hình ảnh chụp được những của các Sensor Box được lắp đặt:
+
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=6in]{sensorbox_1}
+	\caption[Lắp đặt Sensor Box tại sân thượng]{Lắp đặt Sensor Box tại sân thượng}
+	\label{fig:sensorbox_1}
+\end{figure}
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=6in]{sensorbox_2}
+	\caption[Lắp đặt Sensor Box trong hẻm]{Lắp đặt Sensor Box trong hẻm}
+	\label{fig:sensorbox_2}
+\end{figure}
+
+
+Mọi kết quả thu thập được đều được đưa lên máy chủ tại địa chỉ \url{http://www.codingyourfuture.com/graph}
+ và dưới đây là một số kết quả thu được của quá trình thử nghiệm trên:
+
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=6in]{08dec}
+	\caption[Kết quả thử nghiệm vào ngày 08/12/2016]{Kết quả thử nghiệm vào ngày 08/12/2016}
+	\label{fig:08dec}
+\end{figure}
+
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=6in]{05dec_9}
+	\caption[Kết quả thử nghiệm vào ngày 05/12/2016]{Kết quả thử nghiệm vào ngày 05/12/2016}
+	\label{fig:05dec_9}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=6in]{01dec_8}
+	\caption[Kết quả thử nghiệm vào ngày 01/8/2016]{Kết quả thử nghiệm vào ngày 01/8/2016}
+	\label{fig:01dec_8}
+\end{figure}
+
+\subsubsection*{Đánh giá quá trình thử nghiệm}
+Từ những kết quả của những quá trình thử nghiệm trong suốt thời gian gần 2 tháng, kết quả cho thấy các Sensor Node hoạt động tốt với những chức năng như ban đầu phần hiện thực đã đề ra tại mục \ref{sc:prototype_dautien}.
+
+Khả năng hoạt động tốt tại điều kiện môi trường ngoài trời dưới thời tiết nắng, mưa, gió, bụi. Việc này cho thấy phần lên kế hoạch thiết và hiện thực mô hình Sensor box đã đạt được yêu cầu như luận văn đề ra.
+
+Đối với tích hợp thêm module sử dụng năng lượng mặt trời và	mạch nạp pin vẫn chưa được hiệu quả như phần tính toán năng lượng tiêu thụ mong muốn vì các ngày mưa liên tục không có đủ năng lượng để cung cấp cho mạch nạp pin để tiếp tục hoạt động.
+
 \subsection{Đánh giá Server}
 \subsubsection*{Tính sẵn sàng}
 \begin{itemize}
