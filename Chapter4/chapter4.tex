@@ -6,7 +6,7 @@
 \else
     \graphicspath{{Chapter3/Figs/Vector/}{Chapter3/Figs/}}
 \fi
-
+Từ những thiết kế đề tài tại \textbf{chương 3: Thiết kế hệ thống}, chương này tiếp tục trình bày về cách thức hiện thực đề tài và phương pháp thử nghiệm cũng như đánh giá.
 \section{Hiện thực node cảm biến}
 \subsection{Hiện thực prototype node cảm biến}
 Chức năng chính của node cảm biến là dùng để lấy các dữ liệu môi trường như giá trị nồng độ CO, chất lượng không khí, nhiệt độ và lượng bụi, trong quá trình tìm các loại cảm biến trên thị trường hiện có thì nhóm chúng tôi đã đề xuất sử dụng các cảm biến được đề cập tại mục \ref{sec:cacloaicambien} như sau:
@@ -724,29 +724,31 @@ Giao diện này cho phép người dùng theo dõi được dữ liệu của t
 	\end{subfigure}
 	\caption{Giao diện ứng dụng di động}\label{fig:giaodienchinh2}
 \end{figure}
-\section{Tính ổn định của node cảm biến}
+\newpage
+\section{Thử nghiệm và đánh giá}
+\subsection{Thử nghiệm Sensor Box}
 \textbf{này nói về mấy tháng đo, gió mưa đồ}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-\section{Đánh giá Server}
-\subsection{Tính sẵn sàng}
+\subsection{Đánh giá Server}
+\subsubsection*{Tính sẵn sàng}
 \begin{itemize}
 \item[•] Hiện thực đoạn mã tự động khởi dộng Server khi nguồn điện có lại sau khi bị mất điện.\
 \item[•] Sử dụng dịch vụ Dynamic DNS NOIP để cấu hình động tên miền gán với địa chỉ IP của Server tên miền hoạt động lại ngay sau khi vừa thay đổi địa chỉ IP(khắc phục sự cố mất điện làm IP thay đổi).
 \end{itemize}
-\subsection{Tính ổn định}
+\subsubsection*{Tính ổn định}
 \begin{itemize}
 	\item[•]Thực tế từ ngày khởi tạo Server và cho hoạt động liên tục 24/7 tới thời gian viết báo cáo là 8 tuần không có lỗi lạ xảy ra (trừ các trường hợp đặc biệt như mất điện, mạng mất kết nối)
 	\item[•]Điện năng tiêu thụ thấp và nhiệt độ không quá cao, giao động (44 - 48 độ C) đảm bảo tốt trạng thái hoạt động.
 \end{itemize}
-\subsection{Tốc độ đáp ứng}
+\subsubsection*{Tốc độ đáp ứng}
 \begin{itemize}
 	\item[•] Với sức mạnh của Raspberry Pi 3 thì Server hoạt đông tốt, thời gian tải file giao diện web nhanh với độ trễ thấp < 1s. Thời gian đáp ứng trung bình vào khoảng dưới 100ms là tải xong các tập tin giao diện web được gửi từ Server tới client.
 	\item[•] Dịch vụ Google Maps hoạt động khá nhanh mặc dù gói tin truyền đi là chậm nhất vì lượng dữ liệu lớn.
 	\item[•] API đáp ứng tốt, nhanh và hiệu quả. Thử nghiệm lập trình ứng dụng di động sử dụng API có thời gian đáp ứng tốt.
 \end{itemize}
 
-\section{Đánh giá lập trình ứng dụng Mobile sử dụng APIs}
+\subsection{Đánh giá lập trình ứng dụng Mobile sử dụng APIs}
 \begin{itemize}
 \item[•]Ứng dụng được viết có thể được xài trên nhiều platforms.
 \item[•]Đã hiện thực được file APK cho mobile.

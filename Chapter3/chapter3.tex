@@ -6,6 +6,8 @@
 \fi
 
 \chapter{THIẾT KẾ HỆ THỐNG}
+\label{chap: design}
+Áp dụng những kiến thức tại \textbf{Chương 2: Cơ sở lý thuyết}, chương 3 đưa ra những thiết kế về cấu trúc hệ thống, mô hình sensor box và APIs được hỗ trợ.
 \section{Kiến trúc mô hình hệ thống}\label{sec:struc}
 Như đã giới thiệu một số mô hình IoT thực tế ở Mục \ref{sec:xuhuongiot}, mô hình IoT phù hợp mà nhóm sẽ áp dụng cho việc pháp triển hệ thống giám sát được trình bày như Hình \ref{fig:pic5}. Hệ thống bao gồm các thành phần chính như sau: các node cảm biến, trung tâm lưu trữ dữ liệu và ứng dụng truy xuất và hiển thị thông tin phân tích dữ liệu.
 \begin{figure}[H]
@@ -229,7 +231,7 @@ Bù lại, so với các giao thức tối ưu dung lượng gói tin cho phát 
 Về phần API trợ giúp đăng ký và xác thực người dùng được quy ước như bảng \ref{table: apiuser}.
 \begin{table}[H]
 	\centering
-	\caption{Bảng API tương tác với dữ liệu về các node}
+	\caption{Bảng API tính năng đối với người dùng}
 	\begin{tabular}{|l|l|l|}
 		\hline
 		Method & URL            & Miêu tả                \\ \hline
@@ -263,7 +265,7 @@ Vì hiện tại nhóm chúng tôi đang hướng tới hướng phát triển I
 
 Như hình \ref{fig: realtime}, mô hình hoạt động đơn giản hơn rất nhiều, giảm bớt số lượng request không đáng có và đảm bảo tính realtime cho hệ thống.
 
-Một điểm mạnh ở mô hình này nữa là có thể phát triển nhiều server hoặc ứng dụng di động sử dụng chung một hệ quản lý cơ sở dữ liệu nhưng vẫn đảm bảo sự đồng bộ dữ liệu cập nhật tới enduser theo thời gian thực.
+Một điểm mạnh ở mô hình này nữa là có thể phát triển nhiều server hoặc ứng dụng di động sử dụng chung một hệ quản lý cơ sở dữ liệu nhưng vẫn đảm bảo sự đồng bộ dữ liệu cập nhật tới người dùng đầu cuối theo thời gian thực.
 \begin{figure}[H]
 	\centering    
 	\includegraphics[width=1.0\textwidth]{multiserver}
