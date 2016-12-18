@@ -5,14 +5,13 @@
 \graphicspath{{Chapter3/Figs/Vector/}{Chapter3/Figs/}}
 \fi
 
-\chapter{THIẾT KẾ HỆ THỐNG}
-\label{chap: design}
+\chapter{THIẾT KẾ HỆ THỐNG}\label{chap: design}
 Áp dụng những kiến thức tại \textbf{Chương 2: Cơ sở lý thuyết}, chương 3 đưa ra những thiết kế về cấu trúc hệ thống, mô hình sensor box và APIs được hỗ trợ.
 \section{Kiến trúc mô hình hệ thống}\label{sec:struc}
-Như đã giới thiệu một số mô hình IoT thực tế ở Mục \ref{sec:xuhuongiot}, mô hình IoT phù hợp mà nhóm sẽ áp dụng cho việc pháp triển hệ thống giám sát được trình bày như Hình \ref{fig:pic5}. Hệ thống bao gồm các thành phần chính như sau: các node cảm biến, trung tâm lưu trữ dữ liệu và ứng dụng truy xuất và hiển thị thông tin phân tích dữ liệu.
+Như đã giới thiệu một số mô hình IoT thực tế ở Mục \ref{sec:xuhuongiot}, mô hình IoT không dùng Gateway được chúng tôi áp dụng cho hệ thống. Hệ thống bao gồm các thành phần chính như sau: các node cảm biến, trung tâm lưu trữ dữ liệu và ứng dụng truy xuất và hiển thị thông tin dữ liệu.
 \begin{figure}[H]
 	\centering    
-	\includegraphics[width=0.9\textwidth]{model}
+	\includegraphics[width=0.7\textwidth]{model}
 	\caption[Kiến trúc mô hình hệ thống]{Kiến trúc mô hình hệ thống}
 	\label{fig:system}
 \end{figure}
@@ -20,7 +19,7 @@ Như đã giới thiệu một số mô hình IoT thực tế ở Mục \ref{sec
 \section{Các node cảm biến}\label{sec:cacloaicambien}
 Các node cảm biến: là một thiết bị được lắp đặt trên những đoạn đường hoặc các địa điểm thích hợp cần để lấy dữ liệu tại khu vực đó, nhiệm vụ chủ yếu là lấy dữ liệu từ các cảm biến đo được sau đó gửi dữ liệu đó lên máy chủ bằng module Sim GPRS.
 Để các node cảm biến này được hoạt động dưới tác nhân của môi trường như gió, mưa, bụi, và hơn hết có thể tận dụng nguồn năng lượng mặt trời để nạp pin cho mạch hoạt động độc lập với điện lưới, chúng tôi đã đề xuất mô hình thiết kế node cảm biến để có thể đáp ứng các yêu cầu như sau:
- \newpage
+
 \begin{wrapfigure}{l}[4pt]{0.4\linewidth}
     \includegraphics[scale=0.3]{house_home}
     \caption[Mô hình căn nhà 3D]{Mô hình căn nhà 3D}
@@ -287,6 +286,9 @@ Một điểm mạnh ở mô hình này nữa là có thể phát triển nhiề
 \item[•] Quản lý chỉnh sửa thông tin các node cảm biến: thêm, xóa, cập nhật, thay đổi.
 \end{itemize}
 
+\subsection*{Chức năng Ứng dụng di động}
+Hiện thị thông tin các node cảm biến đang hoạt động qua màn hình chính, và biểu đồ dữ liệu của từng node cảm biến theo từng ngày, thêm sự kết nối với web browser tạo sự thuận tiện cho việc theo dõi, hiện thị đồ thị (2 kiểu đồ thị là line chart và bar chart).
+
 \subsection*{Biểu đồ High level Usecase của Web Server}
 \begin{figure}[H]
 \centering    
@@ -323,9 +325,8 @@ STT & Tên            & Miêu tả                                              
 
 
 
-\subsection*{Chức năng Ứng dụng di động}
-Hiện thị thông tin các node cảm biến đang hoạt động qua màn hình chính, và biểu đồ dữ liệu của từng node cảm biến theo từng ngày, thêm sự kết nối với web browser tạo sự thuận tiện cho việc theo dõi, hiện thị đồ thị (2 kiểu đồ thị là line chart và bar chart).
-\subsubsection*{Biểu đồ High level Usecase của ứng dụng di động}
+
+\subsection*{Biểu đồ High level Usecase của ứng dụng di động}
 
 \begin{figure}[H]
 \centering    

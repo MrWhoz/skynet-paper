@@ -40,8 +40,6 @@ Việc tích hợp trí thông minh vào IoT còn có thể giúp các thiết b
 
 \textbf{Vấn đề không gian, thời gian: }Trong IoT, vị trí địa lý chính xác của một vật nào đó là rất quan trọng. Hiện nay, Internet chủ yếu được sử dụng để quản lí thông tin được xử lý bởi con người. Do đó những thông tin như địa điểm, thời gian, không gian của đối tượng không mấy quan trọng bởi người xử lí thông tin có thể quyết định các thông tin này có cần thiết hay không, và nếu cần thì họ có thể bổ sung thêm. Trong khi đó, IoT về lý thuyết sẽ thu thập rất nhiều dữ liệu, trong đó có thể có dữ liệu thừa về địa điểm, và việc xử lí dữ liệu đó được xem như không hiệu quả. Ngoài ra, việc xử lí một khối lượng lớn dữ liệu trong thời gian ngắn đủ để đáp ứng cho hoạt động của các đối tượng cũng là một thác thức hiện nay.
 
-\newpage
-
 \subsubsection*{Mô hình theo xu hướng IoT thực tế}
 \begin{figure}[H]
 \centering  
@@ -60,9 +58,6 @@ Việc tích hợp trí thông minh vào IoT còn có thể giúp các thiết b
 
 Mô hình (Hình ~\ref{fig:pic5}): Các thiết bị sẽ có thể kết nối với nhau bằng TCP/UDP và có thể kết nối trực tiếp đến máy chủ mà không cần thông qua thiết bị khác.\\
 Mô hình (Hình ~\ref{fig:pic6}): Các thiết bị sẽ được hỗ trợ nhiều chuẩn giao tiếp khác nhau (BLE, ZWave,…) nên cần cầu nối là Gateway để kết nối đến máy chủ. 
-
-
-\newpage
 
 Sơ đồ lớp Chung của cả hai mô hình trên:
 \begin{figure}[H] 
@@ -255,7 +250,7 @@ Thủ đô Hà Nội vừa lắp đặt hệ thống 80 trạm quan trắc. Hệ
 	\item[•] Yêu cầu lượng dữ liệu đủ lớn mới có thể phân tích được tình trạng giao thông.
 	\item[•] Module Zigbee bị giới hạn khoảng cách và độ ổn định giảm đáng kể tại môi trường đường phố tại Việt Nam, làm việc triển khai hoạt động gặp nhiều khó khăn.
 \end{itemize}
-\section{Các thiết bị phần cứng được sử dụng}
+\section{Các thiết bị phần cứng hỗ trợ cho đề tài}
 \subsection{Mạch vi xử lý Arduino}
 \subsubsection*{Giới thiệu về Arduino Nano}
 Arduino là một board mạch vi xử lý, nhằm xây dựng các ứng dụng tương tác với nhau hoặc với môi trường được thuận lợi hơn. Phần cứng bao gồm một board mạch nguồn mở được thiết kế trên nền tảng vi xử lý AVR Atmel 8bit, hoặc ARM Atmel 32-bit. Những Model hiện tại được trang bị gồm 1 cổng giao tiếp USB, 6 chân đầu vào analog, 14 chân I/O kỹ thuật số tương thích với nhiều board mở rộng khác nhau. Đi cùng với nó là một môi trường phát triển tích hợp (IDE) chạy trên các máy tính cá nhân thông thường và cho phép người dùng viết các chương trình cho Aduino bằng ngôn ngữ C hoặc C++.
@@ -379,7 +374,7 @@ Chức năng các chân của module Sim800L
 
 %/////////////////////////////////////////////////////////////////////////AT SIM 800L
 \newpage
-\subsubsection*{Một số tập lệnh AT của module Sim800L dùng trong đề tại luận văn}
+\subsubsection*{Một số tập lệnh AT của module Sim800L dùng trong đề tài luận văn}
 
 
  AT+CBC: trả về kết quả dung lượng pin hiện tại.
@@ -423,7 +418,7 @@ Kết quả  &
 \caption[Tập lệnh AT+CCLK: trả về giá trị thời gian của module sim]{Tập lệnh AT+CCLK}
 \end{table}
 
-
+\newpage
 
 AT+CSTT cài đặt các thông số APN, USER NAME, PASSWORD cho Sim
 \begin{table}[H]
@@ -465,7 +460,7 @@ Kết quả  &
 \caption[Tập lệnh AT+CIFSR: lấy thông tin địa chỉ IP của moduleSIM]{Tập lệnh AT+CIFSR}
 \end{table}
 
-
+\newpage
 
 
 AT+CIPSTART: thiết lập kết nối TCP hoặc UDP
@@ -512,7 +507,7 @@ Kết quả  &OK \\
 
 
 
-
+\newpage
 
 
 
@@ -534,14 +529,6 @@ Kết quả  & OK  \\ \hline
 
 
 
-
-
-
-
-
-
-
-\newpage
 \subsection{Pin năng lượng mặt trời}
 Pin năng lượng mặt trời (pin mặt trời/pin quang điện) là thiết bị giúp chuyển hóa trực tiếp năng lượng ánh sáng mặt trời (quang năng) thành năng lượng điện (điện năng) dựa trên hiệu ứng quang điện. Hiệu ứng quang điện là khả năng phát ra điện tử (electron) khi được ánh sáng chiếu vào của vật chất.
 

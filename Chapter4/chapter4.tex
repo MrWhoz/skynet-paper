@@ -79,9 +79,7 @@ Tiếp đến phần thiết kế thì để có thể tận dụng nguồn năn
 	
 	\item[•]Nguồn năng lượng ngoài: sử dụng trong một số trường hợp thời tiết mưa nhiều hoặc gió nhiều mà thiếu nguồn năng lượng mặt trời, chúng ta có thể tận dụng nguồn mưa và gió nhờ các tuapin phát năng lượng nhờ vào sức gió và mưa.
 	\item[•] Nguồn đầu ra 3.7VDC dùng để cấp cho module Sim800L còn đối với nguồn 6.5VDC dùng để cung cấp cho mạch vi xử lý.
-\end{itemize}
-
-\newpage
+\end{itemize}	
 \subsubsection*{Các thư viện đã sử dụng} 
 \begin{lstlisting}[language=C]
 #include "MQ135.h" //Thu vien cac ham toan hoc de xu ly so lieu MQ135
@@ -118,9 +116,6 @@ Tiếp đến phần thiết kế thì để có thể tận dụng nguồn năn
 	\item[•] Gửi được dữ liệu lên máy chủ thông qua dịch vụ GPRS của Sim800L, hệ thống máy chủ của chúng tôi ban đầu chưa được hoàn thành nên nhờ đến công cụ phát triển IoT Thingspeak thì chúng tôi đã kiểm tra được, xem thêm tại: \url{https://thingspeak.com/channels/157120}
 \end{itemize}
 
-
-
-\newpage
 \subsection{Hiện thực mô hình tổng thể node cảm biến}
 \subsubsection*{Hiện thực board mạch vi xử lý}
 Board mạch vi xử lý được thiết kế và hiện thực gọn nhất có thể và hỗ trợ các header nối các dây bus đến các cảm biến và module Sim800L. Chúng tôi đã thực hiện thiết kế board mạch vi xử lý như Hình \ref{fig:botrimcu}
@@ -128,12 +123,12 @@ Board mạch vi xử lý được thiết kế và hiện thực gọn nhất c�
 \begin{figure}[H]
 	\centering  
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=3in]{mcu}
+		\includegraphics[width=2.5in]{mcu}
 		\caption[Mô hình 1]{Mô hình 1}
 		\label{fig:mcu}
 	\end{subfigure}\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=3in]{mcu_2}
+		\includegraphics[width=2.5in]{mcu_2}
 		\caption[Mô hình 2]{Mô hình 2}
 		\label{fig:mcu_2}
 	\end{subfigure}
@@ -176,7 +171,7 @@ Lập trình cho vi xử lý Arduino Nano được mô hình hóa theo lưu đ�
 
 \begin{figure}[H]
 	\centering    
-	\includegraphics[width=2.5in]{node_status}
+	\includegraphics[width=3in]{node_status}
 	\caption[Lưu đồ xử lý hàm main]{Lưu đồ xử lý hàm main}
 	\label{fig:node_status}
 \end{figure}
@@ -188,7 +183,6 @@ Lập trình cho vi xử lý Arduino Nano được mô hình hóa theo lưu đ�
 	- Thiết lập timer định thời.\\
 	- Khởi động Module Sim800L.\\
 	- Đồng bộ thời gian module Sim800L với máy chủ NTP.\\
-	
 	Việc Đồng bộ thời gian module Sim800L với máy chủ NTP được Sim800L hỗ trợ qua các tập lệnh sau:
 	\begin{lstlisting}[numbers=left,firstnumber=1,language=C]
 	void syncTime()
@@ -209,19 +203,7 @@ Lập trình cho vi xử lý Arduino Nano được mô hình hóa theo lưu đ�
 	}
 	\end{lstlisting}
 	
-	
-	
-	
-	
-	
-	
 \end{itemize}
-
-
-
-
-
-
 
 
 
@@ -238,7 +220,7 @@ Việc bố trí các linh kiện trong hộp cảm biến nhầm giúp cho vi�
 		\label{fig:house_sensor}
 	\end{subfigure}\hfill
 	\begin{subfigure}[b]{0.5\textwidth}
-		\includegraphics[width=2.5in]{house_sensor_2}
+		\includegraphics[width=2in]{house_sensor_2}
 		\caption[Thực tế]{Thực tế}
 		\label{fig:house_sensor_2}
 	\end{subfigure}
@@ -312,6 +294,7 @@ Chú ý: các thông số tính toán dưới lấy từ thông số chuẩn c�
 	\end{tabular}
 \end{table}
 
+\newpage
 \textbf{Mức tiêu hao năng lượng vào 1 buổi tối 8PM-7AM:}
 \begin{table}[H]
 	\centering
@@ -647,57 +630,49 @@ Ví dụ cụ thể của một đoạn log:
 \end{lstlisting}
 
 Các thông tin được thể hiện trong file log đủ thông tin để cho phép nhà phát triển theo dõi và áp dụng trong việc hiện thực sản phẩm.
-\subsection{Xây dựng Web Server}
 
-\subsection{Hiện thực giao diện}
+\subsection{Hiện thực giao diện Web}
 
 Sử dụng framework express của Nodejs và HTML để xây dựng frontend
 
 \subsubsection*{Giao diện chính của Web Server}
 Phần này chứa các nút menu chức năng cùng với google map để theo dõi vị trí hoạt động của các cảm biến.
-\begin{center}
 	\begin{figure}[H]
 		\centering    
 		\includegraphics[width=1\textwidth]{webserver}
 		\caption[Giao diện chính của Web Server]{Giao diện chính của Web Server}
 		\label{fig:webserver}
 	\end{figure}
-\end{center}
 
 \subsubsection*{Giao diện đồ thị dữ liệu}
 Là nơi hiện thị biểu đồ của các thông số cũng như thông tin tương ứng của các cảm biến.
-\begin{center}
 	\begin{figure}[H]
 		\centering    
 		\includegraphics[width=1\textwidth]{web_graph}
 		\caption[Giao diện đồ thị dữ liệu]{Giao diện đồ thị dữ liệu}
 		\label{fig:web_graph}
 	\end{figure}
-\end{center}
-
-
 
 \subsubsection*{Giao diện nhận feedback từ người dùng qua email}
-Tương tác giữa người dùng với người quản lý server. Nội dung được gửi thông qua gmail.
-\begin{center}
+Nội dung được gửi thông qua email.
 	\begin{figure}[H]
 		\centering    
-		\includegraphics[width=1\textwidth]{web_email}
+		\includegraphics[width=0.6\textwidth]{web_email}
 		\caption[Giao diện nhận feedback người dùng]{Giao diện nhận feedback người dùng}
 		\label{fig:web_email}
 	\end{figure}
-\end{center}
 
 \subsubsection*{Giao diện dành cho người quản lý}
 Khu vực này dành cho người quản lý truy cập nhầm mục đích chỉnh sửa, thay thế các node cảm biến.
-\begin{center}
 	\begin{figure}[H]
 		\centering    
 		\includegraphics[width=1\textwidth]{web_nodeinfo}
 		\caption[Giao diện quản lý các node cảm biến]{Giao diện quản lý các node cảm biến}
 		\label{fig:web_nodeinfo}
 	\end{figure}
-\end{center}
+	
+
+
 
 
 
@@ -726,7 +701,7 @@ Tại giao diện chính của ứng dụng di động người dùng có thể 
 
 
 \subsubsection*{Giao diện xem dữ liệu trên ứng dụng di động}
-Giao diện này cho phép người dùng theo dõi được dữ liệu của từng node cảm biến theo 2 loại biểu đồ như Hình \ref{fig:app_graph} thể hiện.
+Giao diện này cho phép người dùng theo dõi được dữ liệu của từng node cảm biến theo ngày như Hình \ref{fig:giaodienchinh2} thể hiện.
 \begin{figure}[H]
 	\centering  
 	\begin{subfigure}[b]{0.5\textwidth}
@@ -739,7 +714,8 @@ Giao diện này cho phép người dùng theo dõi được dữ liệu của t
 		\caption[Giao diện thống kê]{Giao diện thống kê}
 		\label{fig:main_3}
 	\end{subfigure}
-	\caption{Giao diện ứng dụng di động}\label{fig:giaodienchinh2}
+	\caption{Giao diện ứng dụng di động}
+	\label{fig:giaodienchinh2}
 \end{figure}
 \newpage
 \section{Thử nghiệm và đánh giá}
@@ -787,6 +763,7 @@ Trong các ngày của tháng 11 và đầu tháng 12 năm 2016 chúng tôi đã
 	\caption[Lắp đặt Sensor Box tại sân thượng]{Lắp đặt Sensor Box tại sân thượng}
 	\label{fig:sensorbox_1}
 \end{figure}
+Địa điểm của Hình \ref{fig:sensorbox_1} là trên sân thượng của căn nhà 3 lầu, khu vực xung quanh chủ yếu là dân cư sinh sống không có nhiều phương tiện giao thông tại nơi này.
 \begin{figure}[H]
 	\centering    
 	\includegraphics[width=6in]{sensorbox_2}

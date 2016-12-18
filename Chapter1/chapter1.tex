@@ -16,7 +16,7 @@
 
 Ngày nay, bài toán giao thông vẫn đang là bài toán hóc búa vẫn chưa được giải quyết được ở Việt Nam và nhiều nước đang phát triển. Tình trạng kẹt xe, ùn tắc kéo dài gây ra sự chậm trễ trong công việc, hơn nữa còn  gây gia tăng ô nhiễm môi trường, giảm chất lượng môi trường sống. Một trong những khó khăn làm bài toán giao thông khó giải quyết đó chính là không có đầy đủ dữ liệu cần thiết. Chúng ta không thể giải bài toán nếu không có đủ dữ kiện, cũng như giải quyết kẹt xe ta cần phải có dữ liệu về lưu lượng giao thông.
 
-Vì yếu tố trên, dự án Smart Traffic được hình thành và phát triển theo hướng IoT với mục đích thu thập dữ liệu về các yếu tố môi trường (nồng độ CO, nhiệt độ, độ ẩm, nồng độ bụi, độ ồn…) và xác định mối tương quan giữa lưu lượng giao thông với môi trường xung quanh khu vực đó. Từ đó ta có thể có được 1 phần dữ liệu cần thiết về tình trạng các con đường theo thời gian thực, cũng như có được lịch sử và dùng dữ liệu ấy để phát triển dự đoán tình trạng giao thông tiếp theo.
+Vì yếu tố trên, dự án SkyNet được hình thành và phát triển theo hướng IoT với mục đích thu thập dữ liệu về các yếu tố môi trường (nồng độ CO, nhiệt độ, chất lượng không khí, nồng độ bụi). Từ đó ta có thể có được 1 phần dữ liệu cần thiết về tình trạng các con đường theo thời gian thực, cũng như có được lịch sử và dùng dữ liệu ấy để phát triển cho những dự án khác.
 
 \begin{figure}[H] 
 \centering    
@@ -25,7 +25,7 @@ Vì yếu tố trên, dự án Smart Traffic được hình thành và phát tri
 \label{fig:pic1}
 \end{figure}
 
-Những dữ liệu đó có thể được phân tích và xử lý, đưa ra những kết luận về tình trạng lưu thông trên đoạn đường đó, về sự thay đổi môi trường tại 1 khu vực ở những khoảng thời gian khác nhau. Và những dữ liệu này có thể ứng dụng cho bất động sản, môi trường và nghiên cứu. Do đó đề tài mang tính thiết thực và ứng dụng cao và được lựa chọn để làm Thực tập tốt nghiệp và có thể lên Luận văn tốt nghiệp.
+Và những dữ liệu này có thể ứng dụng cho bất động sản, môi trường và nghiên cứu. Do đó đề tài mang tính thiết thực và ứng dụng cao và được lựa chọn để làm Luận văn tốt nghiệp.
 
 
 
@@ -35,23 +35,16 @@ Những dữ liệu đó có thể được phân tích và xử lý, đưa ra n
 \subsection{Mục tiêu đề tài}
 \begin{itemize}
 \item[-]Tìm hiểu về khí thải xe máy và ô tô.
-
 \item[-]Hiện thực mạch cảm biến để thu thập khí thải.
-
-\item[-]Khảo sát và đo khí thải thực tế tại một số điểm thường xuyên xảy ra kẹt xe trên địa bàn thành phố.
-
-\item[-]Tổng hợp các số liệu thu thập và các yếu tố môi trường khác (nhiệt độ, độ ẩm, …) để đề xuất mô hình để hướng đến phát triển hệ thống cảnh báo kẹt xe dựa vào tình trạng ô nhiễm không khí.
-
 \item[-]Hiện thực hoàn module thu thập cảm biến tích hợp thêm module sử dụng năng lượng mặt trời để nạp pin cho mạch hoạt động độc lập với điện lưới.
 \item[-]Hoàn chỉnh website cho phép người dùng theo dõi thông tin.
 \item[-]Đề xuất các tính năng thừa hưởng từ kết quả hệ thống và khả năng tích hợp với các hệ thống khác.
-
-
 \end{itemize}
 
-\subsection{Nhiệm vụ đề tài}
+
 
 \begin{landscape}
+\subsection{Nhiệm vụ đề tài}
 \begin{table}[]
 \centering
 \caption{Giản đồ gantt của Huỳnh Phạm So Ny}
@@ -141,11 +134,9 @@ Những dữ liệu đó có thể được phân tích và xử lý, đưa ra n
 Luận văn được chia thành 5 chương, nội dung chính của mỗi chương như sau:
 
 \textbf{Chương 1: Giới thiệu}\\
-
 Giới thiệu sơ bộ về ý tưởng cũng như tính cấp bách, mục tiêu và nhiệm vụ của đề tài và cấu trúc bản báo cáo.
 
 \textbf{Chương 2: Cơ sở lý thuyết}\\
-
 Giới thiệu lý thuyết về các yếu tố ảnh hưởng tới chất lượng môi trường và các hệ thống quan trắc hiện hữu. Bên cạnh đó trình bày kiến thức nền tảng về Internet of Things, các công cụ và thiết bị phần cứng hỗ trợ phát triển IoT được áp dụng thực hiện đề tài. Bên cạnh đó là các khái niệm về các công nghệ, nền tảng xây dựng Server và Database được sử dụng cũng như phát triển ứng dung web và di động cụ thể của hệ thống.
 
 \textbf{Chương 3: Thiết kế}\\
@@ -157,5 +148,5 @@ Hiện thực dựa trên bản thiết kế được trình bày, hiện thực
 Sau khi hiện thực, nhóm thống kê những kết quả thực tế đo được, đánh giá mức độ ổn định của sensor node và server cũng như trải nghiệm ứng dụng web và di động.
 
 \textbf{Chương 5: Tổng kết}\\
+Chương này sẽ đút kết những gì đạt được và khó khăn trong việc hiện thực đề tài. Bên cạnh đó đề ra hướng phát triển đề tài trong tương lai.
 
-Chương này sẽ đút kết những gì đạt được và khó khan trong việc hiện thực đề tài. Bên cạnh đó đề ra hướng phát triển đề tài trong tương lai.
