@@ -315,6 +315,15 @@ Chú ý: các thông số tính toán dưới lấy từ thông số chuẩn c�
 \end{table}
 
 \section{Hệ thống Server lưu trữ dữ liệu và cung cấp API}
+\subsection{Mô hình cụm Server }
+Server được tổ chức theo mô hình MVC (Model - View - Controller). Các lớp này được chạy trên thiết bị phần cứng là Raspberry Pi 3 và trong môi trường phát triển từ Linux OS. Mô hình được mô tả bởi hình \ref{fig: strucserver}
+
+\begin{figure}[H]
+	\centering    
+	\includegraphics[width=0.6\textwidth]{strucserver}
+	\caption[Mô hình cụm Server]{Mô hình cụm Server}
+	\label{fig: strucserver}
+\end{figure}
 
 \subsection{Cấu trúc tổ chức tập tin}
 \subsubsection*{Các thư mục và chức năng}
@@ -824,7 +833,7 @@ Khả năng hoạt động tốt tại điều kiện môi trường ngoài tr�
 
 \subsection{Đánh giá lập trình ứng dụng Mobile sử dụng APIs}
 \begin{itemize}
-\item[•]Ứng dụng được viết có thể được xài trên nhiều platforms.
+\item[•]Ứng dụng được viết có thể được sử dụng trên nhiều platforms.
 \item[•]Đã hiện thực được file APK cho mobile.
 \item[•]Xây dựng một số các chức năng cơ bản như: hiện thị thông tin các node cảm biến cho màn hình chính, vẽ đồ thị, liên kết với web browser …
 \item[•] Vẫn còn một vài chức năng cần hoàn thiện: đăng nhập quản lý người dùng, các chức năng phụ liên quan đến user …

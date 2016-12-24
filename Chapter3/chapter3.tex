@@ -358,27 +358,3 @@ STT & Tên Use-case     & Mô tả                                              
 
 
 
-\section{Các ràng buộc của hệ thống}
-Cũng như các dự án IoT quy mô rộng khác, đề tài cũng yêu cầu nhiều đặc tính ràng buộc như:  
-\subsection*{Tính đáp ứng thời gian thực}Để giải quyết tình trạng giao thông hiện thời và trong thời gian gần, ta cần phải có dữ liệu thời gian thực. Ta không thể sử dụng dữ liệu của nửa tiếng hoặc 1 giờ trước để vẽ nên bản đồ lưu thông hiện tại cũng như cách điều hướng giải quyết. Do đó, hệ thống cần phải có thời gian đáp ứng nhanh khi có yêu cầu dữ liệu khi được gọi. Để đạt được kết quả đó, ta cần phải có những phần cứng với thiết lập kết nối có khả năng đáp ứng nhanh, cùng với khả năng hoạt động ổn định liên tục trong thời gian dài để cung cấp dữ liệu liên tục và liền mạch.
-
-
-\subsection*{Toàn vẹn dữ liệu (Data Integrity)} Mục đích chính của dự án là thu thập dữ liệu và từ đó phát triển ứng dụng. Vì thế tính toàn vẹn dữ liệu đóng vai trò quan trọng. Dữ liệu thu thập cần phải đáp ứng đủ các yếu tố: tin cậy, chính xác và đầy đủ. Ta cần phải có đủ dữ liệu thì mới có thể đủ dữ kiện để giải quyết bài toán. Ta không thể giải quyết khi chỉ có được dữ liệu một đoạn đường, 1 thời gian ngắn mà đòi hỏi phải có dữ liệu của một khu vực đủ lớn và tương quan với nhau. Bên cạnh đó cần phải có tính chính xác dữ liệu và đòi hỏi sự ổn định của lượng dữ liệu đó qua yếu tố độ tin cậy. 
-
-\begin{figure}[H]
-\centering    
-\includegraphics[width=3in]{toanvendulieu}
-\caption[Toàn ven dữ liệu]{Toàn ven dữ liệu}
-\label{fig:toanvendulieu}
-\end{figure}
-\subsubsection*{Đồng bộ hóa} Hệ thống giám sát môi trường có nhiều thiết thiết bị khác nhau, nhiều phương pháp và cách thức truyền dữ liệu khác nhau. Do đó ta cần phải có sự chuẩn hóa các giao thức giao tiếp, đồng bộ các gói dữ liệu. Tuy nhiên điều này sẽ dẫn đến vấn nạn được đề cập ở mục sau.
-
-\subsection*{Tính bảo mật} Vấn đề bảo mật và an toàn dữ liệu hiện tại vẫn là một trong những khó khăn mà hệ thống IoT đang mắc phải. Vì hệ thống IoT đòi hỏi cần phải có giao thức kết nối giữa các thiết bị phải được chuẩn hóa và động bộ, cũng như tối giản kích thước gói tin để tối ưu trong việc truyền dữ liệu giữa các thiết bị, do đó gói tin truyền đi có thiết lập cấu trúc đơn giản và hệ thống dễ bị thâm nhập. Điều này sẽ dẫn đến hệ thống có thể bị đánh cắp dữ liệu, và thậm chí mất quyền kiểm soát toàn bộ hệ thống bởi vì tất cả đều được kết nối với nhau. Vậy nên cần phải cân nhắc trade-off giữa hiệu năng hệ thống và tính bảo mật.
-\begin{figure}[H]
-\centering    
-\includegraphics[width=5in]{virusiot}
-\caption[Tính bảo mật]{Tính bảo mật}
-\label{fig:virusiot}
-\end{figure}
-
-Các mối nguy hại chính ảnh hưởng trực tiếp tới hệ thống IoT như: DDoS, Ransomware, Cyber Criminals và Cyber Warfare. 
