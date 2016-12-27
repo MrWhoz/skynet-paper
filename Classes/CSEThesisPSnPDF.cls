@@ -1034,8 +1034,8 @@ wish to left align your text}
 \newenvironment{declaration}{
 \cleardoublepage
 \setsinglecolumn
-%\chapter*{\centering \Large LỜI CAM ĐOAN}
-\chapter*{\centering \Large Lời cam đoan}
+\chapter*{\centering \Large LỜI CAM ĐOAN}
+%\chapter*{\centering \Large Lời cam đoan}
 \thispagestyle{empty}
 }{
 \flushright
@@ -1053,8 +1053,8 @@ wish to left align your text}
 \newenvironment{acknowledgements}{
 \cleardoublepage
 \setsinglecolumn
-%\chapter*{\centering \Large LỜI CẢM ƠN}
-\chapter*{\centering \Large Lời cảm ơn}
+\chapter*{\centering \Large LỜI CẢM ƠN}
+%\chapter*{\centering \Large Lời cảm ơn}
 \thispagestyle{empty}
 }
 
@@ -1169,7 +1169,7 @@ wish to left align your text}
 % Normal abstract in the thesis
   \cleardoublepage
   \setsinglecolumn
-  \chapter*{\centering \Large Tóm tắt}
+  \chapter*{\centering \Large TÓM TẮT}
   \thispagestyle{empty}
 \fi
 }
@@ -1187,7 +1187,27 @@ wish to left align your text}
 % Normal abstract in the thesis
   \cleardoublepage
   \setsinglecolumn
-  \chapter*{\centering \Large Abstract}
+  \chapter*{\centering \Large ABSTRACT}
+  \thispagestyle{empty}
+\fi
+}
+
+
+
+\newenvironment{viettat} {
+\ifCSE@abstract
+% Separate abstract as per Student Registry guidelines
+  \thispagestyle{empty}
+  \setsinglecolumn
+  \begin{center}
+    { \Large {\bfseries {\@title}} \par}
+    {{\large \vspace*{1em} \@author} \par}
+  \end{center}
+\else
+% Normal abstract in the thesis
+  \cleardoublepage
+  \setsinglecolumn
+  \chapter*{\centering \Large DANH MỤC CHỮ VIẾT TẮT}
   \thispagestyle{empty}
 \fi
 }
