@@ -33,7 +33,7 @@ Từ kết quả tìm hiểu các loại khí thải trong mục \ref{sec:yeuto_
 
 %\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\GP2\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
 \subsection{Cảm biến bụi GP2} 
-Cảm biến bụi GP2 là một bộ cảm biến chất lượng không khí quang học, được thiết kế đo những hạt bụi. Cám biến được thiết kế một điốt phát hồng ngoại và một photostransistor được sắp xếp thành đường chéo thiết bị này, cho phép nó phát hiện ánh sáng phản xạ của bụi trong không khí.  Nó đặc biệt hiệu quả trong việc phát hiện các hạt rất mịn như khói thuốc lá, và thường được sử dụng trong các hệ thống lọc không khí.
+Cảm biến bụi GP2 là một bộ cảm biến chất lượng không khí quang học, được thiết kế đo những hạt bụi. Cảm biến được thiết kế một điốt phát hồng ngoại và một photostransistor được sắp xếp thành đường chéo thiết bị này, cho phép nó phát hiện ánh sáng phản xạ của bụi trong không khí.  Nó đặc biệt hiệu quả trong việc phát hiện các hạt rất mịn như khói thuốc lá, và thường được sử dụng trong các hệ thống lọc không khí.
 
 Cảm biến bụi GP2 tiêu tốn dòng rất ít (20 mA cao nhất, 11mA chế độ chạy thường), có thể hỗ trợ nguồn cung cấp lên tới 7VDC. Tín hiệu đầu ra của cảm biến là dạng tín hiệu tương tự dùng để đo mật độ bụi, với độ nhạy $0.5V/0.1mg/{m}^{3}$.
 
@@ -55,7 +55,7 @@ Thông số kỹ thuật:
 %\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\	MQ135	\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\%
 \newpage
 \subsection{Cảm biến chất lượng không khí MQ135} 
-Cảm biến chất lượng không khí MQ135 thường được dùng trong các thiết bị kiểm tra chất lượng không khí bên trong cao ốc, văn phòng, thích hợp để phát hiện khí NH3, Nox, Ancol, Benzen, khói và khí CO2.Cám biến này với độ nhạy cao và thời gian đáp ứng nhanh. Tín hiệu ngõ ra dạng analog và digital. Cảm biến này có thể hoạt động ở nhiệt độ từ khoảng: $-10^{o}$C đến $50^{o}$C và tiêu thụ dòng khoảng 300mA tại 5V.
+Cảm biến chất lượng không khí MQ135 thường được dùng trong các thiết bị kiểm tra chất lượng không khí bên trong cao ốc, văn phòng, thích hợp để phát hiện khí NH3, Nox, Ancol, Benzen, khói và khí CO2.Cảm biến này với độ nhạy cao và thời gian đáp ứng nhanh. Tín hiệu ngõ ra dạng analog và digital. Cảm biến này có thể hoạt động ở nhiệt độ từ khoảng: $-10^{o}$C đến $50^{o}$C và tiêu thụ dòng khoảng 300mA tại 5V.
 \begin{figure}[H]
 	\centering    
 	\includegraphics[width=0.5\textwidth]{mq135}
@@ -276,7 +276,7 @@ Một điểm mạnh ở mô hình này nữa là có thể phát triển nhiề
 \item[•] Cung cấp cho người dùng thông tin về nơi chứa node cảm biến.
 \item[•] Người dùng có thể xem biểu đồ dữ liệu thông số môi trường tại vị trí tương ứng với node cảm biến đã được thiết lập.
 \item[•] Xem được tình trạng và biểu đồ thống kê của các node cảm biến đang hoạt động.
-\item[•] Gửi phản thông tin phản hồi về cho người quản lý thông qua email.
+\item[•] Gửi thông tin phản hồi về cho người quản lý thông qua email.
 \item[•] Cung cấp thông tin lịch sử các hoạt động sử dung API, giúp cho bên thứ 3 có thể dễ dàng phát triển.
 \end{itemize}
 
@@ -287,12 +287,12 @@ Một điểm mạnh ở mô hình này nữa là có thể phát triển nhiề
 \end{itemize}
 
 \subsection*{Chức năng Ứng dụng di động}
-Hiện thị thông tin các node cảm biến đang hoạt động qua màn hình chính, và biểu đồ dữ liệu của từng node cảm biến theo từng ngày, thêm sự kết nối với web browser tạo sự thuận tiện cho việc theo dõi, hiện thị đồ thị (2 kiểu đồ thị là line chart và bar chart).
+Hiện thị thông tin các node cảm biến đang hoạt động qua màn hình chính, và biểu đồ dữ liệu của từng node cảm biến theo từng ngày, hiện thị đồ thị (2 kiểu đồ thị là line chart và bar chart).
 
 \subsection*{Biểu đồ High level Usecase của Web Server}
 \begin{figure}[H]
 \centering    
-\includegraphics[width=0.6\textwidth]{usecase_diagram}
+\includegraphics[width=0.8\textwidth]{usecase}
 \caption[Biểu đồ High level Usecase]{Biểu đồ High level Usecase }
 \label{fig:usecase_diagram}
 \end{figure}
@@ -301,11 +301,11 @@ Mô tả giản đồ Usecase
 \centering
 \caption{Bảng mô tả giản đồ Usecase của Web Server}
 \label{table:usewebsite}
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|l|L{10cm}|}
 \hline
 STT & Tên            & Miêu tả                                                                                            \\ \hline
 1   & View map       & Người dùng thấy được các node đang chạy trên google maps                                           \\ \hline
-2   & View Node Info & Thông tin tương ứng của Node( Lat, Lng, Phone)                                                     \\ \hline
+2   & View Statistic & Hiển thị các thống kê số lượng node hoạt động và số lượng dữ liệu thu thập                                                       \\ \hline
 3   & View Graph     & Đồ thị hoạt động của Node
 \\ \hline
 4   & Contact        & Phản hồi ý kiến người dùng qua Gmail                                                               \\ \hline
@@ -330,7 +330,7 @@ STT & Tên            & Miêu tả                                              
 
 \begin{figure}[H]
 \centering    
-\includegraphics[width=0.7\textwidth]{app_usecase}
+\includegraphics[width=0.5\textwidth]{musecase}
 \caption[Giản đồ High level Usecase của ứng dụng di động]{Giản đồ High level Usecase của ứng dụng di động}
 \label{fig:app_usecase}
 \end{figure}
@@ -341,14 +341,12 @@ Mô tả Usecase
 \centering
 \caption{Bảng mô tả giản đồ Usecase của ứng dụng di động}
 \label{table:usecase_mobile}
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|l|L{10cm}|}
 \hline
 STT & Tên Use-case     & Mô tả                                                            \\ \hline
 1   & View Node Info   & Thông tin của Node( Lat, lng, Phone, ID)                         \\ \hline
 2   & View Graph       & 2 dạng đồ thị theo ngày (line chart, bar chart của các thông số) \\ \hline
-3   & Link web browser & Liên kết tới web browser                                         \\ \hline
-4   & View Map         & Hiện thị Google Map và vị trí các Node                           \\ \hline
-5   & Other Functions  & Các chức năng của web browser                                    \\ \hline
+3   & View Statistic & Hiển thị các thống kê số lượng node hoạt động và số lượng dữ liệu thu thập                                        \\ \hline
 \end{tabular}
 \end{table}
 

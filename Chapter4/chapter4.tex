@@ -16,7 +16,7 @@ Chức năng chính của node cảm biến là dùng để lấy các dữ li�
 	\item[•]Cảm biến MQ07: dùng để đo nồng độ khí CO trong không khí.
 	\item[•]Cảm biến DS18B20: dùng để đo nhiệt độ môi trường xung quanh. 
 \end{itemize}
-Như vậy, các thành phần chính của prototype biến đầu tiên chúng tôi đã xây dựng như sau:
+Như vậy, các thành phần chính của prototype bước đầu tiên chúng tôi đã xây dựng như sau:
 \begin{figure}[H]
 	\centering    
 	\includegraphics[width=5in]{prototype_1}
@@ -428,7 +428,7 @@ app.use('/auth', auth);
 
 \subsection{Xây dựng Database}
 % TODO: node cảm biến hay sensor node?
-Hệ quản lý cơ sở dữ liệu được sử dụng tại hệ thống là RethinkDB như mô hình thiết kế hệ thống tại mục \ref{sec:struc} . Cơ sở dữ liệu được chia làm 3 bảng: nodeList, nodeData và user được miêu tả tại các hình \ref{fig: dbnode} và\ref{fig: dbuser}
+Hệ quản lý cơ sở dữ liệu được sử dụng tại hệ thống là RethinkDB như mô hình thiết kế hệ thống tại mục \ref{sec:struc} . Cơ sở dữ liệu được chia làm 3 bảng: nodeList, nodeData và user được miêu tả tại các hình \ref{fig: dbnode} và \ref{fig: dbuser}
 
 Các dữ liệu về node được chia làm hai bảng:
 
@@ -827,9 +827,9 @@ Khả năng hoạt động tốt tại điều kiện môi trường ngoài tr�
 \begin{itemize}
 \item[•]Ứng dụng được viết có thể được sử dụng trên nhiều platforms.
 \item[•]Đã hiện thực được file APK cho mobile.
-\item[•]Xây dựng một số các chức năng cơ bản như: hiện thị thông tin các node cảm biến cho màn hình chính, vẽ đồ thị, liên kết với web browser …
+\item[•]Xây dựng một số các chức năng cơ bản như: hiện thị thông tin các node cảm biến cho màn hình chính, vẽ đồ thị...
 \item[•] Vẫn còn một vài chức năng cần hoàn thiện: đăng nhập quản lý người dùng, các chức năng phụ liên quan đến user …
 \item[•] Khó khăn trong việc debugging vì một số plugin hay chức năng không chạy trên nền web app. 
-\item[•]Hiệu suất thấp do nó không hoàn toàn tự nhiên, có thể gặp sự cố khi làm ứng dụng game hay các ứng dụng dùng nhiều tài nguyên.
+\item[•]Hiệu suất thấp do nó không hoàn toàn tự nhiên, có thể gặp sự cố khi làm ứng dụng dùng nhiều tài nguyên.
 
 \end{itemize}
