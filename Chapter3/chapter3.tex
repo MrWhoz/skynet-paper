@@ -87,14 +87,11 @@ Thông số kỹ thuật:
 \end{figure}
 
 
-Giá trị chất lượng không khí(ppm) được xác định theo biểu đồ Hình \ref{fig:mq135_mqh1} giá trị này thay đổi theo sự biến đổi của giá trị Rs/Ro, theo Hình \ref{fig:mq135_mqh2} thì giá trị Rs/Ro bị ảnh hưởng bởi nhiệt độ và độ ẩm.
+Chất lượng không khí được cảm biến MQ135 xác định dựa trên giản đồ chỉ sự biến đổi của Rs/Ro Hình \ref{fig:mq135_mqh1}, trong đó giá trị Rs thay đổi dưới tác nhân của môi trường không khí xung quanh, để định tính được giá trị Rs thì cần phải lấy được giá trị Ro vì giá trị Ro này sẽ được lấy sau mỗi lần thiết bị được khởi động ban đầu. 
 
-Để xác định được giá trị Rs/Ro từ ngõ ra analog của mạch cảm biến MQ-135 ta có công thức như sau:
-\begin{center}
-$\displaystyle \frac{R_{S}}{R_{L}} = \frac{V_{C}-V_{RL}}{V_{RL}}$
-\end{center}
+Giá trị Ro được xác định trong môi trường không khí sạch, như Hình \ref{fig:mq135_mqh1} ta thấy được giá trị Rs/Ro luôn là 3.8 (hằng số không đổi) trong môi trường không khí sạch. Như vậy cần xác định Ro bằng cách để cảm biến MQ135 chạy trong môi trường không khí sạch và tính giá trị $R_{S}=\frac{V_{C}}{V_{RL}}R_{L}$ trung bình trong 100 lần đo. Từ đó chúng ta sẽ có Ro trong không khí sạch $R_{O} = \frac{R_{S}}{3.8}$.
 
-Giá trị Rs/Ro này được vi xử lý tính toán dựa trên đầu ra analog của cảm biến MQ-135 và được đưa vào thư viện mq135.h để có thể lấy được giá trị chất lượng không khí ppm theo sự thay đổi của nhiệt độ và độ ẩm của môi trường thực tế.
+Công việc xác định giá trị Ro được thực hiện trong quá trình khởi tạo, lắp đặt cảm biến, hoặc công đoạn calibration và giá trị Ro không thay đổi trong thời gian đo đạt.
 
 Thư viện mq135.h cung cấp cho chúng ta các hàm toán học đã được nhà sản xuất tính toán sẵn để có thể lấy được giá trị chất lượng không khí ppm dựa vào thay đổi của môi trường nhiệt độ và độ ẩm.
 
@@ -134,14 +131,11 @@ Thông số kỹ thuật:
 \end{figure}
 
 
-Giá trị chất lượng không khí(ppm) được xác định theo biểu đồ Hình \ref{fig:mq07_mqh1} giá trị này thay đổi theo sự biến đổi của giá trị Rs/Ro, theo Hình \ref{fig:mq07_mqh2} thì giá trị Rs/Ro bị ảnh hưởng bởi nhiệt độ và độ ẩm.
+Chất lượng không khí được cảm biến MQ07 xác định dựa trên giản đồ chỉ sự biến đổi của Rs/Ro Hình \ref{fig:mq07_mqh1}, trong đó giá trị Rs thay đổi dưới tác nhân của môi trường không khí xung quanh, để định tính được giá trị Rs thì cần phải lấy được giá trị Ro vì giá trị Ro này sẽ được lấy sau mỗi lần thiết bị được khởi động ban đầu. 
 
-Để xác định được giá trị Rs/Ro từ ngõ ra analog của mạch cảm biến MQ-7 ta có công thức như sau:
-\begin{center}
-$\displaystyle \frac{R_{S}}{R_{L}} = \frac{V_{C}-V_{RL}}{V_{RL}}$
-\end{center}
+Giá trị Ro được xác định trong môi trường không khí sạch, như Hình \ref{fig:mq07_mqh1} ta thấy được giá trị Rs/Ro luôn là 100 (hằng số không đổi) trong môi trường không khí sạch. Như vậy cần xác định Ro bằng cách để cảm biến MQ07 chạy trong môi trường không khí sạch và tính giá trị $R_{S}=\frac{V_{C}}{V_{RL}}R_{L}$ trung bình trong 100 lần đo. Từ đó chúng ta sẽ có Ro trong không khí sạch $R_{O} = \frac{R_{S}}{100}$.
 
-Giá trị Rs/Ro này được vi xử lý tính toán dựa trên đầu ra analog của cảm biến MQ-7 và được đưa vào thư viện mq07.h để có thể lấy được giá trị chất lượng không khí ppm theo sự thay đổi của nhiệt độ và độ ẩm của môi trường thực tế.
+Công việc xác định giá trị Ro được thực hiện trong quá trình khởi tạo, lắp đặt cảm biến, hoặc công đoạn calibration và giá trị Ro không thay đổi trong thời gian đo đạt.
 
 Thư viện mq07.h cung cấp cho chúng ta các hàm toán học đã được nhà sản xuất tính toán sẵn để có thể lấy được giá trị chất lượng không khí ppm dựa vào thay đổi của môi trường nhiệt độ và độ ẩm.
 

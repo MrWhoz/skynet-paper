@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.10.17)  3 JAN 2017 10:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.10.17)  3 JAN 2017 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2369,100 +2369,101 @@ Package pdftex.def Info: Chapter3/Figs/Raster/mq135_mqh2.png used on input line
 File: Chapter3/Figs/Raster/mq07.png Graphic file (type png)
 
 <use Chapter3/Figs/Raster/mq07.png>
-Package pdftex.def Info: Chapter3/Figs/Raster/mq07.png used on input line 108.
+Package pdftex.def Info: Chapter3/Figs/Raster/mq07.png used on input line 105.
 (pdftex.def)             Requested size: 262.47934pt x 262.47922pt.
  [63 <./Chapter3/Figs/Raster/mq07.png>]
-<Chapter3/Figs/Raster/mq07_mqh1.png, id=1073, 504.38437pt x 408.02437pt>
+<Chapter3/Figs/Raster/mq07_mqh1.png, id=1074, 504.38437pt x 408.02437pt>
 File: Chapter3/Figs/Raster/mq07_mqh1.png Graphic file (type png)
 
 <use Chapter3/Figs/Raster/mq07_mqh1.png>
 Package pdftex.def Info: Chapter3/Figs/Raster/mq07_mqh1.png used on input line 
-123.
+120.
 (pdftex.def)             Requested size: 306.22144pt x 247.7178pt.
 
-<Chapter3/Figs/Raster/mq07_mqh2.png, id=1074, 544.28343pt x 252.19218pt>
+<Chapter3/Figs/Raster/mq07_mqh2.png, id=1075, 544.28343pt x 252.19218pt>
 File: Chapter3/Figs/Raster/mq07_mqh2.png Graphic file (type png)
 
 <use Chapter3/Figs/Raster/mq07_mqh2.png>
 Package pdftex.def Info: Chapter3/Figs/Raster/mq07_mqh2.png used on input line 
-131.
+128.
 (pdftex.def)             Requested size: 306.22144pt x 141.88467pt.
- [64 <./Chapter3/Figs/Raster/mq07_mqh1.png>] <Chapter3/Figs/Raster/ds18b20.png,
- id=1081, 498.36188pt x 264.23718pt>
+ [64 <./Chapter3/Figs/Raster/mq07_mqh1.png>] [65 <./Chapter3/Figs/Raster/mq07_m
+qh2.png>]
+<Chapter3/Figs/Raster/ds18b20.png, id=1087, 498.36188pt x 264.23718pt>
 File: Chapter3/Figs/Raster/ds18b20.png Graphic file (type png)
 
 <use Chapter3/Figs/Raster/ds18b20.png>
 Package pdftex.def Info: Chapter3/Figs/Raster/ds18b20.png used on input line 15
-6.
+0.
 (pdftex.def)             Requested size: 306.22144pt x 162.36578pt.
- [65 <./Chapter3/Figs/Raster/mq07_mqh2.png>]
-<Chapter3/Figs/Raster/ds18b20_ketnoi.png, id=1087, 340.27126pt x 264.23718pt>
+
+<Chapter3/Figs/Raster/ds18b20_ketnoi.png, id=1088, 340.27126pt x 264.23718pt>
 File: Chapter3/Figs/Raster/ds18b20_ketnoi.png Graphic file (type png)
 
 <use Chapter3/Figs/Raster/ds18b20_ketnoi.png>
 Package pdftex.def Info: Chapter3/Figs/Raster/ds18b20_ketnoi.png used on input 
-line 172.
+line 166.
 (pdftex.def)             Requested size: 262.47934pt x 203.83821pt.
  [66 <./Chapter3/Figs/Raster/ds18b20.png>] [67 <./Chapter3/Figs/Raster/ds18b20_
 ketnoi.png>]
-<Chapter3/Figs/Raster/sim800_status.png, id=1097, 998.73125pt x 678.535pt>
+<Chapter3/Figs/Raster/sim800_status.png, id=1098, 998.73125pt x 678.535pt>
 File: Chapter3/Figs/Raster/sim800_status.png Graphic file (type png)
 
 <use Chapter3/Figs/Raster/sim800_status.png>
 Package pdftex.def Info: Chapter3/Figs/Raster/sim800_status.png used on input l
-ine 187.
+ine 181.
 (pdftex.def)             Requested size: 437.46112pt x 297.21036pt.
  [68 <./Chapter3/Figs/Raster/sim800_status.png>]
-Overfull \hbox (56.16678pt too wide) in paragraph at lines 211--222
+Overfull \hbox (56.16678pt too wide) in paragraph at lines 205--216
  [][] 
  []
 
-[69] <Chapter3/Figs/Server/polling.png, id=1112, 1872.9975pt x 599.23875pt>
+[69] <Chapter3/Figs/Server/polling.png, id=1113, 1872.9975pt x 599.23875pt>
 File: Chapter3/Figs/Server/polling.png Graphic file (type png)
 
 <use Chapter3/Figs/Server/polling.png>
 Package pdftex.def Info: Chapter3/Figs/Server/polling.png used on input line 24
-6.
+0.
 (pdftex.def)             Requested size: 437.46112pt x 139.95247pt.
  [70 <./Chapter3/Figs/Server/polling.png>] <Chapter3/Figs/Server/realtime.png, 
-id=1118, 696.35156pt x 220.57407pt>
+id=1119, 696.35156pt x 220.57407pt>
 File: Chapter3/Figs/Server/realtime.png Graphic file (type png)
 
 <use Chapter3/Figs/Server/realtime.png>
 Package pdftex.def Info: Chapter3/Figs/Server/realtime.png used on input line 2
-58.
+52.
 (pdftex.def)             Requested size: 437.46112pt x 138.5686pt.
 
-<Chapter3/Figs/Server/multiserver.png, id=1120, 1007.26312pt x 385.44pt>
+<Chapter3/Figs/Server/multiserver.png, id=1121, 1007.26312pt x 385.44pt>
 File: Chapter3/Figs/Server/multiserver.png Graphic file (type png)
 
 <use Chapter3/Figs/Server/multiserver.png>
 Package pdftex.def Info: Chapter3/Figs/Server/multiserver.png used on input lin
-e 268.
+e 262.
 (pdftex.def)             Requested size: 437.46112pt x 167.40038pt.
  [71 <./Chapter3/Figs/Server/realtime.png> <./Chapter3/Figs/Server/multiserver.
 png>]
-<Chapter3/Figs/Server/usecase.png, id=1128, 432.11438pt x 535.2497pt>
+<Chapter3/Figs/Server/usecase.png, id=1129, 432.11438pt x 535.2497pt>
 File: Chapter3/Figs/Server/usecase.png Graphic file (type png)
 
 <use Chapter3/Figs/Server/usecase.png>
-Package pdftex.def Info: Chapter3/Figs/Server/usecase.png used on input line 29
-5.
+Package pdftex.def Info: Chapter3/Figs/Server/usecase.png used on input line 28
+9.
 (pdftex.def)             Requested size: 349.97023pt x 433.51721pt.
  [72] [73 <./Chapter3/Figs/Server/usecase.png>] <Chapter3/Figs/Server/musecase.
-png, id=1141, 246.1697pt x 212.29312pt>
+png, id=1142, 246.1697pt x 212.29312pt>
 File: Chapter3/Figs/Server/musecase.png Graphic file (type png)
 
 <use Chapter3/Figs/Server/musecase.png>
 Package pdftex.def Info: Chapter3/Figs/Server/musecase.png used on input line 3
-33.
+27.
 (pdftex.def)             Requested size: 218.73056pt x 188.63902pt.
  [74 <./Chapter3/Figs/Server/musecase.png>]) [75]
 \openout2 = `Chapter4/chapter4.aux'.
 
  (./Chapter4/chapter4.tex
 Ch\uhorn \ohorn ng 4.
-<Chapter4/Figs/Raster/prototype_1.png, id=1154, 636.3775pt x 434.62375pt>
+<Chapter4/Figs/Raster/prototype_1.png, id=1155, 636.3775pt x 434.62375pt>
 File: Chapter4/Figs/Raster/prototype_1.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/prototype_1.png>
@@ -2474,7 +2475,7 @@ e 23.
 
 
 ]
-<Chapter4/Figs/Raster/khoinguon.png, id=1160, 778.91pt x 262.9825pt>
+<Chapter4/Figs/Raster/khoinguon.png, id=1161, 778.91pt x 262.9825pt>
 File: Chapter4/Figs/Raster/khoinguon.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/khoinguon.png>
@@ -2482,14 +2483,14 @@ Package pdftex.def Info: Chapter4/Figs/Raster/khoinguon.png used on input line
 39.
 (pdftex.def)             Requested size: 433.62pt x 146.40242pt.
  [77 <./Chapter4/Figs/Raster/prototype_1.png>] <Chapter4/Figs/Raster/ht06.png, 
-id=1167, 291.33844pt x 167.12437pt>
+id=1168, 291.33844pt x 167.12437pt>
 File: Chapter4/Figs/Raster/ht06.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/ht06.png>
 Package pdftex.def Info: Chapter4/Figs/Raster/ht06.png used on input line 53.
 (pdftex.def)             Requested size: 216.81pt x 124.37392pt.
  [78 <./Chapter4/Figs/Raster/khoinguon.png>] <Chapter4/Figs/Raster/tp4056.jpg, 
-id=1174, 570.63188pt x 143.78719pt>
+id=1175, 570.63188pt x 143.78719pt>
 File: Chapter4/Figs/Raster/tp4056.jpg Graphic file (type jpg)
 
 <use Chapter4/Figs/Raster/tp4056.jpg>
@@ -2497,7 +2498,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/tp4056.jpg used on input line 66.
 
 (pdftex.def)             Requested size: 361.34999pt x 91.05153pt.
 
-<Chapter4/Figs/Raster/solarpanel_real.png, id=1175, 652.4375pt x 625.33624pt>
+<Chapter4/Figs/Raster/solarpanel_real.png, id=1176, 652.4375pt x 625.33624pt>
 File: Chapter4/Figs/Raster/solarpanel_real.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/solarpanel_real.png>
@@ -2604,7 +2605,7 @@ Package xcolor Warning: Incompatible color definition on input line 91.
 Package xcolor Warning: Incompatible color definition on input line 91.
 
 [80 <./Chapter4/Figs/Raster/solarpanel_real.png>]
-<Chapter4/Figs/Raster/prototype_2.png, id=1191, 5267.68pt x 3950.76pt>
+<Chapter4/Figs/Raster/prototype_2.png, id=1192, 5267.68pt x 3950.76pt>
 File: Chapter4/Figs/Raster/prototype_2.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/prototype_2.png>
@@ -2612,7 +2613,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/prototype_2.png used on input lin
 e 99.
 (pdftex.def)             Requested size: 361.34999pt x 270.97508pt.
 
-<Chapter4/Figs/Raster/prototype_3.png, id=1192, 308.4615pt x 173.448pt>
+<Chapter4/Figs/Raster/prototype_3.png, id=1193, 308.4615pt x 173.448pt>
 File: Chapter4/Figs/Raster/prototype_3.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/prototype_3.png>
@@ -2621,14 +2622,14 @@ e 106.
 (pdftex.def)             Requested size: 361.34999pt x 203.20064pt.
  [81 <./Chapter4/Figs/Raster/prototype_2.png> <./Chapter4/Figs/Raster/prototype
 _3.png>]
-<Chapter4/Figs/Raster/mcu.png, id=1201, 1035.87pt x 1092.08pt>
+<Chapter4/Figs/Raster/mcu.png, id=1202, 1035.87pt x 1092.08pt>
 File: Chapter4/Figs/Raster/mcu.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/mcu.png>
 Package pdftex.def Info: Chapter4/Figs/Raster/mcu.png used on input line 127.
 (pdftex.def)             Requested size: 180.67499pt x 190.46698pt.
 
-<Chapter4/Figs/Raster/mcu_2.png, id=1202, 2390.9325pt x 1505.625pt>
+<Chapter4/Figs/Raster/mcu_2.png, id=1203, 2390.9325pt x 1505.625pt>
 File: Chapter4/Figs/Raster/mcu_2.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/mcu_2.png>
@@ -2648,7 +2649,7 @@ Package xcolor Warning: Incompatible color definition on input line 169.
 
 Package xcolor Warning: Incompatible color definition on input line 169.
 
-<Chapter4/Figs/Raster/node_status.png, id=1210, 272.01625pt x 648.4225pt>
+<Chapter4/Figs/Raster/node_status.png, id=1211, 272.01625pt x 648.4225pt>
 File: Chapter4/Figs/Raster/node_status.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/node_status.png>
@@ -2774,7 +2775,7 @@ Package xcolor Warning: Incompatible color definition on input line 202.
 Package xcolor Warning: Incompatible color definition on input line 202.
 
 [85]
-<Chapter4/Figs/Raster/house_sensor.png, id=1275, 151.29907pt x 155.97842pt>
+<Chapter4/Figs/Raster/house_sensor.png, id=1276, 151.29907pt x 155.97842pt>
 File: Chapter4/Figs/Raster/house_sensor.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/house_sensor.png>
@@ -2782,7 +2783,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/house_sensor.png used on input li
 ne 219.
 (pdftex.def)             Requested size: 180.67499pt x 186.26398pt.
 
-<Chapter4/Figs/Raster/house_sensor_2.png, id=1276, 1505.625pt x 2007.5pt>
+<Chapter4/Figs/Raster/house_sensor_2.png, id=1277, 1505.625pt x 2007.5pt>
 File: Chapter4/Figs/Raster/house_sensor_2.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/house_sensor_2.png>
@@ -2790,7 +2791,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/house_sensor_2.png used on input
 line 224.
 (pdftex.def)             Requested size: 144.54pt x 192.70555pt.
 
-<Chapter4/Figs/Raster/house_dust.png, id=1278, 151.29907pt x 155.97842pt>
+<Chapter4/Figs/Raster/house_dust.png, id=1279, 151.29907pt x 155.97842pt>
 File: Chapter4/Figs/Raster/house_dust.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/house_dust.png>
@@ -2798,7 +2799,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/house_dust.png used on input line
  233.
 (pdftex.def)             Requested size: 180.67499pt x 186.26398pt.
 
-<Chapter4/Figs/Raster/house_board_kogps.png, id=1280, 151.29907pt x 155.97842pt
+<Chapter4/Figs/Raster/house_board_kogps.png, id=1281, 151.29907pt x 155.97842pt
 >
 File: Chapter4/Figs/Raster/house_board_kogps.png Graphic file (type png)
  <use Chapter4/Figs/Raster/house_board_kogps.png>
@@ -2806,7 +2807,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/house_board_kogps.png used on inp
 ut line 241.
 (pdftex.def)             Requested size: 180.67499pt x 186.26398pt.
 
-<Chapter4/Figs/Raster/pic1.png, id=1281, 1437.37pt x 1722.435pt>
+<Chapter4/Figs/Raster/pic1.png, id=1282, 1437.37pt x 1722.435pt>
 File: Chapter4/Figs/Raster/pic1.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/pic1.png>
@@ -2824,7 +2825,7 @@ Overfull \hbox (12.44981pt too wide) in paragraph at lines 311--323
  [][] 
  []
 
-<Chapter4/Figs/Server/strucserver.png, id=1298, 288.3272pt x 414.04688pt>
+<Chapter4/Figs/Server/strucserver.png, id=1299, 288.3272pt x 414.04688pt>
 File: Chapter4/Figs/Server/strucserver.png Graphic file (type png)
 
 <use Chapter4/Figs/Server/strucserver.png>
@@ -3053,7 +3054,7 @@ Package xcolor Warning: Incompatible color definition on input line 400.
 
 Package xcolor Warning: Incompatible color definition on input line 400.
 
-[92] [93] <Chapter4/Figs/Server/dbnode.png, id=1357, 560.8453pt x 338.01282pt>
+[92] [93] <Chapter4/Figs/Server/dbnode.png, id=1358, 560.8453pt x 338.01282pt>
 File: Chapter4/Figs/Server/dbnode.png Graphic file (type png)
 
 <use Chapter4/Figs/Server/dbnode.png>
@@ -3061,7 +3062,7 @@ Package pdftex.def Info: Chapter4/Figs/Server/dbnode.png used on input line 461
 .
 (pdftex.def)             Requested size: 437.46112pt x 263.64893pt.
 
-<Chapter4/Figs/Server/dbuser.png, id=1358, 250.68657pt x 306.39468pt>
+<Chapter4/Figs/Server/dbuser.png, id=1359, 250.68657pt x 306.39468pt>
 File: Chapter4/Figs/Server/dbuser.png Graphic file (type png)
 
 <use Chapter4/Figs/Server/dbuser.png>
@@ -3070,7 +3071,7 @@ Package pdftex.def Info: Chapter4/Figs/Server/dbuser.png used on input line 468
 (pdftex.def)             Requested size: 196.85616pt x 240.61386pt.
  [94 <./Chapter4/Figs/Server/dbnode.png>]
 [95 <./Chapter4/Figs/Server/dbuser.png>] [96]
-<Chapter4/Figs/Server/apilogin.png, id=1377, 1447.4075pt x 988.69376pt>
+<Chapter4/Figs/Server/apilogin.png, id=1378, 1447.4075pt x 988.69376pt>
 File: Chapter4/Figs/Server/apilogin.png Graphic file (type png)
 
 <use Chapter4/Figs/Server/apilogin.png>
@@ -3078,7 +3079,7 @@ Package pdftex.def Info: Chapter4/Figs/Server/apilogin.png used on input line 5
 31.
 (pdftex.def)             Requested size: 437.46112pt x 298.813pt.
  [97] [98 <./Chapter4/Figs/Server/apilogin.png>] [99]
-<Chapter4/Figs/Server/apipost.png, id=1395, 1447.4075pt x 988.69376pt>
+<Chapter4/Figs/Server/apipost.png, id=1396, 1447.4075pt x 988.69376pt>
 File: Chapter4/Figs/Server/apipost.png Graphic file (type png)
 
 <use Chapter4/Figs/Server/apipost.png>
@@ -3086,7 +3087,7 @@ Package pdftex.def Info: Chapter4/Figs/Server/apipost.png used on input line 59
 4.
 (pdftex.def)             Requested size: 437.46112pt x 298.813pt.
  [100] [101 <./Chapter4/Figs/Server/apipost.png>] [102]
-<Chapter4/Figs/Server/log.png, id=1411, 600.74437pt x 158.09062pt>
+<Chapter4/Figs/Server/log.png, id=1412, 600.74437pt x 158.09062pt>
 File: Chapter4/Figs/Server/log.png Graphic file (type png)
 
 <use Chapter4/Figs/Server/log.png>
@@ -3880,7 +3881,7 @@ Package xcolor Warning: Incompatible color definition on input line 659.
 
 Package xcolor Warning: Incompatible color definition on input line 659.
 
-<Chapter4/Figs/Raster/webserver.png, id=1424, 1014.79124pt x 463.7325pt>
+<Chapter4/Figs/Raster/webserver.png, id=1425, 1014.79124pt x 463.7325pt>
 File: Chapter4/Figs/Raster/webserver.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/webserver.png>
@@ -3888,7 +3889,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/webserver.png used on input line
 672.
 (pdftex.def)             Requested size: 437.46112pt x 199.90347pt.
 
-<Chapter4/Figs/Raster/web_graph.png, id=1425, 700.11563pt x 374.14781pt>
+<Chapter4/Figs/Raster/web_graph.png, id=1426, 700.11563pt x 374.14781pt>
 File: Chapter4/Figs/Raster/web_graph.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/web_graph.png>
@@ -3896,7 +3897,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/web_graph.png used on input line
 681.
 (pdftex.def)             Requested size: 437.46112pt x 233.7847pt.
  [104 <./Chapter4/Figs/Raster/webserver.png>]
-<Chapter4/Figs/Raster/web_email.png, id=1432, 546.54187pt x 414.04688pt>
+<Chapter4/Figs/Raster/web_email.png, id=1433, 546.54187pt x 414.04688pt>
 File: Chapter4/Figs/Raster/web_email.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/web_email.png>
@@ -3904,7 +3905,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/web_email.png used on input line
 690.
 (pdftex.def)             Requested size: 262.47934pt x 198.84764pt.
  [105 <./Chapter4/Figs/Raster/web_graph.png>]
-<Chapter4/Figs/Raster/web_nodeinfo.png, id=1440, 737.75626pt x 469.755pt>
+<Chapter4/Figs/Raster/web_nodeinfo.png, id=1441, 737.75626pt x 469.755pt>
 File: Chapter4/Figs/Raster/web_nodeinfo.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/web_nodeinfo.png>
@@ -3913,7 +3914,7 @@ ne 699.
 (pdftex.def)             Requested size: 437.46112pt x 278.54362pt.
  [106 <./Chapter4/Figs/Raster/web_email.png> <./Chapter4/Figs/Raster/web_nodein
 fo.png>]
-<Chapter4/Figs/Raster/main_1.png, id=1448, 847.66687pt x 1332.47812pt>
+<Chapter4/Figs/Raster/main_1.png, id=1449, 847.66687pt x 1332.47812pt>
 File: Chapter4/Figs/Raster/main_1.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/main_1.png>
@@ -3921,7 +3922,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/main_1.png used on input line 712
 .
 (pdftex.def)             Requested size: 180.67499pt x 283.9967pt.
 
-<Chapter4/Figs/Raster/main_2.png, id=1449, 859.71187pt x 1359.57938pt>
+<Chapter4/Figs/Raster/main_2.png, id=1450, 859.71187pt x 1359.57938pt>
 File: Chapter4/Figs/Raster/main_2.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/main_2.png>
@@ -3929,7 +3930,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/main_2.png used on input line 717
 .
 (pdftex.def)             Requested size: 180.67499pt x 285.72755pt.
 
-<Chapter4/Figs/Raster/main_4.png, id=1451, 862.72313pt x 1352.05125pt>
+<Chapter4/Figs/Raster/main_4.png, id=1452, 862.72313pt x 1352.05125pt>
 File: Chapter4/Figs/Raster/main_4.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/main_4.png>
@@ -3937,7 +3938,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/main_4.png used on input line 730
 .
 (pdftex.def)             Requested size: 180.67499pt x 283.13455pt.
 
-<Chapter4/Figs/Raster/main_3.png, id=1452, 841.64438pt x 1324.95pt>
+<Chapter4/Figs/Raster/main_3.png, id=1453, 841.64438pt x 1324.95pt>
 File: Chapter4/Figs/Raster/main_3.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/main_3.png>
@@ -3959,21 +3960,21 @@ Package Fancyhdr Warning: \headheight is too small (14.5pt):
  This may cause the page layout to be inconsistent, however.
 
 [108 <./Chapter4/Figs/Raster/main_4.png> <./Chapter4/Figs/Raster/main_3.png>]
-<Chapter4/Figs/Raster/5nov.png, id=1468, 1806.75pt x 803.0pt>
+<Chapter4/Figs/Raster/5nov.png, id=1469, 1806.75pt x 803.0pt>
 File: Chapter4/Figs/Raster/5nov.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/5nov.png>
 Package pdftex.def Info: Chapter4/Figs/Raster/5nov.png used on input line 759.
 (pdftex.def)             Requested size: 433.62pt x 192.71169pt.
  [109]
-<Chapter4/Figs/Raster/6nov.png, id=1475, 1806.75pt x 803.0pt>
+<Chapter4/Figs/Raster/6nov.png, id=1476, 1806.75pt x 803.0pt>
 File: Chapter4/Figs/Raster/6nov.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/6nov.png>
 Package pdftex.def Info: Chapter4/Figs/Raster/6nov.png used on input line 766.
 (pdftex.def)             Requested size: 433.62pt x 192.71169pt.
 
-<Chapter4/Figs/Raster/14nov.png, id=1476, 1806.75pt x 803.0pt>
+<Chapter4/Figs/Raster/14nov.png, id=1477, 1806.75pt x 803.0pt>
 File: Chapter4/Figs/Raster/14nov.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/14nov.png>
@@ -3981,7 +3982,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/14nov.png used on input line 773.
 
 (pdftex.def)             Requested size: 433.62pt x 192.71169pt.
  [110 <./Chapter4/Figs/Raster/5nov.png> <./Chapter4/Figs/Raster/6nov.png>]
-<Chapter4/Figs/Raster/sensorbox_1.png, id=1483, 1606.0pt x 903.375pt>
+<Chapter4/Figs/Raster/sensorbox_1.png, id=1484, 1606.0pt x 903.375pt>
 File: Chapter4/Figs/Raster/sensorbox_1.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/sensorbox_1.png>
@@ -3989,7 +3990,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/sensorbox_1.png used on input lin
 e 784.
 (pdftex.def)             Requested size: 433.62pt x 243.9145pt.
 
-<Chapter4/Figs/Raster/sensorbox_2.jpg, id=1485, 1569.865pt x 1569.865pt>
+<Chapter4/Figs/Raster/sensorbox_2.jpg, id=1486, 1569.865pt x 1569.865pt>
 File: Chapter4/Figs/Raster/sensorbox_2.jpg Graphic file (type jpg)
 
 <use Chapter4/Figs/Raster/sensorbox_2.jpg>
@@ -3998,7 +3999,7 @@ e 791.
 (pdftex.def)             Requested size: 433.62pt x 433.61858pt.
  [111 <./Chapter4/Figs/Raster/14nov.png> <./Chapter4/Figs/Raster/sensorbox_1.pn
 g>]
-<Chapter4/Figs/Raster/08dec.png, id=1492, 1806.75pt x 803.0pt>
+<Chapter4/Figs/Raster/08dec.png, id=1493, 1806.75pt x 803.0pt>
 File: Chapter4/Figs/Raster/08dec.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/08dec.png>
@@ -4006,7 +4007,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/08dec.png used on input line 802.
 
 (pdftex.def)             Requested size: 433.62pt x 192.71169pt.
  [112 <./Chapter4/Figs/Raster/sensorbox_2.jpg>] <Chapter4/Figs/Raster/05dec_9.p
-ng, id=1498, 1806.75pt x 803.0pt>
+ng, id=1499, 1806.75pt x 803.0pt>
 File: Chapter4/Figs/Raster/05dec_9.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/05dec_9.png>
@@ -4014,7 +4015,7 @@ Package pdftex.def Info: Chapter4/Figs/Raster/05dec_9.png used on input line 80
 9.
 (pdftex.def)             Requested size: 433.62pt x 192.71169pt.
 
-<Chapter4/Figs/Raster/01dec_8.png, id=1499, 1806.75pt x 803.0pt>
+<Chapter4/Figs/Raster/01dec_8.png, id=1500, 1806.75pt x 803.0pt>
 File: Chapter4/Figs/Raster/01dec_8.png Graphic file (type png)
 
 <use Chapter4/Figs/Raster/01dec_8.png>
@@ -4092,28 +4093,29 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 28026 strings out of 493304
- 485227 string characters out of 6139870
- 630706 words of memory out of 5000000
+ 28028 strings out of 493304
+ 485249 string characters out of 6139870
+ 631706 words of memory out of 5000000
  30223 multiletter control sequences out of 15000+600000
- 91234 words of font info for 106 fonts, out of 8000000 for 9000
+ 91321 words of font info for 107 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  49i,17n,53p,10424b,2823s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-t5.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis.pdf (136 pages, 25282081 bytes).
+onts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmtt12.pfb>
+Output written on thesis.pdf (136 pages, 25303058 bytes).
 PDF statistics:
- 1741 PDF objects out of 2073 (max. 8388607)
- 1425 compressed objects within 15 object streams
+ 1746 PDF objects out of 2073 (max. 8388607)
+ 1428 compressed objects within 15 object streams
  494 named destinations out of 1000 (max. 500000)
  22579 words of extra memory for PDF output out of 24883 (max. 10000000)
 
