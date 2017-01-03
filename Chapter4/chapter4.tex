@@ -1,11 +1,12 @@
+\ifpdf
+    \graphicspath{{Chapter4/Figs/Raster/}{Chapter4/Figs/Server/}{Chapter4/Figs/}}
+\else
+    \graphicspath{{Chapter4/Figs/Vector/}{Chapter4/Figs/}}
+\fi
 \chapter{HIỆN THỰC VÀ THỬ NGHIỆM}
 
 % **************************** Define Graphics Path **************************
-\ifpdf
-    \graphicspath{{Chapter3/Figs/Raster/}{Chapter3/Figs/server/}{Chapter3/Figs/}}
-\else
-    \graphicspath{{Chapter3/Figs/Vector/}{Chapter3/Figs/}}
-\fi
+
 Từ những thiết kế đề tài tại \textbf{chương 3: Thiết kế hệ thống}, chương này tiếp tục trình bày về cách thức hiện thực đề tài và phương pháp thử nghiệm cũng như đánh giá.
 \section{Hiện thực node cảm biến}
 \subsection{Hiện thực prototype node cảm biến}\label{sc:prototype_dautien}
@@ -56,7 +57,7 @@ Tiếp đến phần thiết kế thì để có thể tận dụng nguồn năn
 	
 	\item[•]Mạch sạc pin Lithium TP4056v2 sử dụng IC quản lý sạc TP4056 nhưng được nâng cấp để có thể ngắt khi pin yếu dưới 2.4V nhằm bảo vệ pin. Một số thông số kỹ thuật của mạch sạc pin Lithium TP4056v2\\
 	-	Điện áp đầu vào: 5VDC mini USB\\
-	-	Điện áp ngưỡng ra tự động ngắt: 4.2V +- 1%\\
+	-	Điện áp ngưỡng ra tự động ngắt: 4.2V $\pm$ 1\\
 	-	Dòng sạc tối đa: 1000mA\\
 	-	Điện áp ngưỡng cần sạc là 2.5V\\
 	-	Tích hợp tự động ngắt bảo vệ pin khi pin yếu dưới 2.4 V qua 2 chân OUT+ và OUT-
@@ -266,7 +267,7 @@ Còn các board mạch vi xử lý, module Sim800L và pin được đặc vị 
 
 
 \subsection{Mức độ tiêu hao năng lượng}
-Để biết được mức tiêu hao năng lượng của mạch hoạt động như thế nào thì chúng tôi đã bắt đầu tính toán từ những thông số tiêu thụ chuẩn của các linh kiện được sử dụng trong node cảm biến. Nhầm nắm bắt được và đưa ra dung lượng pin cần thiết cho các node cảm biến chạy mà không phụ thuộc vào mạng lưới điện.
+Để biết được mức tiêu hao năng lượng của mạch hoạt động như thế nào thì chúng tôi đã bắt đầu tính toán từ những thông số tiêu thụ chuẩn của các linh kliện được sử dụng trong node cảm biến. Nhầm nắm bắt được và đưa ra dung lượng pin cần thiết cho các node cảm biến chạy mà không phụ thuộc vào mạng lưới điện.
 
 Chú ý: các thông số tính toán dưới lấy từ thông số chuẩn của nhà sản xuất kèm với một số thông số chuẩn của chúng tôi như sau:
 \begin{itemize}
@@ -275,44 +276,64 @@ Chú ý: các thông số tính toán dưới lấy từ thông số chuẩn c�
 	\item[•] Ban đêm từ 8PM-7AM: cứ mỗi 30 phút gửi dữ liệu lên máy chủ.
 \end{itemize}
 
-\textbf{Mức tiêu hao năng lượng vào 1 buổi sáng 7AM-8PM:}
+\textbf{Mức tiêu hao năng lượng vào buổi sáng 7AM-8PM:}
 \begin{table}[H]
 	\centering
 	\caption{Bảng tiêu thụ năng lượng buổi sáng}
 	\label{table:buoisang}
-	\begin{tabular}{|l|l|r|r|r|r|}
-		\hline
-		\textbf{STT}  & \textbf{Module}                                                       & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Dòng tiêu \\ thụ (mA)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Giờ hoạt \\ động (h)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Tổng dòng \\ tiêu thụ(mA)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Công suất\\ (mW)\end{tabular}}} \\ \hline
-		1             & Cảm biến bụi                                                          & 20                                                                                          & 13                                                                                         & 260                                                                                             & 858                                                                                    \\ \hline
-		2             & Cảm biến MQ07                                                         & 250                                                                                         & 2.6                                                                                        & 650                                                                                             & 3250                                                                                   \\ \hline
-		3             & Cảm biến MQ135                                                        & 300                                                                                         & 2.6                                                                                        & 780                                                                                             & 3900                                                                                   \\ \hline
-		4             & \begin{tabular}[c]{@{}l@{}}Cảm biến nhiệt độ\\ 18BS20\end{tabular}    & 1.5                                                                                         & 13                                                                                         & 19.5                                                                                            & 97.5                                                                                   \\ \hline
-		5             & \begin{tabular}[c]{@{}l@{}}Module Sim800L \\ (idea mode)\end{tabular} & 10                                                                                          & 12.35                                                                                      & 123.5                                                                                           & 456.95                                                                                 \\ \hline
-		6             & \begin{tabular}[c]{@{}l@{}}Module Sim800L\\ (Hoạt động)\end{tabular}  & 500                                                                                         & 0.65                                                                                       & 325                                                                                             & 1202.5                                                                                 \\ \hline
-		7             & Arduino nano                                                          & 10                                                                                          & 13                                                                                         & 130                                                                                             & 780                                                                                    \\ \hline
-		\textbf{Tổng} & \textbf{}                                                             & \textbf{1091.5}                                                                             & \textbf{}                                                                                  & \textbf{2288}                                                                                   & \textbf{10544.95}                                                                      \\ \hline
-	\end{tabular}
+\begin{tabular}{|l|l|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{\textbf{STT}} & \multicolumn{1}{c|}{\textbf{Module}}                                     & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Công suất \\ tiêu thụ (mW)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Thời gian \\ hoạt động (h)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Điện năng \\ tiêu thụ (mWh)\end{tabular}}} \\ \hline
+1                                  & Cảm biến bụi GP2                                                         & 50                                                                                               & 13                                                                                               & 650                                                                                               \\ \hline
+2                                  & Cảm biến MQ07                                                            & 350                                                                                              & 2.6                                                                                              & 910                                                                                               \\ \hline
+3                                  & Cảm biến MQ135                                                           & 900                                                                                              & 2.6                                                                                              & 2340                                                                                              \\ \hline
+4                                  & Cảm biến nhiệt độ                                                        & 7.5                                                                                              & 13                                                                                               & 97.5                                                                                              \\ \hline
+5                                  & \begin{tabular}[c]{@{}l@{}}Module sim 800L\\ (idle mode)\end{tabular}    & 50                                                                                               & 12.35                                                                                            & 617.5                                                                                             \\ \hline
+6                                  & \begin{tabular}[c]{@{}l@{}}Module sim 800L \\ (active mode)\end{tabular} & 1850                                                                                             & 0.65                                                                                             & 1202.5                                                                                            \\ \hline
+7                                  & Arduino Nano                                                             & 1.3                                                                                              & 13                                                                                               & 16.9                                                                                              \\ \hline
+\textbf{Tổng}                      & \textbf{}                                                                & \textbf{3208.8}                                                                                  & \textbf{}                                                                                        & \textbf{5834.4}                                                                                   \\ \hline
+\end{tabular}
 \end{table}
 
+
+
+
 \newpage
-\textbf{Mức tiêu hao năng lượng vào 1 buổi tối 8PM-7AM:}
+
+
+
+\textbf{Mức tiêu hao năng lượng vào buổi tối 8PM-7AM:}
+
 \begin{table}[H]
-	\centering
-	\caption{Bảng tiêu thụ năng lượng buổi tối}
-	\label{table:buoitoi}
-	\begin{tabular}{|l|l|r|r|r|r|}
-		\hline
-		\textbf{STT}  & \textbf{Module}                                                       & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Dòng tiêu \\ thụ (mA)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Giờ hoạt \\ động (h)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Tổng dòng \\ tiêu thụ(mA)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Công suất\\ (mW)\end{tabular}}} \\ \hline
-		1             & Cảm biến bụi                                                          & 20                                                                                          & 11                                                                                         & 220                                                                                             & 726                                                                                    \\ \hline
-		2             & Cảm biến MQ07                                                         & 250                                                                                         & 2.2                                                                                        & 550                                                                                             & 2750                                                                                   \\ \hline
-		3             & Cảm biến MQ135                                                        & 300                                                                                         & 2.2                                                                                        & 660                                                                                             & 3300                                                                                   \\ \hline
-		4             & \begin{tabular}[c]{@{}l@{}}Cảm biến nhiệt độ\\ 18BS20\end{tabular}    & 1.5                                                                                         & 11                                                                                         & 16.5                                                                                            & 82.5                                                                                   \\ \hline
-		5             & \begin{tabular}[c]{@{}l@{}}Module Sim800L \\ (idea mode)\end{tabular} & 10                                                                                          & 10.45                                                                                      & 104.5                                                                                           & 386.65                                                                                 \\ \hline
-		6             & \begin{tabular}[c]{@{}l@{}}Module Sim800L\\ (Hoạt động)\end{tabular}  & 500                                                                                         & 0.55                                                                                       & 275                                                                                             & 1017.5                                                                                 \\ \hline
-		7             & Arduino nano                                                          & 10                                                                                          & 11                                                                                         & 110                                                                                             & 660                                                                                    \\ \hline
-		\textbf{Tổng} & \textbf{}                                                             & \textbf{1091.5}                                                                             & \textbf{}                                                                                  & \textbf{1936}                                                                                   & \textbf{8922.65}                                                                       \\ \hline
-	\end{tabular}
+\centering
+\caption{Bảng tiêu thụ năng lượng buổi tối}
+\label{table:buoitoi}
+\begin{tabular}{|l|l|r|r|r|}
+\hline
+\multicolumn{1}{|c|}{\textbf{STT}} & \multicolumn{1}{c|}{\textbf{Module}}                                     & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Công suất \\ tiêu thụ (mW)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Thời gian \\ hoạt động (h)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Điện năng \\ tiêu thụ (mWh)\end{tabular}}} \\ \hline
+1                                  & Cảm biến bụi GP2                                                         & 50                                                                                               & 11                                                                                               & 550                                                                                               \\ \hline
+2                                  & Cảm biến MQ07                                                            & 350                                                                                              & 2.2                                                                                              & 770                                                                                               \\ \hline
+3                                  & Cảm biến MQ135                                                           & 900                                                                                              & 2.2                                                                                              & 1980                                                                                              \\ \hline
+4                                  & Cảm biến nhiệt độ                                                        & 7.5                                                                                              & 11                                                                                               & 82.5                                                                                              \\ \hline
+5                                  & \begin{tabular}[c]{@{}l@{}}Module sim 800L\\ (idle mode)\end{tabular}    & 50                                                                                               & 10.45                                                                                            & 522.5                                                                                             \\ \hline
+6                                  & \begin{tabular}[c]{@{}l@{}}Module sim 800L \\ (active mode)\end{tabular} & 1850                                                                                             & 0.55                                                                                             & 1017.5                                                                                            \\ \hline
+7                                  & Arduino Nano                                                             & 1.3                                                                                              & 11                                                                                               & 14.3                                                                                              \\ \hline
+\textbf{Tổng}                      & \textbf{}                                                                & \textbf{3208.8}                                                                                  & \textbf{}                                                                                        & \textbf{4936.8}                                                                                   \\ \hline
+\end{tabular}
 \end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Hệ thống Server lưu trữ dữ liệu và cung cấp API}
 \subsection{Mô hình cụm Server }
@@ -814,7 +835,7 @@ Khả năng hoạt động tốt tại điều kiện môi trường ngoài tr�
 \subsubsection*{Tính ổn định}
 \begin{itemize}
 	\item[•]Thực tế từ ngày khởi tạo Server và cho hoạt động liên tục 24/7 tới thời gian viết báo cáo là 8 tuần không có lỗi lạ xảy ra (trừ các trường hợp đặc biệt như mất điện, mạng mất kết nối)
-	\item[•]Điện năng tiêu thụ thấp và nhiệt độ không quá cao, giao động (44 - 48 độ C) đảm bảo tốt trạng thái hoạt động.
+	\item[•]Điện năng tiêu thụ thấp và nhiệt độ không quá cao, dao động (44 - 48 độ C) đảm bảo tốt trạng thái hoạt động.
 \end{itemize}
 \subsubsection*{Tốc độ đáp ứng}
 \begin{itemize}

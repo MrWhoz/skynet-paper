@@ -1,0 +1,65 @@
+\begin{thebibliography}{}
+
+\bibitem[c2n, ]{c2nosql}
+Nosql.
+\newblock [NoSQL DEFINITION: Next Generation Databases mostly addressing some
+  of the points: being non-relational, distributed, open-source and
+  horizontally scalable].
+
+\bibitem[Blog, 2014]{c2wk}
+Blog, R. (2014).
+\newblock Giới thiệu về websocket và node.js.
+\newblock
+  \url{http://blog.rikkeisoft.com/seminar-gioi-thieu-ve-websocket-va-node-js/}.
+\newblock [Online; Posted 11-Sept-2014].
+
+\bibitem[Freetuts.net, 2016]{c2js2}
+Freetuts.net (2016).
+\newblock Javascript là gì?
+\newblock
+  \url{http://freetuts.net/javascript-la-gi-viet-ung-dung-javascript-dau-tien-263.html}.
+\newblock [Online; Posted 06-Jan-2015].
+
+\bibitem[Jaitla, 2015]{c2wk2}
+Jaitla, J. (2015).
+\newblock Websockets vs rest: Understanding the difference.
+\newblock
+  \url{https://www.pubnub.com/blog/2015-01-05-websockets-vs-rest-api-understanding-the-difference/}.
+\newblock [Online; Posted 05-Jan-2015].
+
+\bibitem[Raspbian, 2012]{c2rasp}
+Raspbian (2012).
+\newblock What is raspbian?
+\newblock \url{www.raspbian.org}.
+
+\bibitem[RethinkDB, 2015]{c2rethink}
+RethinkDB (2015).
+\newblock What is rethinkdb?
+\newblock \url{https://rethinkdb.com/faq/}.
+\newblock [Online; RethinkDB Faq].
+
+\bibitem[Vietjack, 2015]{c2node}
+Vietjack (2015).
+\newblock Nodejs là gì?
+\newblock \url{http://vietjack.com/nodejs/nodejs_la_gi.jsp}.
+
+\bibitem[VndemyHow, 2016]{c3ionic}
+VndemyHow (2016).
+\newblock Tìm hiểu ionic framework.
+\newblock
+  \url{http://how.vndemy.com/technology/ionic-framework/1434-tim-hieu-ionic-framework/}.
+
+\bibitem[Wikipedia, 2016a]{c2api}
+Wikipedia (2016a).
+\newblock Api - application programming interface.
+\newblock
+  \url{https://en.wikipedia.org/wiki/Application_programming_interface}.
+\newblock [Online; lastest update 06-Dec-2016].
+
+\bibitem[Wikipedia, 2016b]{c2js}
+Wikipedia (2016b).
+\newblock Javascripts.
+\newblock \url{https://vi.wikipedia.org/wiki/JavaScript}.
+\newblock [Online; lastest update 1-Nov-2016].
+
+\end{thebibliography}
