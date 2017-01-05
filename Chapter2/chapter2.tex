@@ -85,8 +85,7 @@ Sơ đồ lớp Chung của cả hai mô hình trên:
 
 % Please add the following required packages to your document preamble:
 Bảng \ref{table:danhgiamohinh} trình bày tổng kết và đánh giá các mô hình trên.
-
-\begin{table}[]
+\begin{table}[H]
 	\centering
 	\caption{So sánh ưu và nhược điểm của các mô hình IoT}
 	\label{table:danhgiamohinh}
@@ -154,13 +153,6 @@ Cũng như các dự án IoT quy mô rộng khác, đề tài cũng yêu cầu n
 
 
 \subsubsection*{Toàn vẹn dữ liệu (Data Integrity)} Mục đích chính của dự án là thu thập dữ liệu và từ đó phát triển ứng dụng. Vì thế tính toàn vẹn dữ liệu đóng vai trò quan trọng. Dữ liệu thu thập cần phải đáp ứng đủ các yếu tố: tin cậy, chính xác và đầy đủ. Dữ liệu hay thông tin không bị thay đổi, mất mát trong khi lưu trữ hay truyền tải. Nói cách khác tính toàn vẹn là tính không bị hiệu chỉnh của dữ liệu. Đây là một trong 4 khía cạnh trong an toàn điện tử: toàn vẹn, xác thực (authentication), không thoái thác (nonrepudiation), tin cậy/riêng tư (reliability/privacy), ích lợi (usefulness).
-
-\begin{figure}[H]
-	\centering    
-	\includegraphics[width=3in]{toanvendulieu}
-	\caption[Toàn vẹn dữ liệu]{Toàn vẹn dữ liệu}
-	\label{fig:toanvendulieu}
-\end{figure}
 
 \subsubsection*{Đồng bộ hóa} Hệ thống giám sát môi trường có nhiều thiết bị khác nhau, nhiều phương pháp và cách thức truyền dữ liệu khác nhau. Do đó ta cần phải có sự chuẩn hóa các giao thức giao tiếp, đồng bộ các gói dữ liệu. Tuy nhiên điều này sẽ dẫn đến vấn nạn được đề cập ở mục sau.
 
@@ -339,20 +331,20 @@ Các chương trình Arduino được viết bằng C hoặc C++. Arduino IDE đ
 \begin{lstlisting}[numbers=left,firstnumber=1,language=C]
 // the setup function runs once
 void setup() {
-// initialize digital pin 13 as an output.
-pinMode(13, OUTPUT);
+	// initialize digital pin 13 as an output.
+	pinMode(13, OUTPUT);
 }
 
 // the loop function runs forever
 void loop() {
-// turn the LED on (HIGH is the voltage level)
-digitalWrite(13, HIGH);   
-// wait for a second
-delay(1000);    
-// turn the LED off by making the voltage LOW          
-digitalWrite(13, LOW);    
-// wait for a second
-delay(1000);              
+	// turn the LED on (HIGH is the voltage level)
+	digitalWrite(13, HIGH);   
+	// wait for a second
+	delay(1000);    
+	// turn the LED off by making the voltage LOW          
+	digitalWrite(13, LOW);    
+	// wait for a second
+	delay(1000);              
 }
 
 \end{lstlisting}
@@ -383,7 +375,7 @@ Thông số kỹ thuật:
 Chức năng các chân của module Sim800L
 \begin{figure}[H]
 	\centering    
-	\includegraphics[width=0.7\textwidth]{sim800l}
+	\includegraphics[width=0.5\textwidth]{sim800l}
 	\caption[Sơ đồ module sim800l]{Sơ đồ module sim800l}
 	\label{fig:sim800l}
 \end{figure}
@@ -445,7 +437,6 @@ AT+ CCLK trả về giá trị thời gian của module sim
 	\caption[Tập lệnh AT+CCLK: trả về giá trị thời gian của module sim]{Tập lệnh AT+CCLK}
 \end{table}
 
-\newpage
 
 AT+CSTT cài đặt các thông số APN, USER NAME, PASSWORD cho Sim
 \begin{table}[H]
@@ -469,8 +460,7 @@ AT+CSTT cài đặt các thông số APN, USER NAME, PASSWORD cho Sim
 \end{table}
 
 
-
-
+\newpage
 
 AT+CIFSR: Lấy thông tin địa chỉ IP của moduleSIM
 \begin{table}[H]
@@ -486,8 +476,6 @@ AT+CIFSR: Lấy thông tin địa chỉ IP của moduleSIM
 	
 	\caption[Tập lệnh AT+CIFSR: lấy thông tin địa chỉ IP của moduleSIM]{Tập lệnh AT+CIFSR}
 \end{table}
-
-\newpage
 
 
 AT+CIPSTART: thiết lập kết nối TCP hoặc UDP
@@ -527,14 +515,6 @@ AT+CDNSGIP: được dùng để phân giải DNS của một tên miền, nó �
 	\caption[Tập lệnh AT+CDNSGIP: phân giải DNS tên miền]{Tập lệnh AT+CDNSGIP}
 \end{table}
 
-
-
-
-
-
-
-
-\newpage
 
 
 
@@ -595,22 +575,16 @@ Các công nghệ biến ánh sáng mặt trời thành điện hiện tại v�
 \section{Công cụ hỗ trợ phát triển đề tài}
 \subsection{Thingspeak}
 ThingSpeak là một mã nguồn mở cho các ứng dụng của Internet of Things. Mã nguồn này hỗ trợ các API lưu trữ, lấy dữ liệu từ các thiết bị, sản phẩm sử dụng HTTP qua Internet hoặc thông qua một Local Area Network. Như một HUB đợi các thông tin cảm biến từ thiết bị và có nhiệm vụ lưu trữ và xử lý dữ liệu, với ThingSpeak, bạn có thể tạo ra các ứng dụng phân tích dữ liệu, lưu trữ dữ liệu, quản lý dữ liệu một cách đơn giản.\\
-ThinkSpeak được phát triển bởi ioBridge và được opensource trên GITHUB  \url{https://github.com/iobridge/thingspeak}
+ThinkSpeak được phát triển bởi ioBridge và được opensource trên GITHUB tại địa chỉ \url{https://github.com/iobridge/thingspeak}
 
-\begin{figure}[H] 
-	\centering    
-	\includegraphics[width=0.7\textwidth]{thingspeak}
-	\caption[Ứng dụng phát triển IoT Thingspeak]{Ứng dụng phát triển IoT Thingspeak}
-	\label{fig:thingspeak}
-\end{figure}
 
 \section{Kiến thức căn bản công nghệ được áp dụng}
 
 \subsection{Web API} 
 
-Web API là giao diện lập trình ứng dụng (API – Application Programming Interface) cho cả web server và web browser.\cite{c2api}
+Web API là giao diện lập trình ứng dụng cho cả web server và web browser.\cite{c2api}
 
-Web API giúp người phát triển xây dựng lên các Service cung cấp dịch vụ cho các ứng dụng web, window… Trước web API, để có các service API người dùng phải cấu hình, xây dựng các ứng dụng wcf, web service khá phức tạp. Các ứng dụng client như website, ứng dụng winform, wpf có thể kết nối vào Web API để lấy các dữ liệu về xử lý, cũng như cập nhật thông tin lại Web API.
+Web API giúp người phát triển xây dựng lên các Service cung cấp dịch vụ cho các  dụng web, window… Trước web API, để có các service API người dùng phải cấu hình, xây dựng các ứng dụng wcf, web service khá phức tạp. Các ứng dụng client như website, ứng dụng winform, wpf có thể kết nối vào Web API để lấy các dữ liệu về xử lý, cũng như cập nhật thông tin lại Web API.
 
 Web API dùng phương thức trao đổi dữ liệu là HTTP, kiểu dữ liệu trao đổi có thể là JSON, XML, hoặc một chuẩn dữ liệu bất kỳ. Đây là những chuẩn dữ liệu hướng đối tượng được dùng khá nhiều trong việc lưu chuyển thông tin trên Internet, do đó các trang web sử dụng web API tương tác dữ liệu có tốc độ khá cao. Ngoài ra do Web API dùng giao thức HTTP nên hầu như tất cả các ứng dụng trên các công nghệ đều có thể kết nối tới để lấy cũng như tương tác với web API cụ thể như chúng ta có thể dùng các công nghệ web như: Asp.NET (MVC, Web Page, WebForm), PHP, jsp hay các ứng dụng desktop như: winform, wpf đều có thể dễ dàng kết nối tới web API. Với Web API chúng ta có thể xây dựng và phân tách các ứng dụng web lớn, cấu hình từng thành phần riêng biệt của website: đâu là tầng data, đâu là tầng xử lý, đâu là tầng dịch vụ, … 
 

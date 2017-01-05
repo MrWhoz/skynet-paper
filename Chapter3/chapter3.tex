@@ -125,7 +125,7 @@ Thông số kỹ thuật:
 
 \begin{figure}[H]
 \centering    
-\includegraphics[width=0.7\textwidth]{mq07_mqh2}
+\includegraphics[width=0.9\textwidth]{mq07_mqh2}
 \caption[Giản đồ chỉ sự biến đổi của Rs/Ro đối với nhiệt độ, độ ẩm]{Giản đồ chỉ sự biến đổi của Rs/Ro đối với nhiệt độ, độ ẩm}
 \label{fig:mq07_mqh2}
 \end{figure}
@@ -133,7 +133,7 @@ Thông số kỹ thuật:
 
 Chất lượng không khí được cảm biến MQ07 xác định dựa trên giản đồ chỉ sự biến đổi của Rs/Ro Hình \ref{fig:mq07_mqh1}, trong đó giá trị Rs thay đổi dưới tác nhân của môi trường không khí xung quanh, để định tính được giá trị Rs thì cần phải lấy được giá trị Ro vì giá trị Ro này sẽ được lấy sau mỗi lần thiết bị được khởi động ban đầu. 
 
-Giá trị Ro được xác định trong môi trường không khí sạch, như Hình \ref{fig:mq07_mqh1} ta thấy được giá trị Rs/Ro luôn là 100 (hằng số không đổi) trong môi trường không khí sạch. Như vậy cần xác định Ro bằng cách để cảm biến MQ07 chạy trong môi trường không khí sạch và tính giá trị $R_{S}=\frac{V_{C}}{V_{RL}}R_{L}$ trung bình trong 100 lần đo. Từ đó chúng ta sẽ có Ro trong không khí sạch $R_{O} = \frac{R_{S}}{100}$.
+Giá trị Ro được xác định trong môi trường không khí sạch, như Hình \ref{fig:mq07_mqh1} ta thấy được giá trị Rs/Ro luôn là 11.8 (hằng số không đổi) trong môi trường không khí sạch. Như vậy cần xác định Ro bằng cách để cảm biến MQ07 chạy trong môi trường không khí sạch và tính giá trị $R_{S}=\frac{V_{C}}{V_{RL}}R_{L}$ trung bình trong 11.8 lần đo. Từ đó chúng ta sẽ có Ro trong không khí sạch $R_{O} = \frac{R_{S}}{11.8}$.
 
 Công việc xác định giá trị Ro được thực hiện trong quá trình khởi tạo, lắp đặt cảm biến, hoặc công đoạn calibration và giá trị Ro không thay đổi trong thời gian đo đạt.
 
@@ -168,8 +168,6 @@ Sơ đồ kết nối IC BS18B20 để lấy được tín hiệu data
 	\label{fig: ds18b20_ketnoi}
 \end{figure}
 Chân Digital input sẽ được đưa tới chân Digital input của board arduino nano, hiện tại nhà sản xuất cũng cung cấp cho lập trình viên về bộ thư viện để có thể sử dụng trong việc phát triển.
-
-\newpage
 
 
 \section{Chuẩn giao tiếp giữa các node tới máy chủ}
@@ -263,6 +261,7 @@ Một điểm mạnh ở mô hình này nữa là có thể phát triển nhiề
 	\caption[Mô hình tương tác cập nhật nhiều Server]{Mô hình tương tác cập nhật nhiều Server và Client}
 	\label{fig: multiserver}
 \end{figure}
+\newpage
 \section{Mô hình ứng dụng trình bày dữ liệu}
 \subsection*{Chức năng Web Server}
 Đối với người dùng:
@@ -286,7 +285,7 @@ Hiện thị thông tin các node cảm biến đang hoạt động qua màn hì
 \subsection*{Biểu đồ High level Usecase của Web Server}
 \begin{figure}[H]
 \centering    
-\includegraphics[width=0.8\textwidth]{usecase}
+\includegraphics[width=0.7\textwidth]{usecase}
 \caption[Biểu đồ High level Usecase]{Biểu đồ High level Usecase }
 \label{fig:usecase_diagram}
 \end{figure}
@@ -329,8 +328,8 @@ STT & Tên            & Miêu tả                                              
 \label{fig:app_usecase}
 \end{figure}
 
+\newpage
 Mô tả Usecase
-
 \begin{table}[H]
 \centering
 \caption{Bảng mô tả giản đồ Usecase của ứng dụng di động}

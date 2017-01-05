@@ -46,11 +46,10 @@ Tiếp đến phần thiết kế thì để có thể tận dụng nguồn năn
 	-	Điện áp vào: 2-24V\\
 	-	Điện áp ra: 5-28V\\
 	-	Dòng tối đa: 2A đỉnh, dòng liên tục khoảng 1A.\\
-	-	Công suất: 6W\\
-	-	Hiệu suất: 93\%
+	-	Công suất: 6W, Hiệu suất: 93\%
 	\begin{figure}[H]
 		\centering    
-		\includegraphics[width=3in]{ht06}
+		\includegraphics[width=2.5in]{ht06}
 		\caption[Mạch tăng áp mini HT106]{Mạch tăng áp mini HT106}
 		\label{fig:ht06}
 	\end{figure}
@@ -172,7 +171,7 @@ Lập trình cho vi xử lý Arduino Nano được mô hình hóa theo lưu đ�
 
 \begin{figure}[H]
 	\centering    
-	\includegraphics[width=3in]{node_status}
+	\includegraphics[width=2in]{node_status}
 	\caption[Lưu đồ xử lý hàm main]{Lưu đồ xử lý hàm main}
 	\label{fig:node_status}
 \end{figure}
@@ -188,19 +187,19 @@ Lập trình cho vi xử lý Arduino Nano được mô hình hóa theo lưu đ�
 	\begin{lstlisting}[numbers=left,firstnumber=1,language=C]
 	void syncTime()
 	{
-	//  Network time sync
-	sim900.println("AT+SAPBR=1,1");
-	delay(2000);
-	sim900.println("AT+CNTPCID=1");
-	delay(2000);
-	sim900.println("AT+CNTP=\"128.4.24.98\",28");
-	delay(2000);
-	sim900.println("AT+CNTP");
-	delay(4000);  
-	sim900.println("AT+SAPBR=0,1");
-	delay(2000);
-	Serial.println("Sync time - Done");
-	updateTime();
+		//  Network time sync
+		sim900.println("AT+SAPBR=1,1");
+		delay(2000);
+		sim900.println("AT+CNTPCID=1");
+		delay(2000);
+		sim900.println("AT+CNTP=\"128.4.24.98\",28");
+		delay(2000);
+		sim900.println("AT+CNTP");
+		delay(4000);  
+		sim900.println("AT+SAPBR=0,1");
+		delay(2000);
+		Serial.println("Sync time - Done");
+		updateTime();
 	}
 	\end{lstlisting}
 	
@@ -684,7 +683,6 @@ Là nơi hiện thị biểu đồ của các thông số cũng như thông tin 
 	\end{figure}
 
 \subsubsection*{Giao diện nhận feedback từ người dùng qua email}
-Nội dung được gửi thông qua email.
 	\begin{figure}[H]
 		\centering    
 		\includegraphics[width=0.6\textwidth]{web_email}
